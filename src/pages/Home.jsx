@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './Home.css'
 
 function Home() {
   return (
     <div>
-      <nav>
+      <nav className="navbar">
         <ul>
           <li><Link to="/adozioni">Adozioni</Link></li>
           <li><Link to="/about">About</Link></li>

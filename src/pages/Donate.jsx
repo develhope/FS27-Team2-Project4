@@ -4,6 +4,7 @@ import {
     usePayPalScriptReducer,
 } from "@paypal/react-paypal-js";
 import { Link } from "react-router-dom";
+import './Donate.css'
 
 function Donate() {
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
@@ -61,7 +62,7 @@ function Donate() {
 
   return (
     <div>
-      <nav>
+      <nav className="navbar">
         <ul>
           <li>
             <Link to="/adozioni">Adozioni</Link>
