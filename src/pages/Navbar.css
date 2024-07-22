@@ -1,55 +1,86 @@
-/* navbar.css */
+:root {
+  --dark-green: rgb(82, 103, 66);
+  --light-green: rgb(146, 170, 127);
+  --pale-pink: rgb(246, 188, 178);
+  --dark-gray: rgb(30, 30, 30);
+  --light-gray: rgb(215, 215, 215);
+  --white: #ffffff;
+}
+
 .navbar {
-    background-color: rgb(82, 103, 66); /* Verde scuro */
-    color: white; 
-    padding: 15px 0; 
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%; 
-    z-index: 100; 
-  }
-  
+  background-color: var(--dark-green); 
+  color: var(--white); 
+  padding: 15px 0; 
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 100; 
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar li {
+  margin: 0; 
+  position: relative;
+}
+
+.navbar a {
+  display: block; 
+  padding: 10px 20px; 
+  color: var(--white);
+  text-decoration: none; 
+  transition: background-color 0.3s; 
+}
+
+.navbar a:hover {
+  background-color: var(--light-green); 
+}
+
+
+.navbar ul ul {
+  display: none; 
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  background-color: var(--pale-pink); 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  min-width: 150px; 
+}
+
+.navbar li:hover > ul {
+  display: block; 
+}
+
+.navbar ul ul a {
+  color: var(--dark-gray);
+}
+
+.navbar ul ul a:hover {
+  background-color: var(--light-gray); 
+}
+
+
+@media (max-width: 768px) {
   .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex; 
-    justify-content: space-around; /* Distribuisce gli elementi uniformemente */
-    align-items: center; /* Allinea al centro verticalmente */
+    flex-direction: column;
   }
   
   .navbar li {
-    margin: 0; /* Rimuovi margini laterali */
+    width: 100%;
   }
   
   .navbar a {
-    display: block; 
-    padding: 10px 20px; /* Aumenta la padding per una migliore area cliccabile */
-    color: white;
-    text-decoration: none; 
-    transition: background-color 0.3s; 
+    padding: 15px 20px;
+    text-align: center;
   }
-  
-  .navbar a:hover {
-    background-color: rgb(146, 170, 127); /* Verde più chiaro al passaggio del mouse */
-  }
-  
-  /* Stili per i link dei social media (sottomenu Contatti) */
-  .navbar ul ul {
-    display: none; 
-    position: absolute;
-    background-color: rgb(246, 188, 178); /* Rosa pallido */
-  }
-  
-  .navbar li:hover > ul {
-    display: block; 
-  }
-  
-  .navbar ul ul a {
-    color: rgb(30, 30, 30);
-  }
-  
-  .navbar ul ul a:hover {
-    background-color: rgb(215, 215, 215); 
-  }
+}

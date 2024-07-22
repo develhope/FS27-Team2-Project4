@@ -1,11 +1,12 @@
+// Donate.jsx
 import React, { useState, useEffect } from "react";
 import {
   PayPalScriptProvider,
-    usePayPalScriptReducer,
+  usePayPalScriptReducer,
 } from "@paypal/react-paypal-js";
 import { Link } from "react-router-dom";
-import './Donate.css'
-import './Navbar.css'
+import './Donate.css';
+import './Navbar.css';
 
 function Donate() {
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
@@ -29,9 +30,7 @@ function Donate() {
   const handleDonationSubmit = (event) => {
     event.preventDefault();
     if (donationAmount <= 0) {
-      setDonationError(
-        "L'importo della donazione deve essere maggiore di zero."
-      );
+      setDonationError("L'importo della donazione deve essere maggiore di zero.");
     } else {
       setDonationError(null);
       paypalDispatch({
@@ -62,33 +61,19 @@ function Donate() {
   };
 
   return (
-    <div>
+    <div className="donate-page">
       <nav className="navbar">
         <ul>
-          <li>
-            <Link to="/adozioni">Adozioni</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/shop">Shop</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-          <li>
-            <Link to="/donate">Donazioni</Link>
-          </li>
+          <li><Link to="/adozioni">Adozioni</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/shop">Shop</Link></li>
+          <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/donate">Donazioni</Link></li>
           <li>
             Contatti
             <ul>
-              <li>
-                <a href="https://www.facebook.com/">Facebook</a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com/">Instagram</a>
-              </li>
+              <li><a href="https://www.facebook.com/">Facebook</a></li>
+              <li><a href="https://www.instagram.com/">Instagram</a></li>
             </ul>
           </li>
         </ul>
@@ -124,7 +109,7 @@ function Donate() {
           />
 
           <button
-            type="submit" // Invia il form quando viene cliccato
+            type="submit"
             className="donate-button"
             disabled={isPending}
           >
@@ -138,7 +123,7 @@ function Donate() {
 
 function DonateWrapper() {
   return (
-    <PayPalScriptProvider options={{ "client-id": "YOUR_CLIENT_ID", currency: "EUR" }}> {/*qui si dovrebbe mettere la mail di paypal*/}
+    <PayPalScriptProvider options={{ "client-id": "YOUR_CLIENT_ID", currency: "EUR" }}>
       <Donate />
     </PayPalScriptProvider>
   );

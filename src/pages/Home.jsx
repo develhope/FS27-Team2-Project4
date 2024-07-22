@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Home.css'
-import './Navbar.css'
+import './Home.css';
+import './Navbar.css';
 
 function Home() {
   return (
@@ -18,15 +18,14 @@ function Home() {
             <ul>
               <li><a href="https://www.facebook.com/">Facebook</a></li>
               <li><a href="https://www.instagram.com/">Instagram</a></li>
-             
             </ul>
           </li>
         </ul>
       </nav>
 
-      
-      <h1>Benvenuti al sito di adozioni!</h1>
-    
+      <div className="main-content">
+        <h1>Benvenuti al sito di adozioni!</h1>
+      </div>
     </div>
   );
 }
