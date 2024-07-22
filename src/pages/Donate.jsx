@@ -5,8 +5,8 @@ import {
   usePayPalScriptReducer,
 } from "@paypal/react-paypal-js";
 import { Link } from "react-router-dom";
-import './Donate.css';
-import './Navbar.css';
+import '../index.css';
+
 
 function Donate() {
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
