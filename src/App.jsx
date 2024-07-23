@@ -1,16 +1,19 @@
-import React from "react";
-import DonateWrapper from "./pages/Donate";
-import Home from "./pages/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DonateWrapper from "./Components/Donate";
+import Home from "./Components/Home";
+import Adozioni from "./Components/Adozioni";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/donate" element={<DonateWrapper />} />
-      </Routes>
-    </Router>
+    <>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/donate" element={<DonateWrapper />} />
+          <Route path="/adozioni" element={<Adozioni />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 
