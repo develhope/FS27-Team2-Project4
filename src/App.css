@@ -1,0 +1,10 @@
+.profile-container{
+    height: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.profile-card{
+    border: 2px solid black;
+    padding: 20px;
+    height: 620px ;
+}
