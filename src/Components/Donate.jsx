@@ -14,7 +14,7 @@ function Donate() {
     paypalDispatch({
       type: "resetOptions",
       value: {
-        "client-id": "YOUR_PAYPAL_CLIENT_ID", // Replace with your actual PayPal client ID
+        "client-id": "YOUR_PAYPAL_CLIENT_ID",
         currency: "EUR",
       },
     });
@@ -32,7 +32,30 @@ function Donate() {
       );
     } else {
       setDonationError(null);
-      // ... (PayPal order creation and approval logic same as before) ...
+      paypalDispatch({
+        type: "createOrder",
+        intent: "capture",
+        createOrder: (data, actions) => {
+          return actions.order.create({
+            purchase_units: [
+              {
+                amount: {
+                  value: donationAmount,
+                },
+              },
+            ],
+          });
+        },
+        onApprove: async (data, actions) => {
+          const details = await actions.order.capture();
+          alert("Grazie per la tua donazione!");
+        },
+        onError: (err) => {
+          setDonationError(
+            "Si è verificato un errore durante la donazione. Riprova più tardi."
+          );
+        },
+      });
     }
   };
 
@@ -114,19 +137,18 @@ function Donate() {
           Sostieni la nostra causa
         </h1>
         <p className="leading-6 mb-3">
-          Ogni giorno, centinaia di animali vengono abbandonati,
-          lasciati soli e senza speranza. Il nostro rifugio è un faro
-          di luce per queste creature indifese, offrendo loro cibo,
-          cure mediche e, soprattutto, amore. Ma non possiamo farlo da
-          soli. {" "}
+          Ogni giorno, centinaia di animali vengono abbandonati, lasciati soli e
+          senza speranza. Il nostro rifugio è un faro di luce per queste
+          creature indifese, offrendo loro cibo, cure mediche e, soprattutto,
+          amore. Ma non possiamo farlo da soli.{" "}
         </p>
-        
+
         <p className="leading-6 mb-3">
-          La tua donazione, grande o piccola che sia, fa una
-          differenza enorme. Ci permette di continuare a salvare vite,
-          a dare una seconda possibilità a chi ne ha più bisogno. Ogni
-          euro conta, ogni gesto di generosità è un passo verso un
-          futuro migliore per i nostri amici a quattro zampe. {" "}
+          La tua donazione, grande o piccola che sia, fa una differenza enorme.
+          Ci permette di continuare a salvare vite, a dare una seconda
+          possibilità a chi ne ha più bisogno. Ogni euro conta, ogni gesto di
+          generosità è un passo verso un futuro migliore per i nostri amici a
+          quattro zampe.{" "}
         </p>
         {donationError && (
           <p className="error-message text-red-500 font-bold">
