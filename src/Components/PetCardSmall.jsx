@@ -1,8 +1,4 @@
-import { useState } from "react";
-
 export function PetCardSmall({ animal, onClick }) {
-  const [cardClick, setCardClick] = useState(false);
-
   return (
     <div className="w-56 ">
       <a
