@@ -1,14 +1,18 @@
-export function PetCard({ animal }) {
+import { useState } from "react";
+
+export function PetCardSmall({ animal, onClick }) {
+  const [cardClick, setCardClick] = useState(false);
+
   return (
     <div className="w-56 ">
       <a
-        href="#"
-        className="block rounded-lg p-4 shadow-sm shadow-indigo-100 hover:shadow-lg"
+        onClick={onClick}
+        className="block rounded-lg p-4 shadow-sm shadow-indigo-100 hover:shadow-lg  "
       >
         <img
           alt="cat"
           src={animal.img}
-          className="w-auto rounded-md object-cover"
+          className="w-auto rounded-md object-cover hover:animate-pulse"
         />
 
         <div className="mt-2">
