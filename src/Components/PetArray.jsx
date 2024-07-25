@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { PetCard } from "./PetCard";
+import { PetCardSmall } from "./PetCardSmall";
+import { PetCardFull } from "./PetCardFull";
 //ARRAY DI TEST PER COSTRUZIONE CARD
 export function PetArray() {
-  const [animals, setAnimals] = useState([
+  const [animals] = useState([
     {
       nome: "Gino",
       famiglia: "gatto",
@@ -37,11 +38,38 @@ export function PetArray() {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi commodi hic dolor reiciendis non tempora possimus nihil. Corrupti deleniti itaque cumque possimus aut voluptas eius et delectus. Eius, repudiandae saepe?",
     },
   ]);
+
+  const [selectedAnimal, setSelectedAnimal] = useState(null);
+
+  const handleCardClick = (animal) => {
+    setSelectedAnimal(animal);
+  };
+
+  const handleOverlayClick = () => {
+    setSelectedAnimal(null);
+  };
+
   return (
-    <div className="flex gap-4">
-      {animals.map((animal, index) => (
-        <PetCard key={index} animal={animal} />
-      ))}
-    </div>
+    <>
+      <div className="flex gap-4 ">
+        {animals.map((animal, index) => (
+          <PetCardSmall
+            key={index}
+            animal={animal}
+            onClick={() => handleCardClick(animal)}
+          />
+        ))}
+      </div>
+      {selectedAnimal && (
+        <div
+          className="fixed inset-0 z-40 bg-black bg-opacity-50 flex items-center justify-center "
+          onClick={handleOverlayClick}
+        >
+          <div onClick={(e) => e.stopPropagation()}>
+            <PetCardFull animal={selectedAnimal} />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
