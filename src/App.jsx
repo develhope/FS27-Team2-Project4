@@ -1,11 +1,9 @@
-import React from "react";
+import DonateWrapper from "./Components/Donate";
+import Home from "./Components/Home";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./Components/Home";
 import Profile from "./Components/Profile";
-import { PetArray } from "./Components/PetArray";
-import { PetCardFull } from "./Components/PetCardFull";
-import DonateWrapper from "./Components/Donate.jsx";
+import { Adozioni } from "./Components/Adozioni";
 
 function App() {
   return (
@@ -15,10 +13,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/donate" element={<DonateWrapper />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/adozioni" element={<PetArray />} />
+          <Route path="/adozioni" element={<Adozioni />} />
         </Routes>
       </div>
-      <PetCardFull animal={PetArray} />
     </>
   );
 }
