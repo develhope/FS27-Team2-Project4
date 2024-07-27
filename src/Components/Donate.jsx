@@ -4,7 +4,7 @@ import {
   usePayPalScriptReducer,
 } from "@paypal/react-paypal-js";
 import Navbar from "./Navbar.jsx";
-import bannerImage from "./banner.avif"
+import bannerImage from "../assets/images/banner-donazioni.avif"
 
 function Donate() {
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
