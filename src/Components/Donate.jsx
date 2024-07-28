@@ -3,8 +3,7 @@ import {
   PayPalScriptProvider,
   usePayPalScriptReducer,
 } from "@paypal/react-paypal-js";
-import Navbar from "./Navbar.jsx";
-import bannerImage from "../assets/images/banner-donazioni.avif"
+import bannerImage from "../assets/images/banner-donazioni.avif";
 
 function Donate() {
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
@@ -28,7 +27,9 @@ function Donate() {
     event.preventDefault();
 
     if (!donationAmount || donationAmount <= 0) {
-      setDonationError("L'importo della donazione deve essere maggiore di zero.");
+      setDonationError(
+        "L'importo della donazione deve essere maggiore di zero."
+      );
       return;
     }
 
@@ -59,7 +60,9 @@ function Donate() {
           alert("Grazie per la tua donazione!");
         },
         onError: (err) => {
-          setDonationError("Si è verificato un errore durante la donazione. Riprova più tardi.");
+          setDonationError(
+            "Si è verificato un errore durante la donazione. Riprova più tardi."
+          );
         },
       });
     } else if (donationMethod === "iban") {
@@ -71,29 +74,27 @@ function Donate() {
 
   return (
     <div className="donate-page">
-      <Navbar />
-
       <div>
-    <div 
-        className="banner"
-        style={{
+        <div
+          className="banner"
+          style={{
             backgroundImage: `url(${bannerImage})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            minHeight: "400px", 
-        }}
-    ></div> 
+            minHeight: "400px",
+          }}
+        ></div>
 
-    <h1 
-        className="text-5xl md:text-6xl font-bold text-center p-8"
-        style={{ 
+        <h1
+          className="text-5xl md:text-6xl font-bold text-center p-8"
+          style={{
             color: "rgb(146, 170, 127)",
-            marginTop: "-2rem" 
-        }}
-    >
-        Sostieni la nostra causa
-    </h1>
-</div>
+            marginTop: "-2rem",
+          }}
+        >
+          Sostieni la nostra causa
+        </h1>
+      </div>
       <div className="max-w-[800px] mx-auto mt-8 p-4 bg-white rounded-lg shadow-md">
         <p>
           Ogni giorno, centinaia di animali vengono abbandonati, lasciati soli e
