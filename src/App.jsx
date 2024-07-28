@@ -4,10 +4,12 @@ import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Profile from "./Components/Profile";
 import { Adozioni } from "./Components/Adozioni";
+import Navbar from "./Components/Navbar";
 
 function App() {
   return (
     <>
+      <Navbar />
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
