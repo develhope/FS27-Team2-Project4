@@ -36,7 +36,7 @@ import sphinx from "../assets/images/sphinx.png";
 import sphinx2 from "../assets/images/sphynx.jpeg";
 import terrier from "../assets/images/Terrier.jpg";
 
-export function PetArray() {
+export function PetArray({ filterCard }) {
   const [animals] = useState([
     {
       nome: "Jack",
@@ -509,6 +509,10 @@ export function PetArray() {
   ]);
 
   const [selectedAnimal, setSelectedAnimal] = useState(null);
+  //variabile per caricare tre file di cards e aggiungerle a gruppi
+  const [visibleRows, setVisibleRows] = useState(3);
+  const cardsPerRow = 5;
+  const visibleCards = visibleRows * cardsPerRow;
 
   const handleCardClick = (animal) => {
     setSelectedAnimal(animal);
@@ -518,25 +522,54 @@ export function PetArray() {
     setSelectedAnimal(null);
   };
 
+  const handleLoadMore = () => {
+    setVisibleRows(visibleRows + 3);
+  };
+
   return (
-    <div className="flex justify-center">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 ">
-        {animals.map((animal, index) => (
-          <PetCardSmall
-            key={index}
-            animal={animal}
-            onClick={() => handleCardClick(animal)}
-          />
-        ))}
-      </div>
-      {selectedAnimal && (
-        <div
-          className="fixed inset-0 z-40 bg-black bg-opacity-50 flex items-center justify-center "
-          onClick={handleOverlayClick}
-        >
-          <div onClick={(e) => e.stopPropagation()}>
-            <PetCardFull animal={selectedAnimal} />
+    <div>
+      <div className="flex justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          {/*         lo slice ritorna solo una porzione dell'array quindi posso usarlo per renderizzare solo un tot di elementi
+           */}{" "}
+          {animals
+            .slice(0, visibleCards)
+            .filter((card) => {
+              if (filterCard === "tutti") {
+                return card === card;
+              } else if (filterCard === "cuore") {
+                return card.problematiche !== "Nessuna";
+              } else {
+                return card.famiglia === filterCard;
+              }
+            })
+            .map((animal, index) => (
+              <PetCardSmall
+                key={index}
+                animal={animal}
+                onClick={() => handleCardClick(animal)}
+              />
+            ))}
+        </div>
+        {selectedAnimal && (
+          <div
+            className="fixed inset-0 z-40 bg-black bg-opacity-50 flex items-center justify-center"
+            onClick={handleOverlayClick}
+          >
+            <div onClick={(e) => e.stopPropagation()}>
+              <PetCardFull animal={selectedAnimal} />
+            </div>
           </div>
+        )}
+      </div>
+      {visibleCards < animals.length && (
+        <div className="flex justify-center mt-4">
+          <button
+            className="bg-[#92aa7f] text-white py-2 px-4 rounded-md font-bold "
+            onClick={handleLoadMore}
+          >
+            Carica Altre
+          </button>
         </div>
       )}
     </div>

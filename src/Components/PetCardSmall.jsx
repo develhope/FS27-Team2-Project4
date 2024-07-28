@@ -8,7 +8,7 @@ export function PetCardSmall({ animal, onClick }) {
         <img
           alt="cat"
           src={animal.img}
-          className="w-auto rounded-md object-cover hover:animate-pulse"
+          className="w-auto rounded-md object-cover h-48  hover:animate-pulse"
         />
 
         <div className="mt-2">

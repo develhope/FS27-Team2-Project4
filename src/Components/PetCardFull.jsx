@@ -7,10 +7,10 @@ export function PetCardFull({ animal }) {
         <div className="border-gray-400 mt-8 ">
           <div className="flex justify-between">
             {" "}
-            <p className="font-semibold text-2xl mb-4 ">{animal.nome}</p>
+            <p className="font-semibold text-2xl mb-4  ">{animal.nome}</p>
             <button
-              className={`rounded-xl p-2 ${
-                animal.famiglia === "gatto" ? "bg-[#e4adc9]" : "bg-[#92aa7f]"
+              className={`rounded-xl p-2 text-neutral-50 font-bold ${
+                animal.famiglia === "gatto" ? "bg-[#f6bcb2]" : "bg-[#92aa7f]"
               }`}
             >
               {animal.sesso == "Maschio"
