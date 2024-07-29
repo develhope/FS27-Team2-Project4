@@ -35,12 +35,12 @@ function Navbar() {
             </li>
             <li>
               <Link to="/adozioni" className="hover:text-[#f6bcba] transition duration-300">
-                Adozioni
+                Adoption
               </Link>
             </li>
             <li>
               <Link to="/donate" className="hover:text-[#f6bcba] transition duration-300">
-                Donazioni
+                Donate
               </Link>
             </li>
             <li>
