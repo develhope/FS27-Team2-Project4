@@ -26,7 +26,7 @@ export default function Footer() {
                     Scopri le ultime novità!
                   </h2>
   
-                  <p className="mt-4 text-[#D8B3B9]">
+                  <p className="mt-4 text-gray-700" >
                   Ogni adozione è una storia da raccontare. E tu, vuoi essere il protagonista della prossima?  Tieniti aggiornato! Scopri quali amici a quattro zampe ti aspettano per iniziare una nuova avventura.
                   </p>
                 </div>
@@ -39,15 +39,15 @@ export default function Footer() {
                     Email{" "}
                   </label>
   
-                  <div className=" p-2  sm:flex sm:items-center sm:gap-4 pb-10">
+                  <div className=" p-2  sm:flex sm:items-center sm:gap-0 pb-10">
                     <input
                       type="email"
                       id="UserEmail"
                       placeholder="john@rhcp.com"
-                      className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm px-6 py-3 rounded-md"
+                      className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm px-6 py-3 rounded-md rounded-r-none"
                     />
   
-                    <button className="mt-1 w-full bg-[#D8B3B9] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-[#BECBD9] sm:mt-0 sm:w-auto sm:shrink-0 rounded-md">
+                    <button className="mt-1 w-full bg-[#D8B3B9] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-[#D7D7D7] hover:text-[#526742] sm:mt-0 sm:w-auto sm:shrink-0 rounded-md rounded-l-none">
                       Iscriviti
                     </button>
                   </div>
@@ -141,7 +141,7 @@ export default function Footer() {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Certificazione Prodotti{" "}
+                      Metodi Pagamento{" "}
                     </Link>
                   </li>
                  
