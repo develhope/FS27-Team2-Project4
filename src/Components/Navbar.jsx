@@ -25,7 +25,7 @@ function Navbar() {
             </li>
             <li>
               <Link to="/about" className="hover:text-[#f6bcba] transition duration-300">
-                About
+                Chi Siamo
               </Link>
             </li>
             <li>
@@ -35,12 +35,12 @@ function Navbar() {
             </li>
             <li>
               <Link to="/adozioni" className="hover:text-[#f6bcba] transition duration-300">
-                Adoption
+                Adozioni
               </Link>
             </li>
             <li>
               <Link to="/donate" className="hover:text-[#f6bcba] transition duration-300">
-                Donate
+                Donazioni
               </Link>
             </li>
             <li>
@@ -75,6 +75,11 @@ function Navbar() {
               <li>
                 <a href="https://www.instagram.com/" className="block px-4 py-2 hover:bg-gray-100">
                   Instagram
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/home" className="block px-4 py-2 hover:bg-gray-100">
+                  Twitter
                 </a>
               </li>
             </ul>
