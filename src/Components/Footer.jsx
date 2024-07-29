@@ -39,7 +39,7 @@ export default function Footer() {
                     Email{" "}
                   </label>
   
-                  <div className=" p-2 focus-within:ring sm:flex sm:items-center sm:gap-4 pb-10">
+                  <div className=" p-2  sm:flex sm:items-center sm:gap-4 pb-10">
                     <input
                       type="email"
                       id="UserEmail"
