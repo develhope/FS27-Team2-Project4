@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Footer() {
     return (
       <footer className="bg-[#92aa7f]">
@@ -25,8 +27,7 @@ export default function Footer() {
                   </h2>
   
                   <p className="mt-4 text-[#D8B3B9]">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-                    non cupiditate quae nam molestias.
+                  Ogni adozione è una storia da raccontare. E tu, vuoi essere il protagonista della prossima?  Tieniti aggiornato! Scopri quali amici a quattro zampe ti aspettano per iniziare una nuova avventura.
                   </p>
                 </div>
               </div>
@@ -58,53 +59,54 @@ export default function Footer() {
   
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/link"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      1on1 Coaching{" "}
-                    </a>
+                      Home{" "}
+                    </Link>
+                  </li>
+  
+                  
+                  <li>
+                    <Link
+                      to="/community"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      {" "}
+                      Community{" "}
+                    </Link>
                   </li>
   
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/Adozioni"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Company Review{" "}
-                    </a>
+                     Adoption{" "}
+                    </Link>
                   </li>
   
+                  
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/shop"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Accounts Review{" "}
-                    </a>
+                     Shop{" "}
+                    </Link>
                   </li>
-  
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/Blog"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      HR Consulting{" "}
-                    </a>
-                  </li>
-  
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-700 transition hover:opacity-75"
-                    >
-                      {" "}
-                      SEO Optimisation{" "}
-                    </a>
+                     Blog{" "}
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -114,34 +116,35 @@ export default function Footer() {
   
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                     to="/about"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
                       About{" "}
-                    </a>
+                    </Link>
                   </li>
   
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/sustainability"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Meet the Team{" "}
-                    </a>
+                      Sustainability{" "}
+                    </Link>
                   </li>
   
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/certification"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Accounts Review{" "}
-                    </a>
+                      Product Certification{" "}
+                    </Link>
                   </li>
+                 
                 </ul>
               </div>
   
@@ -150,33 +153,33 @@ export default function Footer() {
   
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/contact"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
                       Contact{" "}
-                    </a>
+                    </Link>
                   </li>
   
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/faqs"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
                       FAQs{" "}
-                    </a>
+                    </Link>
                   </li>
   
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/liveChat"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
                       Live Chat{" "}
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -186,69 +189,61 @@ export default function Footer() {
   
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/accessibility"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
                       Accessibility{" "}
-                    </a>
+                    </Link>
                   </li>
   
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/return"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
                       Returns Policy{" "}
-                    </a>
+                    </Link>
                   </li>
   
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/refund"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
                       Refund Policy{" "}
-                    </a>
+                    </Link>
                   </li>
   
-                  <li>
-                    <a
-                      href="#"
-                      className="text-gray-700 transition hover:opacity-75"
-                    >
-                      {" "}
-                      Hiring Statistics{" "}
-                    </a>
-                  </li>
+                  
                 </ul>
               </div>
   
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900">Downloads</p>
+                <p className="font-medium text-gray-900">Support</p>
   
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/donate"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Marketing Calendar{" "}
-                    </a>
+                     Donate{" "}
+                    </Link>
                   </li>
   
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                      to="/events"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      SEO Infographics{" "}
-                    </a>
+                     Our Events{" "}
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -256,8 +251,7 @@ export default function Footer() {
               <ul className="col-span-2 flex justify-start gap-6 lg:col-span-5 lg:justify-end">
                 <li>
                   <a
-                    href="#"
-                    rel="noreferrer"
+                    href="src/Components/Navbar.jsx"
                     target="_blank"
                     className="text-gray-700 transition hover:opacity-75"
                   >
@@ -280,8 +274,7 @@ export default function Footer() {
   
                 <li>
                   <a
-                    href="#"
-                    rel="noreferrer"
+                    href="https://www.instagram.com/"
                     target="_blank"
                     className="text-gray-700 transition hover:opacity-75"
                   >
@@ -304,9 +297,8 @@ export default function Footer() {
   
                 <li>
                   <a
-                    href="#"
-                    rel="noreferrer"
-                    target="_blank"
+                    href="https://twitter.com/home"
+                    
                     className="text-gray-700 transition hover:opacity-75"
                   >
                     <span className="sr-only">Twitter</span>
