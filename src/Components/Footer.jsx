@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
-      <footer className="bg-[#92aa7f]">
+      <footer className="bg-[#92aa7f] mt-52">
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-start lg:gap-8">
             <div className="text-[#D8B3B9]">
@@ -23,7 +23,7 @@ export default function Footer() {
               <div className="col-span-2">
                 <div>
                   <h2 className="text-2xl font-bold text-[#1F2C3A]">
-                    Get the latest news!
+                    Scopri le ultime novità!
                   </h2>
   
                   <p className="mt-4 text-[#D8B3B9]">
@@ -39,23 +39,23 @@ export default function Footer() {
                     Email{" "}
                   </label>
   
-                  <div className="border border-gray-100 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4">
+                  <div className=" p-2 focus-within:ring sm:flex sm:items-center sm:gap-4 pb-10">
                     <input
                       type="email"
                       id="UserEmail"
                       placeholder="john@rhcp.com"
-                      className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm"
+                      className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm px-6 py-3 rounded-md"
                     />
   
-                    <button className="mt-1 w-full bg-[#D8B3B9] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-[#BECBD9] sm:mt-0 sm:w-auto sm:shrink-0">
-                      Sign Up
+                    <button className="mt-1 w-full bg-[#D8B3B9] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-[#BECBD9] sm:mt-0 sm:w-auto sm:shrink-0 rounded-md">
+                      Iscriviti
                     </button>
                   </div>
                 </form>
               </div>
   
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900">Services</p>
+                <p className="font-medium text-gray-900">Servizi</p>
   
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
@@ -85,7 +85,7 @@ export default function Footer() {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                     Adoption{" "}
+                     Adozioni{" "}
                     </Link>
                   </li>
   
@@ -112,7 +112,7 @@ export default function Footer() {
               </div>
   
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900">Company</p>
+                <p className="font-medium text-gray-900">Società</p>
   
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
@@ -121,7 +121,7 @@ export default function Footer() {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      About{" "}
+                      Chi siamo{" "}
                     </Link>
                   </li>
   
@@ -131,7 +131,7 @@ export default function Footer() {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Sustainability{" "}
+                      Sostenibilità{" "}
                     </Link>
                   </li>
   
@@ -141,7 +141,7 @@ export default function Footer() {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Product Certification{" "}
+                      Certificazione Prodotti{" "}
                     </Link>
                   </li>
                  
@@ -149,7 +149,7 @@ export default function Footer() {
               </div>
   
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900">Helpful Links</p>
+                <p className="font-medium text-gray-900">Link Utili</p>
   
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
@@ -158,7 +158,7 @@ export default function Footer() {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Contact{" "}
+                      Contatti{" "}
                     </Link>
                   </li>
   
@@ -185,7 +185,7 @@ export default function Footer() {
               </div>
   
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900">Legal</p>
+                <p className="font-medium text-gray-900">Legale</p>
   
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
@@ -194,7 +194,7 @@ export default function Footer() {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Accessibility{" "}
+                      Accessibilità{" "}
                     </Link>
                   </li>
   
@@ -204,7 +204,7 @@ export default function Footer() {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Returns Policy{" "}
+                      Politica Resi{" "}
                     </Link>
                   </li>
   
@@ -214,7 +214,7 @@ export default function Footer() {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                      Refund Policy{" "}
+                      Politica Rimborsi{" "}
                     </Link>
                   </li>
   
@@ -223,7 +223,7 @@ export default function Footer() {
               </div>
   
               <div className="col-span-2 sm:col-span-1">
-                <p className="font-medium text-gray-900">Support</p>
+                <p className="font-medium text-gray-900">Supporto</p>
   
                 <ul className="mt-6 space-y-4 text-sm">
                   <li>
@@ -232,7 +232,7 @@ export default function Footer() {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                     Donate{" "}
+                     Donazioni{" "}
                     </Link>
                   </li>
   
@@ -242,7 +242,7 @@ export default function Footer() {
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
-                     Our Events{" "}
+                     I Nostri Eventi{" "}
                     </Link>
                   </li>
                 </ul>
@@ -332,7 +332,7 @@ export default function Footer() {
                     className="text-gray-500 transition hover:opacity-75"
                   >
                     {" "}
-                    Terms & Conditions{" "}
+                    Termini e condizioni{" "}
                   </a>
                 </li>
   
@@ -342,7 +342,7 @@ export default function Footer() {
                     className="text-gray-500 transition hover:opacity-75"
                   >
                     {" "}
-                    Privacy Policy{" "}
+                    Privacy{" "}
                   </a>
                 </li>
   
