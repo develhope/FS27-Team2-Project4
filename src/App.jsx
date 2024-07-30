@@ -7,11 +7,12 @@ import { Adozioni } from "./Components/Adozioni";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 
+
 function App() {
   return (
     <>
       <Navbar />
-      
+
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
