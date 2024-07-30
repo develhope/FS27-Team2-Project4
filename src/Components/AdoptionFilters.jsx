@@ -2,10 +2,11 @@ export function AdoptionFilters({ filterCard, setFilterCard }) {
   function handleFilter(e) {
     setFilterCard(e.target.name);
   }
+
+
   const selected = "bg-[#f6bcb2]";
   return (
     <div>
-      {/*   TODO----> MOSTRARE IL FILTER IN TUTTA LA RESPONSIVE--SCOMPARE SE RIMPICCIOLITO A MOBILE*/}
       <div>
         <nav className="flex gap-6 justify-center p-10" aria-label="Tabs">
           <button
