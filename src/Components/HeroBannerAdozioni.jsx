@@ -3,6 +3,7 @@ import heroAdoptionGatti from "../assets/images/hero-adoption-cat.jpg";
 import heroAdoptionCani from "../assets/images/hero-adoption-dog.jpg";
 import heroAdoptionCuore from "../assets/images/hero-adoption-cuore.jpg";
 
+
 export function HeroBannerAdozioni({ filterCard }) {
   let backgroundImage = heroAdoption;
   let displayCaption = "none";
