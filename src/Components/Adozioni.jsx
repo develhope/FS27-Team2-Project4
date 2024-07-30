@@ -8,8 +8,8 @@ export function Adozioni() {
 
   return (
     <>
-      <HeroBannerAdozioni />
-      <AdoptionFilters setFilterCard={ setFilterCard}  filterCard={filterCard}/>
+      <HeroBannerAdozioni filterCard={filterCard} />
+      <AdoptionFilters setFilterCard={setFilterCard} filterCard={filterCard} />
       <PetArray filterCard={filterCard} />
     </>
   );
