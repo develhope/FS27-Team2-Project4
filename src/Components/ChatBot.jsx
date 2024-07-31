@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaComments } from "react-icons/fa";
+import { useHistory } from "react-router-dom";
 
 const teamMembers = [
   "Astrid",
@@ -16,7 +17,6 @@ const animals = [
     famiglia: "cane",
     razza: "Golden Retriever",
     sesso: "Maschio",
-
     età: "3",
     problematiche: "Nessuna",
     sterilizzato: "Non sterilizzato",
@@ -31,6 +31,7 @@ const ChatBot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const chatRef = useRef(null);
+  const history = useHistory();
 
   const toggleChat = () => {
     setIsOpen(!isOpen);
@@ -47,15 +48,6 @@ const ChatBot = () => {
     }
   };
 
-  const teamMemberResponses = {
-    Astrid: "Ciao sono Astrid! Sono la manager del rifugio, decido io cosa tu puoi adottare.",
-    Manuel: "Ciao sono Manuel: divertiti a pescare tra gli animali che abbiamo, ciò che peschi ti tieni e non hai diritto ad un secondo lancio.",
-    Aurora: "Ciao sono Aurora. Mentre scegli, ti indirizzo su quale band K-pop è più adatta al tuo amico a quattro zampe.",
-    Alessandro: "Ciao sono Alessandro. Scegli il cane o gatto che ti piace e poi fuggi sciocco",
-    Francesca: "Ciao sono Francesca. Nel frattempo che decidi ti parlo di teatro",
-    Antonio: "Ciao sono Antonio! Che cane vuoi?",
-  };
-
   const generateResponse = (question) => {
     let response = "";
 
@@ -66,30 +58,28 @@ const ChatBot = () => {
     } else if (question.toLowerCase().includes("volontariato")) {
       response =
         "Siamo sempre alla ricerca di volontari! Puoi contattarci per maggiori informazioni.";
+    } else if (question.toLowerCase().includes("che animali posso adottare?")) {
+      response = "Ti reindirizzo alla pagina delle adozioni...";
+      setTimeout(() => {
+        history.push("/adozioni");
+      }, 2000); 
     } else {
-      // Verifica se l'utente vuole parlare con un membro specifico
-      const matchMember = question.toLowerCase().match("posso parlare con?");
-  if (matchMember) {
-    requestedMember = matchMember[1].trim(); 
-    response = teamMemberResponses[requestedMember] || "Mi dispiace, al momento non sono disponibile. Posso aiutarti io o preferisci che ti metta in contatto con un altro membro del team?"
+      // Simulazione risposte specifiche per gli animali
+      const animal = animals.find((a) =>
+        question.toLowerCase().includes(a.nome.toLowerCase())
+      );
+      if (animal) {
+        response = `${animal.nome} è un ${animal.famiglia} ${animal.razza}. Ha ${animal.età} anni e ${
+          animal.sterilizzato === "Sterilizzato" ? "è sterilizzato" : "non è sterilizzato"
+        }. ${animal.descrizione}`;
       } else {
-        // Simulazione risposte specifiche per gli animali
-        const animal = animals.find((a) =>
-          question.toLowerCase().includes(a.nome.toLowerCase())
-        );
-        if (animal) {
-          response = `${animal.nome} è un ${animal.famiglia} ${animal.razza}. Ha ${animal.età} anni e ${
-            animal.sterilizzato === "Sterilizzato" ? "è sterilizzato" : "non è sterilizzato"
-          }. ${animal.descrizione}`;
-        } else {
-          response =
-            "Grazie per il tuo messaggio! Uno dei nostri operatori ti risponderà a breve.";
-        }
+        response =
+          "Grazie per il tuo messaggio! Uno dei nostri operatori ti risponderà a breve.";
       }
     }
 
     const botMessage = {
-      sender: response in teamMemberResponses ? requestedMember : teamMembers[Math.floor(Math.random() * teamMembers.length)],
+      sender: teamMembers[Math.floor(Math.random() * teamMembers.length)],
       text: response,
     };
     setMessages((prevMessages) => [...prevMessages, botMessage]);
