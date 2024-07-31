@@ -170,7 +170,7 @@ function Donate() {
             disabled={isPending || !donationAmount}
           >
             {isPending ? (
-              <div className="spinner border-4 border-gray-200 border-t-4 border-[#526742] rounded-full w-5 h-5 animate-spin mx-auto"></div>
+              <div className="spinner border-t-4 border-[#526742] rounded-full w-5 h-5 animate-spin mx-auto"></div>
             ) : (
               "Dona ora"
             )}
