@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaComments } from "react-icons/fa";
-import { useHistory } from "react-router-dom";
 
 const teamMembers = [
   "Astrid",
@@ -11,70 +10,47 @@ const teamMembers = [
   "Francesca",
 ];
 
-const animals = [
-  {
-    nome: "Scout",
-    famiglia: "cane",
-    razza: "Golden Retriever",
-    sesso: "Maschio",
-    età: "3",
-    problematiche: "Nessuna",
-    sterilizzato: "Non sterilizzato",
-    descrizione:
-      "Scout è un golden retriever di 3 anni, sempre felice e pronto a giocare. È perfetto per le famiglie con bambini.",
-  },
-  // ... altri animali ...
-];
-
-const ChatBot = () => {
+const ChatBot = ({ animals }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const chatRef = useRef(null);
-  const history = useHistory();
 
-  const toggleChat = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleChat = () => setIsOpen(!isOpen);
 
   const handleSend = () => {
     if (input.trim()) {
       const userMessage = { sender: "user", text: input };
       setMessages([...messages, userMessage]);
       setInput("");
-      setTimeout(() => {
-        generateResponse(userMessage.text);
-      }, 1000);
+      setTimeout(() => generateResponse(userMessage.text), 1000);
     }
   };
 
   const generateResponse = (question) => {
     let response = "";
 
-    // Simulazione risposte generiche del rifugio
     if (question.toLowerCase().includes("adozione")) {
-      response =
-        "Tutti i nostri animali sono disponibili per l'adozione. Vuoi informazioni su un animale specifico?";
+      response = "Tutti i nostri animali sono disponibili per l'adozione. Vuoi informazioni su un animale specifico?";
     } else if (question.toLowerCase().includes("volontariato")) {
-      response =
-        "Siamo sempre alla ricerca di volontari! Puoi contattarci per maggiori informazioni.";
+      response = "Siamo sempre alla ricerca di volontari! Puoi contattarci per maggiori informazioni.";
     } else if (question.toLowerCase().includes("che animali posso adottare?")) {
       response = "Ti reindirizzo alla pagina delle adozioni...";
       setTimeout(() => {
-        history.push("/adozioni");
-      }, 2000); 
+        window.location.href = "/adozioni";
+      }, 2000);
     } else {
-      // Simulazione risposte specifiche per gli animali
       const animal = animals.find((a) =>
-        question.toLowerCase().includes(a.nome.toLowerCase())
+        question.toLowerCase().includes(a.nome?.toLowerCase())
       );
+
       if (animal) {
-        response = `${animal.nome} è un ${animal.famiglia} ${animal.razza}. Ha ${animal.età} anni e ${
-          animal.sterilizzato === "Sterilizzato" ? "è sterilizzato" : "non è sterilizzato"
-        }. ${animal.descrizione}`;
+        const { nome, famiglia, razza, età, sterilizzato, descrizione } = animal;
+        response = `${nome} è un ${famiglia} ${razza}. Ha ${età} anni e ${
+          sterilizzato === "Sterilizzato" ? "è sterilizzato" : "non è sterilizzato"
+        }. ${descrizione}`;
       } else {
-        response =
-          "Grazie per il tuo messaggio! Uno dei nostri operatori ti risponderà a breve.";
+        response = "Grazie per il tuo messaggio! Uno dei nostri operatori ti risponderà a breve.";
       }
     }
 
@@ -110,9 +86,7 @@ const ChatBot = () => {
               <div
                 key={index}
                 className={`my-2 p-2 rounded-lg ${
-                  msg.sender === "user"
-                    ? "bg-blue-100 text-right"
-                    : "bg-gray-100 text-left"
+                  msg.sender === "user" ? "bg-blue-100 text-right" : "bg-gray-100 text-left"
                 }`}
               >
                 <p className="text-sm">
@@ -131,11 +105,10 @@ const ChatBot = () => {
               onKeyPress={(e) => {
                 if (e.key === "Enter") handleSend();
               }}
-              placeholder="Scrivi un messaggio..."
             />
             <button
+              className="bg-[#92aa7f] text-white py-2 px-4 rounded-md font-bold ml-2"
               onClick={handleSend}
-              className="ml-2 bg-[#92aa7f] text-white p-2 rounded-lg"
             >
               Invia
             </button>
@@ -143,10 +116,10 @@ const ChatBot = () => {
         </div>
       ) : (
         <button
+          className="bg-[#92aa7f] text-white p-2 rounded-full shadow-lg"
           onClick={toggleChat}
-          className="bg-[#92aa7f] text-white p-4 rounded-full shadow-lg"
         >
-          <FaComments className="text-2xl" />
+          <FaComments />
         </button>
       )}
     </div>

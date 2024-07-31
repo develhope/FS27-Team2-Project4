@@ -6,7 +6,7 @@ import Profile from "./Components/Profile";
 import { Adozioni } from "./Components/Adozioni";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
-
+import ChatBot from "./Components/ChatBot";
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/adozioni" element={<Adozioni />} />
         </Routes>
+        <ChatBot />
       </div>
       <Footer />
     </>
