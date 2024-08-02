@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const FAQItem = ({ question, answer }) => {
-  
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <details className="group [&_summary::-webkit-details-marker]:hidden" open>
+    <div className="group [&_summary::-webkit-details-marker]:hidden">
       <summary
         className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-light-green p-4 text-gray-900"
+        onClick={toggleOpen}
       >
         <h2 className="font-medium">{question}</h2>
 
         <svg
-          className="size-5 shrink-0 transition duration-300 group-open:-rotate-180"
+          className={`size-5 shrink-0 transition duration-300 ${isOpen ? 'rotate-180' : ''}`}
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -20,10 +26,12 @@ const FAQItem = ({ question, answer }) => {
         </svg>
       </summary>
 
-      <p className="mt-4 px-4 leading-relaxed text-gray-700">
-        {answer}
-      </p>
-    </details>
+      {isOpen && (
+        <p className="mt-4 px-4 leading-relaxed text-gray-700">
+          {answer}
+        </p>
+      )}
+    </div>
   );
 };
 
