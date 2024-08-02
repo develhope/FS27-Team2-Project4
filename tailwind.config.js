@@ -19,6 +19,18 @@ export default {
       // => @media (min-width: 1536px) { ... }
       extend: {},
     },
+    colors:{
+      'dark-green': '#526742',
+      'light-green': '#92aa7f',
+      'pink': '#f6bcb2',
+      'light-grey': '#d7d7d7',
+      'dark-grey': '#1e1e1e',
+      'dark-purple': '#674274',
+      'light-purple': '#9f7cb4',
+      'dark-blue': '#1d3557',
+      'light-blue': '#457b9d',
+      'yellow': '#f7e3af',
+    },
     plugins: [],
   },
 };
