@@ -1,7 +1,7 @@
 export function PetCardFull({ animal }) {
   return (
-    <div className="flex justify-center items-center p-4 sm:flex-col">
-      <div className="border-y-neutral-900 border-solid rounded-md p-4 w-full max-w-2xl object-cover shadow-xl flex flex-col justify-center bg-white">
+    <div className="flex justify-center items-center p-4 sm:flex-col ">
+      <div className="border-y-neutral-900 border-solid rounded-md p-4 w-full max-w-2xl object-cover shadow-xl flex flex-col justify-center bg-white ">
         <img
           src={animal.img}
           alt="foto profilo pet"
