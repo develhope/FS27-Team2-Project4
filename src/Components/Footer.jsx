@@ -164,7 +164,7 @@ export default function Footer() {
   
                   <li>
                     <Link
-                      to="/faqs"
+                      to="/FAQPage"
                       className="text-gray-700 transition hover:opacity-75"
                     >
                       {" "}
