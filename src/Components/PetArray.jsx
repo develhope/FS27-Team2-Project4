@@ -511,15 +511,21 @@ export function PetArray({ filterCard }) {
   const [selectedAnimal, setSelectedAnimal] = useState(null);
   //variabile per caricare tre file di cards e aggiungerle a gruppi
   const [visibleRows, setVisibleRows] = useState(3);
-  const cardsPerRow = 5;
+  const [isCardVisible, setIsCardVisible] = useState(false);
+
+  const cardsPerRow = 5; // Numero di card per riga
   const visibleCards = visibleRows * cardsPerRow;
 
   const handleCardClick = (animal) => {
     setSelectedAnimal(animal);
+    setIsCardVisible(true);
   };
 
   const handleOverlayClick = () => {
-    setSelectedAnimal(null);
+    setIsCardVisible(false);
+    setTimeout(() => {
+      setSelectedAnimal(null);
+    }, 300); // Match the duration with your animation duration
   };
 
   const handleLoadMore = () => {
@@ -527,36 +533,28 @@ export function PetArray({ filterCard }) {
   };
 
   return (
-    <div>
+    <>
       <div className="flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {/*         lo slice ritorna solo una porzione dell'array quindi posso usarlo per renderizzare solo un tot di elementi
-           */}{" "}
-          {animals
-            .slice(0, visibleCards)
-            .filter((card) => {
-              if (filterCard === "tutti") {
-                return card === card;
-              } else if (filterCard === "cuore") {
-                return card.problematiche !== "Nessuna";
-              } else {
-                return card.famiglia === filterCard;
-              }
-            })
-            .map((animal, index) => (
-              <PetCardSmall
-                key={index}
-                animal={animal}
-                onClick={() => handleCardClick(animal)}
-              />
-            ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10">
+          {animals.slice(0, visibleCards).map((animal, index) => (
+            <PetCardSmall
+              key={index}
+              animal={animal}
+              onClick={() => handleCardClick(animal)}
+            />
+          ))}
         </div>
         {selectedAnimal && (
           <div
             className="fixed inset-0 z-40 bg-black bg-opacity-50 flex items-center justify-center"
             onClick={handleOverlayClick}
           >
-            <div onClick={(e) => e.stopPropagation()}>
+            <div
+              className={`transform transition-transform duration-300 ${
+                isCardVisible ? "scale-100" : "scale-0"
+              }`}
+              onClick={(e) => e.stopPropagation()}
+            >
               <PetCardFull animal={selectedAnimal} />
             </div>
           </div>
@@ -565,13 +563,13 @@ export function PetArray({ filterCard }) {
       {visibleCards < animals.length && (
         <div className="flex justify-center mt-4">
           <button
-            className="bg-[#92aa7f] text-white py-2 px-4 rounded-md font-bold "
+            className="bg-[#92aa7f] text-white py-2 px-4 rounded mt-12 mb-16"
             onClick={handleLoadMore}
           >
             Carica Altre
           </button>
         </div>
       )}
-    </div>
+    </>
   );
 }

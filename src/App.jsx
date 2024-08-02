@@ -10,7 +10,7 @@ import ChatBot from "./Components/ChatBot";
 
 function App() {
   return (
-    <>
+    <div className="cursor">
       <Navbar />
 
       <div>
@@ -23,7 +23,7 @@ function App() {
         <ChatBot />
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function AdoptionForm() {
   const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ function AdoptionForm() {
   };
 
   return (
-    <section className="bg-gray-50">
+    <section className="bg-gray-50 z-0">
       <div className="relative overflow-hidden bg-white py-16">
         <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl">
           {/* Aggiungere sfondo decorativo se serve */}
