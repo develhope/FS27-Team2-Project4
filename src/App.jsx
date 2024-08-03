@@ -7,6 +7,7 @@ import { Adozioni } from "./Components/Adozioni";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import ChatBot from "./Components/ChatBot";
+import FAQPage from "./Components/FAQPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/donate" element={<DonateWrapper />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/adozioni" element={<Adozioni />} />
+          <Route path="/FAQPage" element={<FAQPage />} />
         </Routes>
         <ChatBot />
       </div>

@@ -19,7 +19,7 @@ function Navbar() {
 
           <ul className="hidden md:flex space-x-4">
             <li>
-              <Link to="/home" className="hover:text-[#f6bcba] transition duration-300">
+              <Link to="/" className="hover:text-[#f6bcba] transition duration-300">
                 Home
               </Link>
             </li>

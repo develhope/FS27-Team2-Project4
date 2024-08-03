@@ -39,6 +39,11 @@ const ChatBot = ({ animals }) => {
       setTimeout(() => {
         window.location.href = "/adozioni";
       }, 2000);
+    } else if (question.toLowerCase().includes("faq")) {
+      response = "Ti reindirizzo alla pagina delle adozioni...";
+      setTimeout(() => {
+        window.location.href = "/FAQPage";
+      }, 2000);
     } else {
       const animal = animals.find((a) =>
         question.toLowerCase().includes(a.nome?.toLowerCase())
