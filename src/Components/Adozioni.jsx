@@ -8,7 +8,7 @@ export function Adozioni() {
   const [filterCard, setFilterCard] = useState("tutti");
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       <HeroBannerAdozioni filterCard={filterCard} />
       <AdoptionFilters setFilterCard={setFilterCard} filterCard={filterCard} />
       <PetArray filterCard={filterCard} />
