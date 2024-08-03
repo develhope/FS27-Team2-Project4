@@ -1,4 +1,4 @@
-* {
+/* * {
   cursor: url(../public/SVG/Risorsa\ 1.svg), auto;
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -6,8 +6,10 @@
 }
 a {
   cursor: url(../public/SVG/Risorsa\ 1.svg), pointer;
+} */
+* {
+  font-family: "Montserrat", sans-serif;
 }
-
 .profile-container {
   height: 100vw;
   display: flex;
