@@ -29,7 +29,7 @@ function AdoptionForm() {
   };
 
   return (
-    <section className="bg-gray-50 z-0">
+    <section className="bg-gray-50 z-0 px-4 mx-4">
       <div className="relative overflow-hidden bg-white py-16">
         <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl">
           {/* Aggiungere sfondo decorativo se serve */}
@@ -49,11 +49,11 @@ function AdoptionForm() {
                 </svg>
               </a>
               <h2 className="mt-6 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
-                Welcome
+                Vuoi conoscere uno dei nostri cuccioli?
               </h2>
               <p className="mt-4 leading-relaxed text-gray-500">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.
+                Compila il form se vuoi fare la conoscenza dei nostri amici
+                pelosi, lo esamineremo e verrai ricontattato al più presto
               </p>
             </div>
             <form
@@ -63,7 +63,7 @@ function AdoptionForm() {
               <div className="col-span-6 sm:col-span-3">
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block font-medium text-gray-400 text-xs"
                 >
                   Nome
                 </label>
@@ -73,7 +73,7 @@ function AdoptionForm() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2"
                   required
                 />
               </div>
@@ -81,7 +81,7 @@ function AdoptionForm() {
               <div className="col-span-6 sm:col-span-3">
                 <label
                   htmlFor="surname"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-xs font-medium text-gray-400"
                 >
                   Cognome
                 </label>
@@ -91,7 +91,7 @@ function AdoptionForm() {
                   name="surname"
                   value={formData.surname}
                   onChange={handleChange}
-                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2"
                   required
                 />
               </div>
@@ -99,7 +99,7 @@ function AdoptionForm() {
               <div className="col-span-6">
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-xs font-medium text-gray-400"
                 >
                   Email
                 </label>
@@ -109,7 +109,7 @@ function AdoptionForm() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2"
                   required
                 />
               </div>
@@ -117,7 +117,7 @@ function AdoptionForm() {
               <div className="col-span-6 sm:col-span-3">
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-xs font-medium text-gray-400"
                 >
                   Telefono
                 </label>
@@ -127,14 +127,14 @@ function AdoptionForm() {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2"
                 />
               </div>
 
               <div className="col-span-6">
                 <label
                   htmlFor="address"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-xs font-medium text-gray-400"
                 >
                   Indirizzo
                 </label>
@@ -144,14 +144,14 @@ function AdoptionForm() {
                   name="address"
                   value={formData.address}
                   onChange={handleChange}
-                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2"
                 />
               </div>
 
               <div className="col-span-6 sm:col-span-3">
                 <label
                   htmlFor="occupation"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-xs font-medium text-gray-400"
                 >
                   Occupazione
                 </label>
@@ -161,14 +161,14 @@ function AdoptionForm() {
                   name="occupation"
                   value={formData.occupation}
                   onChange={handleChange}
-                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2"
                 />
               </div>
 
               <div className="col-span-6">
                 <label
                   htmlFor="reasons"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-xs font-medium text-gray-400"
                 >
                   Motivi per cui vuoi adottare
                 </label>
@@ -185,9 +185,9 @@ function AdoptionForm() {
               <div className="col-span-6">
                 <label
                   htmlFor="experience"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-xs font-medium text-gray-400"
                 >
-                  Esperienza con animali
+                  Che esperienza hai con gli animali?
                 </label>
                 <textarea
                   id="experience"
@@ -202,16 +202,16 @@ function AdoptionForm() {
               <div className="col-span-6">
                 <label
                   htmlFor="petPreference"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-xs font-medium text-gray-400"
                 >
-                  Preferenze per animali
+                  A quali animali sei interessato?
                 </label>
                 <select
                   id="petPreference"
                   name="petPreference"
                   value={formData.petPreference}
                   onChange={handleChange}
-                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2"
                 >
                   <option value="">Seleziona...</option>
                   <option value="dogs">Cani</option>
@@ -230,9 +230,9 @@ function AdoptionForm() {
                   className="h-4 w-4 text-blue-600 focus:ring-blue-500"
                   required
                 />
-                <label htmlFor="agreeTerms" className="text-sm text-gray-700">
+                <label htmlFor="agreeTerms" className="text-xs text-soft-grey">
                   Accetto i{" "}
-                  <a href="#" className="text-blue-600">
+                  <a href="#" className="text-blue-600 text-xs">
                     Termini e Condizioni
                   </a>
                 </label>
@@ -242,7 +242,7 @@ function AdoptionForm() {
               <div className="col-span-6">
                 <button
                   type="submit"
-                  className="inline-block rounded-lg bg-blue-600 px-8 py-3 text-base font-semibold text-white transition hover:bg-blue-700"
+                  className="bg-light-green text-white py-2 px-4 rounded mt-12 mb-16 hover:bg-dark-green"
                 >
                   Invia
                 </button>
