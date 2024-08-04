@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
-      <footer className="bg-[#92aa7f] mt-52">
+      <footer className="bg-light-green mt-52">
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-start lg:gap-8">
-            <div className="text-[#D8B3B9]">
+            <div className="text-pink">
               <svg
                 className="h-8"
                 viewBox="0 0 28 24"
@@ -22,7 +22,7 @@ export default function Footer() {
             <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">
               <div className="col-span-2">
                 <div>
-                  <h2 className="text-2xl font-bold text-[#1F2C3A]">
+                  <h2 className="text-2xl font-bold text-gray-700">
                     Scopri le ultime novità!
                   </h2>
   
@@ -47,7 +47,7 @@ export default function Footer() {
                       className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm px-6 py-3 rounded-md rounded-r-none"
                     />
   
-                    <button className="mt-1 w-full bg-[#D8B3B9] px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-[#D7D7D7] hover:text-[#526742] sm:mt-0 sm:w-auto sm:shrink-0 rounded-md rounded-l-none">
+                    <button className="mt-1 w-full bg-pink px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition-none hover:bg-light-grey hover:text-dark-green sm:mt-0 sm:w-auto sm:shrink-0 rounded-md rounded-l-none">
                       Iscriviti
                     </button>
                   </div>
@@ -259,7 +259,7 @@ export default function Footer() {
   
                     <svg
                       className="h-6 w-6"
-                      fill="#D8B3B9"
+                      fill="pink"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
                     >
@@ -282,7 +282,7 @@ export default function Footer() {
   
                     <svg
                       className="h-6 w-6"
-                      fill="#D8B3B9"
+                      fill="pink"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
                     >
@@ -305,7 +305,7 @@ export default function Footer() {
   
                     <svg
                       className="h-6 w-6"
-                      fill="#D8B3B9"
+                      fill="pink"
                       viewBox="0 0 24 24"
                       aria-hidden="true"
                     >
