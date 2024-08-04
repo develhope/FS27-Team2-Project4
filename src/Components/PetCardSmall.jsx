@@ -3,7 +3,7 @@ export function PetCardSmall({ animal, onClick }) {
     <div className="w-56 ">
       <a
         onClick={onClick}
-        className="block rounded-lg p-4 shadow-xl shadow-slate-400 transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl"
+        className="block rounded-lg p-4 shadow-xl shadow-slate-400 transform transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-2xl "
       >
         <img
           alt="cat"

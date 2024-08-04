@@ -1,7 +1,7 @@
 export function PetCardFull({ animal }) {
   return (
     <div className="flex justify-center items-center p-4 sm:flex-col">
-      <div className="border-y-neutral-900 border-solid rounded-3xl shadow-2xl p-4 w-full max-w-xl flex flex-col justify-center bg-white">
+      <div className="border-y-neutral-900 border-solid rounded-3xl shadow-2xl p-8  w-full max-w-xl flex flex-col justify-center bg-white">
         <div className="flex justify-center">
           <img
             src={animal.img}
@@ -9,18 +9,18 @@ export function PetCardFull({ animal }) {
             className="rounded-3xl w-96 h-96 object-cover"
           />
         </div>
-        <div className="border-gray-400 p-8 my-2 w-96">
-          <div className="flex justify-between mb-4">
+        <div className="border-gray-400  my-2 w-96">
+          <div className="flex justify-between mb-4 mt-6">
             <p className="font-semibold text-2xl">{animal.nome}</p>
-            <button
+            {/*  <button
               className={`rounded-xl p-2 text-white font-semibold text-sm ${
-                animal.famiglia === "gatto" ? "bg-[#f6bcb2]" : "bg-[#92aa7f]"
+                animal.famiglia === "gatto" ? "bg-[#f6bcb2] hover:bg-dark-purple " : "bg-[#92aa7f] hover:bg-dark-green"
               }`}
             >
               {animal.sesso === "Maschio"
                 ? "Vorrei conoscerlo"
                 : "Vorrei conoscerla"}
-            </button>
+            </button> */}
           </div>
 
           <p className="text-xs my-2">
