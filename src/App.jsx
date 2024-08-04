@@ -9,6 +9,7 @@ import Footer from "./Components/Footer";
 import ChatBot from "./Components/ChatBot";
 import FAQPage from "./Components/FAQPage";
 
+
 function App() {
   return (
     <div className="cursor">

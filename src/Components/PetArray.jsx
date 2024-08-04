@@ -575,7 +575,7 @@ export function PetArray({ filterCard }) {
       {visibleCards < animals.length && (
         <div className="flex justify-center mt-4">
           <button
-            className="bg-pink text-dark-grey p-4 pr-8 pl-8 mt-16 rounded-md font-bold "
+            className="bg-pink shadow-lg hover:bg-light-purple hover:shadow-xl text-dark-grey p-4 pr-8 pl-8 mt-16 rounded-md font-bold "
             onClick={handleLoadMore}
           >
             Carica Altre

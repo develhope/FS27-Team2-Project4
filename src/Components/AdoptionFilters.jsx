@@ -13,7 +13,7 @@ export function AdoptionFilters({ filterCard, setFilterCard }) {
             name="tutti"
             className={`${
               filterCard === "tutti" ? selected : ""
-            } shrink-0 rounded-lg p-4 pr-8 pl-8 text-sm font-semibold text-gray-800 hover:bg-pink hover:text-gray-700`}
+            } shrink-0 rounded-lg p-4 pr-8 pl-8 text-sm font-semibold text-gray-800 hover:bg-pink hover:text-gray-700 `}
           >
             Tutti
           </button>

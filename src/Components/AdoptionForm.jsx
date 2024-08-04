@@ -8,6 +8,7 @@ function AdoptionForm() {
     phone: "",
     address: "",
     occupation: "",
+    petName: "",
     reasons: "",
     experience: "",
     petPreference: "",
@@ -29,12 +30,13 @@ function AdoptionForm() {
     alert(
       "Grazie, abbiamo ricevuto la tua richiesta, ti ricontatteremo presto."
     );
+    
   };
 
   return (
     <section className="my-14 ">
       <div className=" flex bg-light-green justify-center rounded-2xl px-32">
-        <div className="px-16 py-10 mx-auto max-w-7xl">
+        <div className="px-2 py-10 mx-auto max-w-7xl">
           <div className="text-center">
             <a href="#" className="inline-block">
               <span className="sr-only">Home</span>
@@ -156,6 +158,23 @@ function AdoptionForm() {
                 id="occupation"
                 name="occupation"
                 value={formData.occupation}
+                onChange={handleChange}
+                className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2"
+              />
+            </div>
+
+            <div className="col-span-6 sm:col-span-3">
+              <label
+                htmlFor="petName"
+                className="block text-sm font-medium text-gray-400"
+              >
+                Nome dell'animale
+              </label>
+              <input
+                type="text"
+                id="petName"
+                name="petName"
+                value={formData.petName}
                 onChange={handleChange}
                 className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm p-2"
               />
