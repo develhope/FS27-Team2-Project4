@@ -4,7 +4,7 @@ import FAQPage from "./FAQPage";
 function Home() {
   return (
     <div>
-      <div className="main-content p-10 text-center mt-20">
+      <div className="main-content pb-10 text-center">
         <Banner />
         <FAQPage />
       </div>

@@ -7,23 +7,23 @@ return (
   
 
 
-<section class="relative bg-[url(../src/assets/images/cld-header.jpeg)] bg-cover bg-center bg-no-repeat ">
+<section class="relative bg-[url(../src/assets/images/cld-header.jpeg)] bg-cover bg-center bg-no-repeat">
 
   <div
-    className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l "
+    className="absolute inset-0 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l "
   ></div>
 
   <div
     className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8 "
   >
     <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right ">
-      <h1 className="text-3xl font-extrabold sm:text-5xl text-dark-grey">
+      <h1 className="text-3xl font-extrabold sm:text-5xl text-light-grey">
       Incontra l'anima gemella del tuo cuore
 
         <strong className="block font-extrabold text-pink"> ... pelosa! </strong>
       </h1>
 
-      <p className="mt-4 max-w-lg sm:text-xl/relaxed text-dark-grey">
+      <p className="mt-4 max-w-lg sm:text-xl/relaxed text-light-grey">
       Il tuo cuore è pronto per un nuovo amore? Allora vieni a trovarci e scegli il tuo compagno ideale. Un'esperienza indimenticabile ti aspetta.
       </p>
 
