@@ -121,7 +121,7 @@ function Donate() {
               onChange={(e) => setDonationAmount(e.target.value)}
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               min="0"
-              step="0.01"
+              step="5"
             />
           </div>
 
