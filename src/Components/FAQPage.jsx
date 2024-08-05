@@ -37,7 +37,7 @@ const FAQPage = () => {
 
   return (
     <div className="my-10 flex flex-col">
-      <h3 className="text-3xl self-start font-bold text-dark-grey">F.A.Q</h3>
+      <h3 className="text-3xl self-start font-bold text-dark-grey px-16">F.A.Q</h3>
       <div className="space-y-4 my-9">
         {faqs.map((faq, index) => (
           <FAQItem key={index} question={faq.question} answer={faq.answer} />
