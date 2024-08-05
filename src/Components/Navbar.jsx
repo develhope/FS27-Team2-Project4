@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 
 function Navbar({ bgColor, textColor, elementText, elementBg }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
-  console.log("bgColor:", bgColor);
-  console.log("textColor:", textColor);
+  
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };

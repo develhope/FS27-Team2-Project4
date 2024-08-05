@@ -12,6 +12,7 @@ import FAQPage from "./Components/FAQPage";
 import Blog from "./Components/Blog/Blog";
 import ArticlePage from "./Components/Blog/ArticlePage";
 import { useEffect, useState } from "react";
+import FAQPage from "./Components/FAQPage";
 
 function App() {
   const [theme, setTheme] = useState({

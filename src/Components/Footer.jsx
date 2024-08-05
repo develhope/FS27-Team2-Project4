@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 export default function Footer({
-  bgColor = "bg-light-green",
-  textColor = "text-dark-grey",
+  bgColor,
+  textColor,
   elementText,
   elementBg,
 }) {
@@ -10,7 +10,7 @@ export default function Footer({
     <footer className={` ${bgColor} ${textColor} text-dark-grey mt-52`}>
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-start lg:gap-8">
-          <div className="text-[#D8B3B9]">
+          <div className="text-pink">
             <svg
               className="h-8"
               viewBox="0 0 28 24"
