@@ -20,7 +20,7 @@ function Navbar({ bgColor, textColor, elementText, elementBg }) {
           <ul className="hidden md:flex space-x-4">
             <li>
               <Link
-                to="/home"
+                to="/"
                 className={`${elementText} hover:text-pink transition duration-300`}
               >
                 Home

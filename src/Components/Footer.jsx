@@ -7,7 +7,7 @@ export default function Footer({
   elementBg,
 }) {
   return (
-    <footer className={` ${bgColor} ${textColor} text-dark-grey mt-52`}>
+    <footer className={` ${bgColor} ${textColor} text-dark-grey mt-36`}>
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="lg:flex lg:items-start lg:gap-8">
           <div className="text-pink">
@@ -70,7 +70,7 @@ export default function Footer({
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <Link
-                    to="/link"
+                    to="/"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}

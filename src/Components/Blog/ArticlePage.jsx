@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import articles from "./Articles";
+import { ErrorPage } from "./ErrorPage";
 
 function ArticlePage({ setTag }) {
   const { id } = useParams();
@@ -81,7 +82,7 @@ function ArticlePage({ setTag }) {
           </div>
         );
       default:
-        return <div>Article not found</div>;
+        return <ErrorPage />;
     }
   };
 
