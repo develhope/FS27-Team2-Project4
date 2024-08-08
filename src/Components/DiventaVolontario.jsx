@@ -25,6 +25,7 @@ const DiventaVolontario = () => {
       <div className="p-10 bg-gray-100">
         <h3 className="mb-2.5">Vuoi diventare Volontario?</h3>
         <p>Compila il form per essere ricontattato</p>
+        
         <form className="flex flex-col items-center" onSubmit={handleSubmit}>
           <label htmlFor="name" className="mt-2.5 mb-1.5">Nome</label>
           <input type="text" id="name" name="name" required className="w-4/5 max-w-xs p-2.5 mb-3.5 border" />
@@ -39,14 +40,15 @@ const DiventaVolontario = () => {
           <textarea id="message" name="message" required className="w-4/5 max-w-xs p-2.5 mb-3.5 border"></textarea>
 
           <button
-            type="submit"
-            className="py-2.5 px-5 bg-green-600 text-white border-none cursor-pointer hover:bg-green-700 mt-4"
+          type="submit"
+          className="py-2.5 px-5 bg-green-600 text-white border-none cursor-pointer hover:bg-green-700 mt-4"
+          style={{ border: '2px solid yellow' }} 
           >
-            Submit
-          </button>
-        </form>
-      </div>
-    </div>
+          Submit
+        </button>
+     </form>
+   </div>
+</div>
   );
 };
 
