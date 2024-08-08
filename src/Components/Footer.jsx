@@ -188,6 +188,17 @@ export default function Footer({
                     Live Chat{" "}
                   </Link>
                 </li>
+
+                <li>
+                  <Link
+                    to="/DiventaVolontario"
+                    className={`${elementText} text-gray-700 transition hover:text-pink`}
+                  >
+                    {" "}
+                    Diventa Volontario{" "}
+                  </Link>
+                </li>
+                
               </ul>
             </div>
 
