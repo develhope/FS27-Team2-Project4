@@ -11,6 +11,7 @@ import FAQPage from "./Components/FAQPage";
 import Blog from "./Components/Blog/Blog";
 import ArticlePage from "./Components/Blog/ArticlePage";
 import { useEffect, useState } from "react";
+import DiventaVolontario from "./Components/DiventaVolontario";
 
 function App() {
   const [theme, setTheme] = useState({
@@ -22,7 +23,7 @@ function App() {
 
   const [tag, setTag] = useState("");
 
-  useEffect(() => {;
+  useEffect(() => {
     if (tag === "gatti") {
       setTheme({
         ...theme,
@@ -68,6 +69,7 @@ function App() {
           <Route path="/adozioni" element={<Adozioni />} />
           <Route path="/FAQPage" element={<FAQPage />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/diventavolontario" element={<DiventaVolontario />} />
           <Route
             path="/article/:id"
             element={<ArticlePage theme={theme} setTag={handleTheme} />}
