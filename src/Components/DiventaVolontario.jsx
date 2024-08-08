@@ -1,9 +1,13 @@
 import React from 'react';
 
 const DiventaVolontario = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+    console.log('Form submitted');
+  };
+
   return (
     <div className="w-full text-center">
-      {/* Banner Section */}
       <div className="bg-gray-200 p-10">
         <h1 className="m-0">Main info about the page</h1>
         <p className="mt-2 text-gray-600">
@@ -11,19 +15,17 @@ const DiventaVolontario = () => {
         </p>
       </div>
 
-      {/* Text Section */}
       <div className="p-10 bg-white">
         <h2 className="mb-5">Diventa Volontario</h2>
         <p className="text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         </p>
       </div>
 
-      {/* Volunteer Form Section */}
       <div className="p-10 bg-gray-100">
         <h3 className="mb-2.5">Vuoi diventare Volontario?</h3>
         <p>Compila il form per essere ricontattato</p>
-        <form className="flex flex-col items-center">
+        <form className="flex flex-col items-center" onSubmit={handleSubmit}>
           <label htmlFor="name" className="mt-2.5 mb-1.5">Nome</label>
           <input type="text" id="name" name="name" required className="w-4/5 max-w-xs p-2.5 mb-3.5 border" />
 
@@ -36,7 +38,10 @@ const DiventaVolontario = () => {
           <label htmlFor="message" className="mt-2.5 mb-1.5">Messaggio</label>
           <textarea id="message" name="message" required className="w-4/5 max-w-xs p-2.5 mb-3.5 border"></textarea>
 
-          <button type="submit" className="py-2.5 px-5 bg-green-600 text-white border-none cursor-pointer hover:bg-green-700">
+          <button
+            type="submit"
+            className="py-2.5 px-5 bg-green-600 text-white border-none cursor-pointer hover:bg-green-700 mt-4"
+          >
             Submit
           </button>
         </form>
