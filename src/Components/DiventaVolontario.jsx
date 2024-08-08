@@ -41,14 +41,21 @@ const DiventaVolontario = () => {
 
           <button
           type="submit"
-          className="py-2.5 px-5 bg-green-600 text-white border-none cursor-pointer hover:bg-green-700 mt-4"
-          style={{ border: '2px solid yellow' }} 
-          >
-          Submit
-        </button>
+          style={{
+          display: 'block', 
+          backgroundColor: 'green',
+          color: 'white',
+          padding: '10px 20px',
+          marginTop: '20px',
+          border: '2px solid yellow'
+        }}
+    >
+    Submit
+    </button>
+
      </form>
+    </div>
    </div>
-</div>
   );
 };
 
