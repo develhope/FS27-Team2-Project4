@@ -47,7 +47,7 @@ const DiventaVolontario = () => {
           color: 'white',
           padding: '10px 20px',
           marginTop: '20px',
-          border: '2px solid yellow'
+          border: '2px solid pink'
         }}
     >
     Submit
