@@ -1,10 +1,10 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import DonateWrapper from './Components/Donate';
 import Home from './Components/Home';
 import Profile from './Components/Profile';
-import { Adozioni } from './Components/Adozioni';
+import { Adozioni } from './Components/Adozioni/Adozioni';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import ChatBot from './Components/ChatBot';
