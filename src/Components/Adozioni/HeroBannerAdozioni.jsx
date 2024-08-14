@@ -1,7 +1,7 @@
-import heroAdoption from "../assets/images/hero-adoption.jpg";
-import heroAdoptionGatti from "../assets/images/hero-adoption-cat.jpg";
-import heroAdoptionCani from "../assets/images/hero-adoption-dog.jpg";
-import heroAdoptionCuore from "../assets/images/hero-adoption-cuore.jpg";
+import heroAdoption from "../../assets/images/hero-adoption.jpg";
+import heroAdoptionGatti from "../../assets/images/hero-adoption-cat.jpg";
+import heroAdoptionCani from "../../assets/images/hero-adoption-dog.jpg";
+import heroAdoptionCuore from "../../assets/images/hero-adoption-cuore.jpg";
 import { useEffect, useState } from "react";
 
 export function HeroBannerAdozioni({ filterCard }) {
@@ -31,7 +31,7 @@ export function HeroBannerAdozioni({ filterCard }) {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div style={{ opacity: displayCaption }}>
-        <div className="absolute inset-0 bg-white/75 sm:bg-white/0 "></div>
+        <div className="absolute inset-0 bg-white/75 sm:bg-white/0  "></div>
         <div className="relative mx-auto px-4 py-32 sm:px-6 lg:flex lg:flex-col lg:items-center lg:px-8">
           <div className="lg:flex outline p-3 rounded-3xl outline-white">
             <h1 className="text-lg font-extrabold sm:text-5xl text-dark-green">
