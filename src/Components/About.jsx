@@ -41,7 +41,7 @@ const teamMembers = [
 
 export default function About() {
   return (
-    <div className="bg-light-grey py 0">
+    <div className="bg-light-grey py-10">
       <div className="container mx-auto text-center">
         <div className="bg-light-green py-10 px-6 mb-10 rounded-lg shadow-lg mt-0">
           <h1 className="text-dark-purple text-5xl font-bold mb-4">Benvenuti al Rifugio degli Animali</h1>
