@@ -12,6 +12,7 @@ import FAQPage from './Components/FAQPage';
 import Blog from './Components/Blog/Blog';
 import ArticlePage from './Components/Blog/ArticlePage';
 import DiventaVolontario from './Components/DiventaVolontario';
+import About from './Components/About';
 
 function App() {
   const [theme, setTheme] = useState({
@@ -66,6 +67,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/donate" element={<DonateWrapper />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/about" element={<About />} />
           <Route path="/adozioni" element={<Adozioni />} />
           <Route path="/FAQPage" element={<FAQPage />} />
           <Route path="/blog" element={<Blog />} />
