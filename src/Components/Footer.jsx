@@ -218,7 +218,7 @@ export default function Footer({
 
                 <li>
                   <Link
-                    to="/return"
+                    to="/resi"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
