@@ -509,8 +509,10 @@ export function PetArray({ filterCard }) {
   ]);
 
   const [selectedAnimal, setSelectedAnimal] = useState(null);
+  //
   //variabile per caricare tre file di cards e aggiungerle a gruppi
   const [visibleRows, setVisibleRows] = useState(3);
+  //
   const [isCardVisible, setIsCardVisible] = useState();
   const cardsPerRow = 5;
   const visibleCards = visibleRows * cardsPerRow;
