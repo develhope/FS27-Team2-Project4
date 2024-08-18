@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function Navbar({
   bgColor = "bg-green-600",
   textColor = "text-white",
-  elementText = "text-white",
-  elementBg = "bg-gray-200",
+  elementText = "text-black",
+  elementBg = "bg-green-600",
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -15,13 +15,14 @@ function Navbar({
 
   return (
     <nav className={`${bgColor} ${textColor} p-4`}>
-      <div className="flex items-center space-x-4">
-        {" "}
+      <div className="flex items-center justify-between">
+        {/* Logo */}
         <Link to="/" className="text-2xl font-semibold">
-          {" "}
-          {/* si deve mettere qui il logo */} Logo{" "}
+          Logo
         </Link>
-        <div className="hidden lg:flex items-center space-x-4">
+
+        {/* Menu Links */}
+        <div className="hidden lg:flex flex-grow justify-center space-x-4">
           <NavLink to="/" text="Home" />
           <NavLink to="/about" text="About" />
           <NavLink to="/community" text="Community" />
@@ -30,9 +31,14 @@ function Navbar({
           <NavLink to="/shop" text="Shop" />
           <NavLink to="/blog" text="Blog" />
           <DropdownMenu />
+        </div>
+
+        {/* Auth Buttons */}
+        <div className="hidden lg:flex space-x-4">
           <AuthButtons />
         </div>
-     
+
+        {/* Hamburger Menu */}
         <button
           onClick={toggleMenu}
           className="lg:hidden text-white focus:outline-none"
@@ -71,7 +77,7 @@ function Navbar({
         </button>
       </div>
 
-     
+      {/* Mobile Menu */}
       <div className={`lg:hidden ${isOpen ? "block" : "hidden"} mt-4`}>
         <NavLink to="/" text="Home" mobile />
         <NavLink to="/about" text="About" mobile />
@@ -90,10 +96,17 @@ function Navbar({
     return (
       <Link
         to={to}
-        className={`${
-          mobile ? "block py-2 px-4" : ""
-        } ${elementText} hover:text-pink-300 transition duration-300`}
-        onClick={() => mobile && setIsOpen(false)}
+        className={`
+          ${mobile ? "block py-2 px-4" : ""}
+          px-4 py-2 rounded
+          transition duration-300
+        `}
+        style={{
+          backgroundColor: 'transparent',
+          color: 'black'
+        }}
+        onMouseEnter={(e) => e.target.style.backgroundColor = '#f6bcb2'}
+        onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
       >
         {text}
       </Link>
@@ -105,9 +118,17 @@ function Navbar({
       <div className={mobile ? "" : "relative"}>
         <button
           onClick={toggleDropdown}
-          className={`${elementText} hover:text-pink-300 transition duration-300 ${
-            mobile ? "block w-full text-left py-2 px-4" : ""
-          }`}
+          className={`
+            px-4 py-2 rounded
+            transition duration-300
+            ${mobile ? "block w-full text-left py-2 px-4" : ""}
+          `}
+          style={{
+            backgroundColor: 'transparent',
+            color: 'black'
+          }}
+          onMouseEnter={(e) => e.target.style.backgroundColor = '#f6bcb2'}
+          onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
         >
           Contatti
         </button>
@@ -121,9 +142,10 @@ function Navbar({
           <li>
             <a
               href="https://www.facebook.com/"
-              className={`block px-4 py-2 hover:bg-gray-100 ${
-                mobile ? "text-white" : "text-green-600"
-              }`}
+              className="block px-4 py-2 transition duration-300"
+              style={{ color: 'black' }}
+              onMouseEnter={(e) => e.target.style.backgroundColor = '#ec4899'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
             >
               Facebook
             </a>
@@ -131,9 +153,10 @@ function Navbar({
           <li>
             <a
               href="https://www.instagram.com/"
-              className={`block px-4 py-2 hover:bg-gray-100 ${
-                mobile ? "text-white" : "text-green-600"
-              }`}
+              className="block px-4 py-2 transition duration-300"
+              style={{ color: 'black' }}
+              onMouseEnter={(e) => e.target.style.backgroundColor = '#ec4899'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
             >
               Instagram
             </a>
@@ -141,9 +164,10 @@ function Navbar({
           <li>
             <a
               href="https://twitter.com/home"
-              className={`block px-4 py-2 hover:bg-gray-100 ${
-                mobile ? "text-white" : "text-green-600"
-              }`}
+              className="block px-4 py-2 transition duration-300"
+              style={{ color: 'black' }}
+              onMouseEnter={(e) => e.target.style.backgroundColor = '#ec4899'}
+              onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
             >
               Twitter
             </a>
