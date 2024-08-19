@@ -15,6 +15,7 @@ import DiventaVolontario from "./Components/DiventaVolontario";
 import About from "./Components/About";
 import { ShopPage } from "./Components/Shop/ShopPage";
 import Resi from "./Components/Resi";
+import Rimborsi from "./Components/Rimborsi";
 
 function App() {
   const [theme, setTheme] = useState({
@@ -75,6 +76,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/resi" element={<Resi/>} />
+          <Route path="/rimborsi" element={<Rimborsi/>} />
           <Route path="/diventavolontario" element={<DiventaVolontario />} />
           <Route
             path="/article/:id"
