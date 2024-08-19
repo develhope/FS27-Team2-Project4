@@ -97,8 +97,8 @@ const DiventaVolontario = () => {
             Compila il form per essere ricontattato
           </p>
 
-          <form className="flex flex-col" onSubmit={handleSubmit}>
-            <div className="mb-6">
+          <form className="flex flex-col items-center" onSubmit={handleSubmit}>
+            <div className="mb-6 w-full">
               <label htmlFor="name" className="block text-lg mb-2">
                 Name
               </label>
@@ -107,13 +107,13 @@ const DiventaVolontario = () => {
                 id="name"
                 name="name"
                 required
-                placeholder="Value"
-                className="w-full md:w-3/4 lg:w-1/2 p-3 text-lg border-2 rounded-md"
+                placeholder="Enter your name"
+                className="w-full p-3 text-lg border-2 rounded-md"
                 style={{ borderColor: "#92aa7f", backgroundColor: "white" }}
               />
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 w-full">
               <label htmlFor="surname" className="block text-lg mb-2">
                 Surname
               </label>
@@ -122,13 +122,13 @@ const DiventaVolontario = () => {
                 id="surname"
                 name="surname"
                 required
-                placeholder="Value"
-                className="w-full md:w-3/4 lg:w-1/2 p-3 text-lg border-2 rounded-md"
+                placeholder="Enter your surname"
+                className="w-full p-3 text-lg border-2 rounded-md"
                 style={{ borderColor: "#92aa7f", backgroundColor: "white" }}
               />
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 w-full">
               <label htmlFor="email" className="block text-lg mb-2">
                 Email
               </label>
@@ -137,13 +137,13 @@ const DiventaVolontario = () => {
                 id="email"
                 name="email"
                 required
-                placeholder="Value"
-                className="w-full md:w-3/4 lg:w-1/2 p-3 text-lg border-2 rounded-md"
+                placeholder="Enter your email"
+                className="w-full p-3 text-lg border-2 rounded-md"
                 style={{ borderColor: "#92aa7f", backgroundColor: "white" }}
               />
             </div>
 
-            <div className="mb-6">
+            <div className="mb-6 w-full">
               <label htmlFor="message" className="block text-lg mb-2">
                 Message
               </label>
@@ -151,15 +151,15 @@ const DiventaVolontario = () => {
                 id="message"
                 name="message"
                 required
-                placeholder="Value"
-                className="w-full md:w-3/4 lg:w-1/2 p-3 text-lg border-2 rounded-md h-32"
+                placeholder="Enter your message"
+                className="w-full p-3 text-lg border-2 rounded-md h-32"
                 style={{ borderColor: "#92aa7f", backgroundColor: "white" }}
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="text-black py-2 px-6 rounded-md text-lg self-start"
+              className="text-black py-2 px-4 rounded-md text-base"
               style={{ backgroundColor: "#f6bcb2" }}
             >
               Submit
