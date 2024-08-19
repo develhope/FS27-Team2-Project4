@@ -228,7 +228,7 @@ export default function Footer({
 
                 <li>
                   <Link
-                    to="/refund"
+                    to="/rimborsi"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
