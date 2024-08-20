@@ -11,16 +11,14 @@ const DiventaVolontario = () => {
 
   return (
     <div className="w-full">
+      {/* Section 1 */}
       <div className="bg-gray-200 p-4 md:p-8 lg:p-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-          <div className="text-left">
-            <h1
-              className="m-0 text-3xl md:text-4xl lg:text-5xl"
-              style={{ color: "#92aa7f" }}
-            >
+          <div>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#92aa7f]">
               L'Importanza del Volontariato
             </h1>
-            <p className="mt-2 text-gray-600 text-justify text-sm md:text-base lg:text-lg">
+            <p className="mt-2 text-gray-600 text-sm md:text-base lg:text-lg text-justify">
               Il volontariato non è solo un'azione, è un impegno che rispecchia
               la nostra umanità. Quando scegliamo di donare il nostro tempo agli
               altri, stiamo contribuendo a costruire una società più empatica e
@@ -41,6 +39,7 @@ const DiventaVolontario = () => {
         </div>
       </div>
 
+      {/* Section 2 */}
       <div className="p-4 md:p-8 lg:p-10 bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div className="order-2 md:order-1">
@@ -51,13 +50,10 @@ const DiventaVolontario = () => {
             />
           </div>
           <div className="text-left order-1 md:order-2">
-            <h1
-              className="mb-5 text-3xl md:text-4xl lg:text-5xl"
-              style={{ color: "#92aa7f" }}
-            >
+            <h1 className="text-3xl md:text-4xl lg:text-5xl text-[#92aa7f] mb-5">
               Perché Diventare Volontario?
             </h1>
-            <p className="text-gray-600 text-justify text-sm md:text-base lg:text-lg">
+            <p className="text-gray-600 text-sm md:text-base lg:text-lg text-justify">
               Diventare volontario è un viaggio che va oltre il semplice atto
               del dare; è un'esperienza che arricchisce l'anima. Nel momento in
               cui decidi di dedicarti agli altri, scopri una nuova prospettiva
@@ -71,26 +67,22 @@ const DiventaVolontario = () => {
         </div>
       </div>
 
+      {/* Section 3 */}
       <div
-        className="relative w-full h-auto"
+        className="relative w-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${TopVolontariato})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          height: "auto",
           paddingTop: "60%",
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          <h3
-            className="text-4xl md:text-6xl lg:text-8xl font-bold text-white text-center px-4"
-            style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}
-          >
+          <h3 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white text-center px-4 shadow-md">
             Vuoi diventare Volontario?
           </h3>
         </div>
       </div>
 
+      {/* Form Section */}
       <div className="p-4 md:p-8 lg:p-10 bg-gray-100">
         <div className="max-w-full mx-auto text-left">
           <p className="text-xl md:text-2xl mb-8 text-gray-600">
@@ -100,31 +92,29 @@ const DiventaVolontario = () => {
           <form className="flex flex-col items-center" onSubmit={handleSubmit}>
             <div className="mb-6 w-full">
               <label htmlFor="name" className="block text-lg mb-2">
-                Name
+                Nome
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 required
-                placeholder="Enter your name"
-                className="w-full p-3 text-lg border-2 rounded-md"
-                style={{ borderColor: "#92aa7f", backgroundColor: "white" }}
+                placeholder="Nome"
+                className="w-full p-3 text-lg border-2 border-white bg-white text-gray-800 rounded-md"
               />
             </div>
 
             <div className="mb-6 w-full">
               <label htmlFor="surname" className="block text-lg mb-2">
-                Surname
+                Cognome
               </label>
               <input
                 type="text"
                 id="surname"
                 name="surname"
                 required
-                placeholder="Enter your surname"
-                className="w-full p-3 text-lg border-2 rounded-md"
-                style={{ borderColor: "#92aa7f", backgroundColor: "white" }}
+                placeholder="Cognome"
+                className="w-full p-3 text-lg border-2 border-white bg-white text-gray-800 rounded-md"
               />
             </div>
 
@@ -137,30 +127,27 @@ const DiventaVolontario = () => {
                 id="email"
                 name="email"
                 required
-                placeholder="Enter your email"
-                className="w-full p-3 text-lg border-2 rounded-md"
-                style={{ borderColor: "#92aa7f", backgroundColor: "white" }}
+                placeholder="Email"
+                className="w-full p-3 text-lg border-2 border-white bg-white text-gray-800 rounded-md"
               />
             </div>
 
             <div className="mb-6 w-full">
               <label htmlFor="message" className="block text-lg mb-2">
-                Message
+                Messaggio
               </label>
               <textarea
                 id="message"
                 name="message"
                 required
-                placeholder="Enter your message"
-                className="w-full p-3 text-lg border-2 rounded-md h-32"
-                style={{ borderColor: "#92aa7f", backgroundColor: "white" }}
+                placeholder="Messaggio"
+                className="w-full p-3 text-lg border-2 border-white bg-white text-gray-800 rounded-md h-32"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="text-black py-2 px-4 rounded-md text-base"
-              style={{ backgroundColor: "#f6bcb2" }}
+              className="py-1.5 px-3 text-sm rounded-lg text-black bg-[#f6bcb2] border border-[#ffe6b3] shadow-md"
             >
               Submit
             </button>
