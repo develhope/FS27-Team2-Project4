@@ -3,7 +3,7 @@ import { ProductCard } from "./ProductCard";
 import cat1 from "../../assets/images/cat1.webp";
 import { ProductCardFull } from "./ProductCardFull";
 
-export function ProductArray() {
+export function ProductArray({ addToCart }) {
   const [color] = useState(["NERO", "BIANCO", "AZZURRO", "ROSA", "VERDE"]);
   const [size] = useState(["XS", "S", "M", "L", "XL", "XXL"]);
   const [products] = useState([
@@ -88,7 +88,7 @@ export function ProductArray() {
               }`}
               onClick={(e) => e.stopPropagation()}
             >
-              <ProductCardFull product={selectedProduct} />
+              <ProductCardFull product={selectedProduct} addToCart={addToCart} />
             </div>
           </div>
         )}
