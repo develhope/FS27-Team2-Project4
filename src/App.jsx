@@ -16,6 +16,7 @@ import About from "./Components/About";
 import { ShopPage } from "./Components/Shop/ShopPage";
 import Resi from "./Components/Resi";
 import Rimborsi from "./Components/Rimborsi";
+import Community from "./Components/Community/community";
 
 function App() {
   const [theme, setTheme] = useState({
@@ -75,9 +76,11 @@ function App() {
           <Route path="/FAQPage" element={<FAQPage />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/shop" element={<ShopPage />} />
-          <Route path="/resi" element={<Resi/>} />
-          <Route path="/rimborsi" element={<Rimborsi/>} />
+          <Route path="/resi" element={<Resi />} />
+          <Route path="/rimborsi" element={<Rimborsi />} />
           <Route path="/diventavolontario" element={<DiventaVolontario />} />
+          <Route path="/community" element={<Community />} />
+          
           <Route
             path="/article/:id"
             element={<ArticlePage theme={theme} setTag={handleTheme} />}

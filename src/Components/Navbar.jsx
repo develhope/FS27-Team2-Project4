@@ -21,7 +21,7 @@ function Navbar({
           Logo
         </Link>
 
-        {/* Menu Links */}
+        
         <div className="hidden lg:flex flex-grow justify-center space-x-4">
           <NavLink to="/" text="Home" />
           <NavLink to="/about" text="About" />
@@ -33,7 +33,7 @@ function Navbar({
           <DropdownMenu />
         </div>
 
-        {/* Auth Buttons */}
+        
         <div className="hidden lg:flex space-x-4">
           <AuthButtons />
         </div>
@@ -77,7 +77,7 @@ function Navbar({
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      
       <div className={`lg:hidden ${isOpen ? "block" : "hidden"} mt-4`}>
         <NavLink to="/" text="Home" mobile />
         <NavLink to="/about" text="About" mobile />
