@@ -80,7 +80,7 @@ function App() {
           <Route path="/rimborsi" element={<Rimborsi />} />
           <Route path="/diventavolontario" element={<DiventaVolontario />} />
           <Route path="/community" element={<Community />} />
-          
+
           <Route
             path="/article/:id"
             element={<ArticlePage theme={theme} setTag={handleTheme} />}
