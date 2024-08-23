@@ -37,7 +37,6 @@ function Donate() {
       return;
     }
     if (donationMethod === "paypal") {
-      // Handle PayPal donation
     } else if (donationMethod === "iban") {
       setShowIbanDetails(true);
     } else if (donationMethod === "5x1000") {

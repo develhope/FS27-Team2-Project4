@@ -11,7 +11,7 @@ const DiventaVolontario = () => {
 
   return (
     <div className="w-full">
-      {/* Section 1 */}
+    
       <div className="bg-gray-200 p-4 md:p-8 lg:p-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div>
@@ -39,7 +39,7 @@ const DiventaVolontario = () => {
         </div>
       </div>
 
-      {/* Section 2 */}
+      
       <div className="p-4 md:p-8 lg:p-10 bg-white">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div className="order-2 md:order-1">
@@ -67,7 +67,7 @@ const DiventaVolontario = () => {
         </div>
       </div>
 
-      {/* Section 3 */}
+      
       <div
         className="relative w-full bg-cover bg-center"
         style={{
