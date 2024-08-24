@@ -17,6 +17,9 @@ import { ShopPage } from "./Components/Shop/ShopPage";
 import Resi from "./Components/Resi";
 import Rimborsi from "./Components/Rimborsi";
 import Community from "./Components/Community/community";
+import { CartPage } from "./Components/Shop/CartPage";
+import { ShoppingApp } from "./Components/Shop/ShoppingApp";
+import { CartProvider } from "./CartContext";
 
 function App() {
   const [theme, setTheme] = useState({
@@ -59,43 +62,47 @@ function App() {
   }
 
   return (
-    <div className="cursor">
-      <Navbar
-        bgColor={theme.bgColor}
-        textColor={theme.textColor}
-        elementBg={theme.elementBg}
-        elementText={theme.elementText}
-      />
-      <div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/donate" element={<DonateWrapper />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/adozioni" element={<Adozioni />} />
-          <Route path="/FAQPage" element={<FAQPage />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/shop" element={<ShopPage />} />
-          <Route path="/resi" element={<Resi />} />
-          <Route path="/rimborsi" element={<Rimborsi />} />
-          <Route path="/diventavolontario" element={<DiventaVolontario />} />
-          <Route path="/community" element={<Community />} />
+    <CartProvider>
+      <div className="cursor">
+        <Navbar
+          bgColor={theme.bgColor}
+          textColor={theme.textColor}
+          elementBg={theme.elementBg}
+          elementText={theme.elementText}
+        />
+        <div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/donate" element={<DonateWrapper />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/adozioni" element={<Adozioni />} />
+            <Route path="/FAQPage" element={<FAQPage />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/shoppingapp" element={<ShoppingApp />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/resi" element={<Resi />} />
+            <Route path="/rimborsi" element={<Rimborsi />} />
+            <Route path="/diventavolontario" element={<DiventaVolontario />} />
+            <Route path="/community" element={<Community />} />
 
-          <Route
-            path="/article/:id"
-            element={<ArticlePage theme={theme} setTag={handleTheme} />}
-          />
-          <Route path="/diventa-volontario" element={<DiventaVolontario />} />
-        </Routes>
-        <ChatBot />
+            <Route
+              path="/article/:id"
+              element={<ArticlePage theme={theme} setTag={handleTheme} />}
+            />
+            <Route path="/diventa-volontario" element={<DiventaVolontario />} />
+          </Routes>
+          <ChatBot />
+        </div>
+        <Footer
+          bgColor={theme.bgColor}
+          textColor={theme.textColor}
+          elementBg={theme.elementBg}
+          elementText={theme.elementText}
+        />
       </div>
-      <Footer
-        bgColor={theme.bgColor}
-        textColor={theme.textColor}
-        elementBg={theme.elementBg}
-        elementText={theme.elementText}
-      />
-    </div>
+    </CartProvider>
   );
 }
 

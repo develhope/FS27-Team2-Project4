@@ -17,9 +17,9 @@ export function ShopBanner() {
         </div>
       </div>
       <div className="flex flex-col items-center my-10">
-        <p className="text-4xl font-bold text-dark-green py-10">
+      {/*   <p className="text-4xl font-bold text-dark-green py-10">
           HOUSE OF PAWS SHOP
-        </p>
+        </p> */}
       </div>
     </div>
   );
