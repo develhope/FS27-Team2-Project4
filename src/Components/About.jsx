@@ -1,4 +1,5 @@
 import manuel from "../assets/images/manuel.jpg";
+import Alessandro from "../assets/images/Alessandro.jpg"
 
 const teamMembers = [
   {
@@ -16,7 +17,7 @@ const teamMembers = [
   {
     name: "Alessandro",
     role: "Responsabile Adozioni",
-    imageUrl: "path/to/ale.jpg",
+    imageUrl: Alessandro,
     description: 'Alessandro è il pilastro dietro il processo di adozione del Rifugio degli Animali. Con un incredibile dedizione e una profonda empatia, si assicura che ogni animale trovi la famiglia giusta. Alessandro lavora instancabilmente per conoscere ogni animale, comprendere le loro esigenze uniche e abbinarli a famiglie amorevoli e compatibili. Grazie al suo impegno, centinaia di animali hanno trovato case sicure e affettuose, trasformando il loro futuro in una storia di successo.',
   },
   {
