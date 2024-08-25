@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { CartContext } from "../../CartContext";
 import { ShopBanner } from "./ShopBanner";
+import { Link } from "react-router-dom";
 
 export function CartPage() {
   const { cart, removeFromCart } = useContext(CartContext);
 
-  // Calcola il totale del carrello
+  //  totale del carrello
   const totale = cart.reduce((total, item) => {
     const totalePrezzo = parseFloat(
       item.prezzo.replace("€", "").replace(",", ".").trim()
@@ -31,7 +32,7 @@ export function CartPage() {
                   alt={item.nome}
                 />
                 <span>
-                  {item.nome} - {item.prezzo}
+                  {item.nome} - {item.prezzo} 
                 </span>
                 <button
                   className="bg-pink text-white px-2 py-1 rounded"
@@ -47,8 +48,8 @@ export function CartPage() {
           </p>
 
           {totale > 0 && (
-            <button className="bg-dark-blue text-white px-4 py-2 rounded mt-4">
-              Procedi al checkout
+            <button className="bg-dark-blue text-white px-4 py-2 rounded mt-6 hover:bg-light-blue">
+              <Link to="/submitOrderPage">Procedi al Checkout</Link>
             </button>
           )}
         </div>

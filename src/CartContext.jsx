@@ -16,6 +16,10 @@ export function CartProvider({ children }) {
     setCart((prevCart) => [...prevCart, product]);
   };
 
+  const clearCart = () => {
+    setCart([]);  // Svuota il carrello
+  };
+
   const removeFromCart = (index) => {
     setCart((prevCart) => {
       const updatedCart = [...prevCart];
@@ -28,7 +32,7 @@ export function CartProvider({ children }) {
 
   return (
     <CartContext.Provider
-      value={{ cart, addToCart, removeFromCart, cartCount }}
+      value={{ cart, addToCart, removeFromCart,  clearCart, cartCount }}
     >
       {children}
     </CartContext.Provider>

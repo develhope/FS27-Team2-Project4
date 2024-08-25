@@ -20,6 +20,8 @@ import Community from "./Components/Community/community";
 import { CartPage } from "./Components/Shop/CartPage";
 import { ShoppingApp } from "./Components/Shop/ShoppingApp";
 import { CartProvider } from "./CartContext";
+import { SubmitOrderPage } from "./Components/Shop/SubmitOrderPage";
+import { Thankyoupage } from "./Components/Shop/ThankYouPage";
 
 function App() {
   const [theme, setTheme] = useState({
@@ -86,7 +88,8 @@ function App() {
             <Route path="/rimborsi" element={<Rimborsi />} />
             <Route path="/diventavolontario" element={<DiventaVolontario />} />
             <Route path="/community" element={<Community />} />
-
+            <Route path="/submitOrderPage" element={<SubmitOrderPage />} />
+            <Route path="/thankyoupage" element={<Thankyoupage />} />
             <Route
               path="/article/:id"
               element={<ArticlePage theme={theme} setTag={handleTheme} />}

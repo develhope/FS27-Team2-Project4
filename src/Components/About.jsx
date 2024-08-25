@@ -1,4 +1,4 @@
-import React from "react";
+import manuel from "../assets/images/manuel.jpg";
 
 const teamMembers = [
   {
@@ -22,7 +22,7 @@ const teamMembers = [
   {
     name: "Manuel",
     role: "Coordinatore Adozioni a Distanza",
-    imageUrl: "path/to/manuel.jpg",
+    imageUrl: manuel,
     description: 'Manuel è il nostro Coordinatore delle Adozioni a Distanza, responsabile di gestire e ottimizzare il programma che consente ai sostenitori di contribuire al benessere degli animali attraverso supporto economico mirato. Con grande attenzione ai dettagli e abilità organizzative, Manuel gestisce le richieste di adozione a distanza, fornisce aggiornamenti regolari ai sostenitori e garantisce che ogni contributo venga utilizzato in modo efficace per migliorare le vite degli animali. Il suo lavoro non solo aiuta a mantenere il rifugio operativo, ma costruisce anche una comunità di sostenitori coinvolti e appassionati, creando un legame speciale tra gli animali e i loro adottanti a distanza.',
   },
   {
