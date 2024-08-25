@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "../CartContext"; // Importa il contesto del carrello
+import { CartContext } from "../CartContext";  
 
 function Navbar({
   bgColor = "bg-green-600",
@@ -10,7 +10,7 @@ function Navbar({
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const { cartCount } = useContext(CartContext); // Usa il contesto per ottenere il conteggio del carrello
+  const { cartCount } = useContext(CartContext);  
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
@@ -80,7 +80,7 @@ function Navbar({
           isOpen ? "flex flex-col gap-4" : "hidden"
         } mt-4`}
       >
-        {/* Mobile Links */}
+        {/* Mobile  */}
         <Link to="/" className="hover:underline">
           Home
         </Link>
