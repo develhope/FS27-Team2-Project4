@@ -26,7 +26,7 @@ function Navbar({
           <Link to="/" className="hover:underline">
             Home
           </Link>
-          <Link to="/c" className="hover:underline">
+          <Link to="/about" className="hover:underline">
             Chi siamo
           </Link>
           <Link to="/community" className="hover:underline">
@@ -40,9 +40,6 @@ function Navbar({
           </Link>
           <Link to="/shop" className="hover:underline">
             Shop
-          </Link>
-          <Link to="/about" className="hover:underline">
-            Contatti
           </Link>
         </div>
 

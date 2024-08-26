@@ -1,6 +1,7 @@
 import manuel from "../assets/images/manuel.jpg";
 import Alessandro from "../assets/images/Alessandro.jpg"
 import Antonio from "../assets/images/Antonio.jpg"
+import Aurora from "../assets/images/aurora.jpg"
 
 const teamMembers = [
   {
@@ -30,7 +31,7 @@ const teamMembers = [
   {
     name: "Aurora",
     role: "Consulente Comportamentale per Animali",
-    imageUrl: "path/to/aurora.jpg",
+    imageUrl: Aurora ,
     description: 'Aurora è la nostra esperta consulente comportamentale, dedicata a comprendere e migliorare il benessere emotivo e comportamentale degli animali del rifugio. Con una formazione avanzata in etologia e un innata empatia, lavora a stretto contatto con gli animali per identificare e trattare problematiche comportamentali, contribuendo a prepararli per una vita serena e stabile nelle loro future case. Aurora sviluppa e implementa programmi di riabilitazione, collabora con il team per migliorare le condizioni di vita degli animali e offre consulenze specializzate per garantire che ogni animale possa esprimere il suo vero potenziale.',
   },
   {
