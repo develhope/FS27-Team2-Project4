@@ -1,5 +1,6 @@
 import manuel from "../assets/images/manuel.jpg";
 import Alessandro from "../assets/images/Alessandro.jpg"
+import Antonio from "../assets/images/Antonio.jpg"
 
 const teamMembers = [
   {
@@ -35,7 +36,7 @@ const teamMembers = [
   {
     name: "Antonio",
     role: "Volontario",
-    imageUrl: "path/to/antonio.jpg",
+    imageUrl: Antonio,
     description: 'Antonio è un prezioso volontario del Rifugio degli Animali, che contribuisce quotidianamente con entusiasmo e dedizione. Con il suo spirito altruista e il suo amore per gli animali, Antonio si occupa di diverse attività fondamentali, come la cura e l’alimentazione degli animali, la pulizia degli spazi e l’assistenza durante le visite dei potenziali adottanti. La sua presenza costante e il suo impegno aiutano a garantire che il rifugio funzioni senza intoppi e che ogni animale riceva le attenzioni e le cure di cui ha bisogno. Antonio è un esempio di generosità e passione, giocando un ruolo chiave nel mantenere un ambiente positivo e amorevole per tutti gli ospiti del rifugio.',
   },
 ];
@@ -89,7 +90,7 @@ export default function About() {
               >
                 <img
                   className="h-8 w-8 mx-2"
-                  src="path/to/facebook-logo.png"
+                  src="./src/assets/images/Facebook_Logo_Primary.png"
                   
                 />
               </a>
@@ -100,7 +101,7 @@ export default function About() {
               >
                 <img
                   className="h-8 w-8 mx-2"
-                  src="path/to/instagram-logo.png"
+                  src="./src/assets/images/Instagram_Glyph_Gradient.png"
                   
                 />
               </a>
@@ -111,7 +112,7 @@ export default function About() {
               >
                 <img
                   className="h-8 w-8 mx-2"
-                  src="path/to/twitter-logo.png"
+                  src="./src/assets/images/logo-black.png"
                 
                 />
               </a>
