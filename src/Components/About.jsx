@@ -2,6 +2,7 @@ import manuel from "../assets/images/manuel.jpg";
 import Alessandro from "../assets/images/Alessandro.jpg"
 import Antonio from "../assets/images/Antonio.jpg"
 import Aurora from "../assets/images/aurora.jpg"
+import Francesca from "../assets/images/Francesca.jpg"
 
 const teamMembers = [
   {
@@ -13,7 +14,7 @@ const teamMembers = [
   {
     name: "Francesca",
     role: "Responsabile Comunicazioni",
-    imageUrl: "path/to/francesca.jpg",
+    imageUrl: Francesca,
     description: 'Francesca è la voce del Rifugio degli Animali, responsabile di diffondere il nostro messaggio di amore e cura per gli animali a un pubblico sempre più vasto. Con una grande esperienza nella comunicazione e una passione per le cause sociali, gestisce con efficacia le nostre campagne sui social media, coordina le relazioni con i media e assicura che ogni storia degli animali del rifugio raggiunga il cuore delle persone. Grazie al suo lavoro, il rifugio ha potuto sensibilizzare e coinvolgere la comunità, aumentando le adozioni e il supporto ai nostri progetti.',
   },
   {
