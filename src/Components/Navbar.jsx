@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { CartContext } from "../CartContext";  
-
+import { CartContext } from "../CartContext";
+import Logo from "../../public/SVG/LOGO-SITO.png";
 function Navbar({
   bgColor = "bg-green-600",
   textColor = "text-white",
@@ -10,16 +10,16 @@ function Navbar({
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  const { cartCount } = useContext(CartContext);  
+  const { cartCount } = useContext(CartContext);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
   return (
-    <nav className={`${bgColor} ${textColor} p-4`}>
+    <nav className={`${bgColor} ${textColor} py-4 px-8`}>
       <div className="flex items-center justify-between">
         <Link to="/" className="text-2xl font-semibold">
-          Logo
+          <img src={Logo} alt="logo" className="h-12" />
         </Link>
 
         <div className="hidden lg:flex flex-grow justify-center space-x-4">
@@ -118,7 +118,7 @@ function Navbar({
           Accedi
         </Link>
         <Link
-          to="/register"
+          to="/signIn"
           className={`${
             mobile ? "block w-full" : ""
           } ${elementBg} text-green-600 px-4 py-2 rounded hover:bg-opacity-90 transition duration-300 ${

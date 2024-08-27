@@ -22,6 +22,9 @@ import { ShoppingApp } from "./Components/Shop/ShoppingApp";
 import { CartProvider } from "./CartContext";
 import { SubmitOrderPage } from "./Components/Shop/SubmitOrderPage";
 import { Thankyoupage } from "./Components/Shop/ThankYouPage";
+import { Login } from "./Components/User/Login";
+import { Users } from "./Components/User/Users";
+import { SignIn } from "./Components/User/SignIn";
 
 function App() {
   const [theme, setTheme] = useState({
@@ -63,6 +66,19 @@ function App() {
     setTag(string);
   }
 
+  //gestione login e users
+
+  const [users, setUsers] = useState([
+    {
+      username: "Admin",
+      password: "Team4",
+      admin: true,
+    },
+  ]);
+  useEffect(() => console.log(users), [users]);
+
+  const [login, setLogin] = useState(null);
+
   return (
     <CartProvider>
       <div className="cursor">
@@ -95,6 +111,18 @@ function App() {
               element={<ArticlePage theme={theme} setTag={handleTheme} />}
             />
             <Route path="/diventa-volontario" element={<DiventaVolontario />} />
+            <Route
+              path="/login"
+              element={
+                <Login setLogin={setLogin} login={login} users={users} />
+              }
+            />
+            <Route path="/users" element={<Users />} />
+            <Route
+              path="/signin"
+              element={<SignIn setUsers={setUsers} users={users} />}
+            />
+            <Route path="/users" element={<Users />} />
           </Routes>
           <ChatBot />
         </div>
