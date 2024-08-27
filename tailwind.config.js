@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./node_modules/flowbite/**/*.js"],
   theme: {
     screens: {
       sm: "640px",
@@ -28,6 +28,6 @@ export default {
       yellow: "#f7e3af",
       white: "#ffffff",
     },
-    plugins: [],
+    plugins: [require('flowbite/plugin')],
   },
 };
