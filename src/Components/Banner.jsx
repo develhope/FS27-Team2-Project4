@@ -1,25 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import adopt from "../assets/images/homepagedopt.jpg"
+import blog from "../assets/images/homepageblog.jpg"
 
 export default function Banner() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      image: 'https://img.freepik.com/free-photo/isolated-shot-ginger-cat-looking-retriever-dog-looking-camera-white-surface_181624-43633.jpg?t=st=1724739570~exp=1724743170~hmac=21853cabfb0452693676efb414a7a6dc4332089da30b804057fca50f611ceaca&w=1800',
+      image: adopt,
       title: 'Il tuo cuore è pronto per un nuovo amore? ',
       subtitle: 'Scopri i nostri animali in cerca di casa e trova il tuo amico perfetto!',
       buttonText: 'Scopri di più',
       buttonLink: './adozioni',
     },
     {
-      image: 'https://img.freepik.com/free-photo/close-up-dog-front-legs_23-2148423572.jpg?t=st=1724739414~exp=1724743014~hmac=bc38b25c26c0258cebd01b57c3050f60dd42f956c02a974d3f1c53d78faca107&w=2000',
+      image: 'https://cdn.discordapp.com/attachments/962745661688774656/1278105403984580608/image.png?ex=66cf97ea&is=66ce466a&hm=ee459c38f3c578381999ed6636e001f0717fb930218a6a53b3bed21044597d44&',
       title: 'Fai la differenza!',
       subtitle: 'Contribuisci a migliorare la vita dei nostri amici a quattro zampe. Ogni donazione è preziosa.',
       buttonText: 'Dona Ora',
       buttonLink: './donate',
     },
     {
-      image: 'https://img.freepik.com/free-photo/chubby-domestic-cat-leaning-brown-puppy-lying-white-surface_181624-45927.jpg?t=st=1724727389~exp=1724730989~hmac=98bc05d91ce22d6d40bf84d317513d1739688321e69ea0b988c362aa7481a3e2&w=1800',
+      image: blog,
       title: 'Non sai da dove iniziare? ',
       subtitle: 'Visita il nostro blog per trovare articoli e suggerimenti pratici per accogliere e curare i tuoi animali con amore.',
       buttonText: 'Scopri di più',

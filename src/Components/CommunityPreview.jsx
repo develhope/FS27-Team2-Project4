@@ -2,75 +2,87 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from "react-icons/fa";
+import laura from "../assets/images/communityuser.jpg"
+import chiara from "../assets/images/communityuser2.jpg"
+import giovanni from "../assets/images/communityuser3.jpg"
+import federico from "../assets/images/communityuser4.jpg"
+import paolo from "../assets/images/communityuser5.jpg"
+import riccardo from "../assets/images/communityuser6.jpg"
+import silvia from "../assets/images/communityuser7.jpg"
+import alessandro from "../assets/images/communityuser8.jpg"
+import adoption from "../assets/images/communityevent1.jpg"
+import raccoltafondi from "../assets/images/communityevent2.jpg"
+import seminario from "../assets/images/communityevent3.jpg"
 
 const reviews = [
-  {
-    name: "Paolo Marini",
-    role: "Adottante",
-    image:
-      "https://images.unsplash.com/photo-1544725176-7c40e5a98222?ixlib=rb-1.2.1&auto=format&fit=crop&w=1180&q=80",
-    text: "Il cane che abbiamo adottato da House of Paws è diventato parte integrante della nostra famiglia. Grazie per averci aiutato a trovare il nostro nuovo amico a quattro zampe.",
-    rating: 5,
-  },
-  {
-    name: "Martina Ferrari",
-    role: "Sostenitrice",
-    image:
-      "https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1180&q=80",
-    text: "Supporto House of Paws da diversi anni. Sono una realtà affidabile e trasparente che lavora instancabilmente per il benessere degli animali.",
-    rating: 4,
-  },
-  {
-    name: "Riccardo Rossi",
-    role: "Adottante",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=1180&q=80",
-    text: "Abbiamo adottato un gatto di tre anni da House of Paws e non potremmo essere più felici. L'organizzazione ci ha guidato attraverso tutto il processo.",
-    rating: 5,
-  },
-  {
-    name: "Alessandro Conti",
-    role: "Volontario",
-    image:
-      "https://images.unsplash.com/photo-1533616688419-b7a585564566?ixlib=rb-1.2.1&auto=format&fit=crop&w=1180&q=80",
-    text: "Essere un volontario in House of Paws mi ha fatto capire quanto amore e dedizione ci siano in questa organizzazione. È un onore farne parte.",
-    rating: 5,
-  },
-  {
-    name: "Silvia De Luca",
-    role: "Veterinaria",
-    image:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1180&q=80",
-    text: "Come veterinaria, collaborare con House of Paws è una garanzia di qualità. L'amore per gli animali è al centro di tutto ciò che fanno.",
-    rating: 5,
-  },
-];
+    {
+      name: "Paolo Marini",
+      role: "Adottante",
+      image:
+        paolo,
+      text: "Il cane che abbiamo adottato da House of Paws è diventato parte integrante della nostra famiglia. Grazie per averci aiutato a trovare il nostro nuovo amico a quattro zampe.",
+      rating: 5,
+    },
+    {
+      name: "Martina Ferrari",
+      role: "Sostenitrice",
+      image:
+        "https://images.unsplash.com/photo-1517849845537-4d257902454a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fHN1cHBvcnRlcnxlbnwwfHx8fDE2MzU1ODU3Mjg&ixlib=rb-1.2.1&q=80&w=400",
+      text: "Supporto House of Paws da diversi anni. Sono una realtà affidabile e trasparente che lavora instancabilmente per il benessere degli animali.",
+      rating: 4,
+    },
+    {
+      name: "Riccardo Rossi",
+      role: "Adottante",
+      image:
+        riccardo,
+      text: "Abbiamo adottato un gatto di tre anni da House of Paws e non potremmo essere più felici. L'organizzazione ci ha guidato attraverso tutto il processo.",
+      rating: 5,
+    },
+    {
+      name: "Alessandro Conti",
+      role: "Volontario",
+      image:
+       alessandro,
+      text: "Essere un volontario in House of Paws mi ha fatto capire quanto amore e dedizione ci siano in questa organizzazione. È un onore farne parte.",
+      rating: 5,
+    },
+    {
+      name: "Silvia De Luca",
+      role: "Veterinaria",
+      image:
+        silvia,
+      text: "Come veterinaria, collaborare con House of Paws è una garanzia di qualità. L'amore per gli animali è al centro di tutto ciò che fanno.",
+      rating: 5,
+    },
+  ];
 
 const events = [
-  {
-    title: "Giornata di Adozione",
-    date: "25 Agosto 2024",
-    description:
-      "Unisciti a noi per una giornata dedicata all'adozione di cani e gatti in cerca di una nuova casa. Vieni a conoscere i nostri ospiti e trova il tuo nuovo amico a quattro zampe!",
-    image: "src/assets/images/giornataAdozioni.webp",
-  },
-  {
-    title: "Evento di Raccolta Fondi",
-    date: "10 Settembre 2024",
-    description:
-      "Partecipa al nostro evento di raccolta fondi per sostenere House of Paws. Ci saranno giochi, cibo e divertimento per tutta la famiglia!",
-    image:
-      "https://images.unsplash.com/photo-1571501679680-de32f1e7aad4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1180&q=80",
-  },
-  {
-    title: "Seminario sulla Cura degli Animali",
-    date: "15 Ottobre 2024",
-    description:
-      "Partecipa al nostro seminario con esperti veterinari che parleranno della cura quotidiana degli animali e delle migliori pratiche per il loro benessere.",
-    image:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1180&q=80",
-  },
-];
+    {
+      title: "Giornata di Adozione",
+      date: "25 Agosto 2024",
+      description:
+        "Unisciti a noi per una giornata dedicata all'adozione di cani e gatti in cerca di una nuova casa. Vieni a conoscere i nostri ospiti e trova il tuo nuovo amico a quattro zampe!",
+      image:
+        adoption,
+    },
+    {
+      title: "Evento di Raccolta Fondi",
+      date: "10 Settembre 2024",
+      description:
+        "Partecipa al nostro evento di raccolta fondi per sostenere House of Paws. Ci saranno giochi, cibo e divertimento per tutta la famiglia!",
+      image:
+        raccoltafondi,
+    },
+    {
+      title: "Seminario sulla Cura degli Animali",
+      date: "15 Ottobre 2024",
+      description:
+        "Partecipa al nostro seminario con esperti veterinari che parleranno della cura quotidiana degli animali e delle migliori pratiche per il loro benessere.",
+      image:
+        seminario,
+    }
+  ];
 
 export default function CommunityPreview() {
   const settings = {

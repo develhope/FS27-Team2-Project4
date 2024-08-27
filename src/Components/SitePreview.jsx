@@ -1,4 +1,6 @@
 import React from 'react';
+import volontariato from "../assets/images/homepagevolontariato.jpg"
+import community from "../assets/images/homepagecommunity.jpg"
 
 const PreviewCard = ({ image, title, link }) => (
   <div className="relative group flex justify-center items-center h-full w-full">
@@ -25,12 +27,12 @@ export default function SitePreview() {
       link: '/shop'
     },
     {
-      image: 'https://img.freepik.com/free-photo/elegant-woman-black-suit-with-black-bulldog_1157-33146.jpg?t=st=1724753629~exp=1724757229~hmac=f089403076001639dc0169c80dd9d8b28ab9164022481ca17bf2b6954a262359&w=1800',
+      image: community,
       title: 'Community',
       link: '/community'
     },
     {
-      image: 'https://img.freepik.com/free-photo/beautiful-pet-portrait-small-dog-cat_23-2149218512.jpg?t=st=1724753549~exp=1724757149~hmac=e98fe4aab115c68f3fad02d87c5e0b5e1c2edad73d118abd59c2f05817a25d2f&w=1480',
+      image: volontariato,
       title: 'Volontariato',
       link: '/diventavolontario'
     }
