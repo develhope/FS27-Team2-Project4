@@ -37,7 +37,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
                   <input
                     type="email"
                     id="UserEmail"
-                    placeholder="john@rhcp.com"
+                    placeholder="Inserisci qui la tua mail"
                     className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm px-6 py-3 rounded-md rounded-r-none"
                   />
 

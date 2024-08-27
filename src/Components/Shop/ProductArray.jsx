@@ -52,6 +52,14 @@ export function ProductArray({ addToCart }) {
       taglia: "",
       colore: "",
     },
+    {
+      nome: "Tazza HOP",
+      descrizione: "La nostra tazza personalizzata per ogni evenienza.",
+      prezzo: "10,00 €",
+      immagine: TAZZA,
+      taglia: "",
+      colore: "",
+    },
   ]);
 
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -93,7 +101,10 @@ export function ProductArray({ addToCart }) {
               }`}
               onClick={(e) => e.stopPropagation()}
             >
-              <ProductCardFull product={selectedProduct} addToCart={addToCart} />
+              <ProductCardFull
+                product={selectedProduct}
+                addToCart={addToCart}
+              />
             </div>
           </div>
         )}

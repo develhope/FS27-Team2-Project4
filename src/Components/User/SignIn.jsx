@@ -19,14 +19,15 @@ export function SignIn({ setUsers, users }) {
   }
 
   return (
-    <div className="flex flex-col justify-center gap-4 content-center max-w-72 ">
-      <div className="flex flex-col gap-4 ">
-      <h1 className="text-pink-800 text-lg">SignIn</h1>
+    <div className="justify-center items-center flex ">
+    <div className="flex flex-col gap-2 max-w-72 justify-center items-center mt-20">
+    <div className="flex flex-col gap-4 justify-center">
+      <h1 className="flex items-center justify-center text-light-purple text-4xl font-semibold mb-8">SignIn</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 justify-center">
           {" "}
           {/* gestisce il submit di tutti gli input nel form */}
           <input
-          className="rounded-lg"
+          className="rounded-md flex drop-shadow-lg p-2"
             type="text"
             placeholder="username"
             name="signin-username"
@@ -36,7 +37,7 @@ export function SignIn({ setUsers, users }) {
             } /*prende il valore di username dallo stato */
           />
           <input
-          className="rounded-lg"
+          className="rounded-md mt-2 flex drop-shadow-lg p-2"
             type="password"
             placeholder="password"
             name="signin-password"
@@ -45,9 +46,10 @@ export function SignIn({ setUsers, users }) {
               setPassword(e.target.value)
             } /*prende il valore di password dallo stato */
           />
-          <button className="bg-red-400 text-red-50 font-bold p-2 rounded-lg  hover:bg-orange-300">Submit</button>
+          <button className="bg-pink mt-3 mb-6 hover:shadow-xl text-white font-bold p-2 rounded-lg   drop-shadow-lg ">Submit</button>
         </form>
       </div>
+    </div>
     </div>
   );
 }
