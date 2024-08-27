@@ -2,13 +2,24 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from "react-icons/fa";
+import laura from "../../assets/images/communityuser.jpg"
+import chiara from "../../assets/images/communityuser2.jpg"
+import giovanni from "../../assets/images/communityuser3.jpg"
+import federico from "../../assets/images/communityuser4.jpg"
+import paolo from "../../assets/images/communityuser5.jpg"
+import riccardo from "../../assets/images/communityuser6.jpg"
+import silvia from "../../assets/images/communityuser7.jpg"
+import alessandro from "../../assets/images/communityuser8.jpg"
+import adoption from "../../assets/images/communityevent1.jpg"
+import raccoltafondi from "../../assets/images/communityevent2.jpg"
+import seminario from "../../assets/images/communityevent3.jpg"
 
 const testimonials = [
   {
     name: "Laura Russo",
     role: "Volontaria",
     image:
-      "https://images.unsplash.com/photo-1603032531727-45df57b7df82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHx2b2x1bnRlZXJ8ZW58MHx8fHwxNjM1NTg1NzI4&ixlib=rb-1.2.1&q=80&w=400",
+      laura,
     text: "Aiutare gli animali di House of Paws è stata un'esperienza trasformativa. Ogni giorno sento di fare la differenza nella vita di questi esseri meravigliosi.",
     rating: 5,
   },
@@ -16,7 +27,7 @@ const testimonials = [
     name: "Giovanni Ricci",
     role: "Adottante",
     image:
-      "https://images.unsplash.com/photo-1596275724463-272deb7f40aa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxjYXR8ZW58MHx8fHwxNjM1NTg1NzI4&ixlib=rb-1.2.1&q=80&w=400",
+      giovanni,
     text: "Adottare il mio gatto attraverso House of Paws è stata un'esperienza fantastica. Il processo è stato semplice e il personale è stato incredibilmente di supporto.",
     rating: 5,
   },
@@ -24,7 +35,7 @@ const testimonials = [
     name: "Chiara Neri",
     role: "Volontaria",
     image:
-      "https://images.unsplash.com/photo-1601262731553-d3cb9a932f0a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHdwZWRzX3ZvbHVudGVlcnxlbnwwfHx8fDE2MzU1ODU3Mjg&ixlib=rb-1.2.1&q=80&w=400",
+      chiara,
     text: "Partecipare come volontaria in House of Paws è stata una delle scelte migliori della mia vita. Vedere gli animali trovare una famiglia amorevole è impagabile.",
     rating: 5,
   },
@@ -32,7 +43,7 @@ const testimonials = [
     name: "Federico Bianchi",
     role: "Sostenitore",
     image:
-      "https://images.unsplash.com/photo-1526226499639-7a06ce6c463d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIxfHxzdXBwb3J0ZXJ8ZW58MHx8fHwxNjM1NTg1NzI4&ixlib=rb-1.2.1&q=80&w=400",
+      federico,
     text: "House of Paws è un'organizzazione meravigliosa. Sono felice di poter contribuire a migliorare la vita di tanti animali bisognosi.",
     rating: 4,
   },
@@ -51,7 +62,7 @@ const reviews = [
     name: "Paolo Marini",
     role: "Adottante",
     image:
-      "https://images.unsplash.com/photo-1605258497659-7aa48a9b1512?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDl8fGFkb3B0ZXJ8ZW58MHx8fHwxNjM1NTg1NzI4&ixlib=rb-1.2.1&q=80&w=400",
+      paolo,
     text: "Il cane che abbiamo adottato da House of Paws è diventato parte integrante della nostra famiglia. Grazie per averci aiutato a trovare il nostro nuovo amico a quattro zampe.",
     rating: 5,
   },
@@ -67,7 +78,7 @@ const reviews = [
     name: "Riccardo Rossi",
     role: "Adottante",
     image:
-      "https://images.unsplash.com/photo-1560807707-8cc77767d783?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGFkb3B0ZXJ8ZW58MHx8fHwxNjM1NTg1NzI4&ixlib=rb-1.2.1&q=80&w=400",
+      riccardo,
     text: "Abbiamo adottato un gatto di tre anni da House of Paws e non potremmo essere più felici. L'organizzazione ci ha guidato attraverso tutto il processo.",
     rating: 5,
   },
@@ -75,7 +86,7 @@ const reviews = [
     name: "Alessandro Conti",
     role: "Volontario",
     image:
-      "https://images.unsplash.com/photo-1526869838828-ebe1f43c2a67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHZvbHVudGVlcnxlbnwwfHx8fDE2MzU1ODU3Mjg&ixlib=rb-1.2.1&q=80&w=400",
+     alessandro,
     text: "Essere un volontario in House of Paws mi ha fatto capire quanto amore e dedizione ci siano in questa organizzazione. È un onore farne parte.",
     rating: 5,
   },
@@ -83,7 +94,7 @@ const reviews = [
     name: "Silvia De Luca",
     role: "Veterinaria",
     image:
-      "https://images.unsplash.com/photo-1532619675605-4f2b9623a5f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDExfH12ZXRlcmluYXJpYW58ZW58MHx8fHwxNjM1NTg1NzI4&ixlib=rb-1.2.1&q=80&w=400",
+      silvia,
     text: "Come veterinaria, collaborare con House of Paws è una garanzia di qualità. L'amore per gli animali è al centro di tutto ciò che fanno.",
     rating: 5,
   },
@@ -96,7 +107,7 @@ const events = [
     description:
       "Unisciti a noi per una giornata dedicata all'adozione di cani e gatti in cerca di una nuova casa. Vieni a conoscere i nostri ospiti e trova il tuo nuovo amico a quattro zampe!",
     image:
-      "https://images.unsplash.com/photo-1598137097135-6cb516dec22d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDI2fHxhZG9wdGlvbnxlbnwwfHx8fDE2MzU1ODU3Mjg&ixlib=rb-1.2.1&q=80&w=400",
+      adoption,
   },
   {
     title: "Evento di Raccolta Fondi",
@@ -104,7 +115,7 @@ const events = [
     description:
       "Partecipa al nostro evento di raccolta fondi per sostenere House of Paws. Ci saranno giochi, cibo e divertimento per tutta la famiglia!",
     image:
-      "https://images.unsplash.com/photo-1509221961899-a92776cbe0ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDI1fHxmdW5kcmFpc2VyfGVufDB8fHx8MTYzNTU4NTcyOA&ixlib=rb-1.2.1&q=80&w=400",
+      raccoltafondi,
   },
   {
     title: "Seminario sulla Cura degli Animali",
@@ -112,8 +123,8 @@ const events = [
     description:
       "Partecipa al nostro seminario con esperti veterinari che parleranno della cura quotidiana degli animali e delle migliori pratiche per il loro benessere.",
     image:
-      "https://images.unsplash.com/photo-1580326955583-46d6d00c49fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHNlbWluYXJ8ZW58MHx8fHwxNjM1NTg1NzI4&ixlib=rb-1.2.1&q=80&w=400",
-  },
+      seminario,
+  }
 ];
 
 const resources = [
