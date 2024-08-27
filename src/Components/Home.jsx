@@ -1,6 +1,5 @@
 
 import { AdoptionPreview } from "./AdoptionPreview";
-import { PetArray } from "./Adozioni/PetArray";
 import Banner from "./Banner";
 import BlogPreview from "./BlogPreview";
 import CommunityPreview from "./CommunityPreview";

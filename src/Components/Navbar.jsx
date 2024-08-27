@@ -35,7 +35,7 @@ function Navbar({
           <Link to="/adozioni" className="hover:underline">
             Adozioni
           </Link>
-          <Link to="/blog" className="hover:underline">
+          <Link to="/blog" className="`${elementText} hover:underline transition duration-300`">
           Blog
           </Link>
           <Link to="/donate" className="hover:underline">
@@ -124,7 +124,7 @@ function Navbar({
           to="/signIn"
           className={`${
             mobile ? "block w-full" : ""
-          } ${elementBg} text-green-600 px-4 py-2 rounded hover:bg-opacity-90 transition duration-300 ${
+          } ${elementBg}  text-dark-grey px-4 py-2 rounded hover:bg-opacity-90 transition duration-300 ${
             mobile ? "mt-0" : ""
           }`}
           onClick={() => mobile && setIsOpen(false)}

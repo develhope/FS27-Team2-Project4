@@ -13,7 +13,7 @@ const PreviewCard = ({ image, title, link }) => (
     >
       {title}
     </a>
-    <div className="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
+    <div className="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-5 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
   </div>
 );
 
@@ -37,7 +37,7 @@ export default function SitePreview() {
   ];
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center px-20 mb-20">
       <div className="2xl:mx-auto 2xl:container py-12 px-4 sm:px-6 xl:px-20 2xl:px-0">
         <div className="flex flex-col justify-center items-center space-y-10">
           <div className="flex flex-col justify-center items-center">
@@ -46,7 +46,7 @@ export default function SitePreview() {
             </h1>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-4 w-full h-[90vh]">
-            {/* First element spanning 2 rows */}
+            
             <div className="lg:col-span-1 lg:row-span-2">
               <PreviewCard
                 image={previews[0].image}
@@ -54,7 +54,7 @@ export default function SitePreview() {
                 link={previews[0].link}
               />
             </div>
-            {/* Remaining elements */}
+          
             <div className="lg:col-span-1 lg:row-span-1">
               <PreviewCard
                 image={previews[1].image}

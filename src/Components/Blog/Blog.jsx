@@ -47,7 +47,7 @@ const Blog = () => {
         </button>
       </div>
 
-      <section className="pt-14 max-w-screen-xl mx-auto">
+      <section className="py-14 max-w-screen-xl mx-auto">
             <div className="relative overflow-hidden mx-4 px-4 py-14 rounded-2xl bg-light-green md:px-8 md:mx-8">
                 <div className="relative z-10 max-w-xl mx-auto sm:text-center">
                     <div className="space-y-3">
