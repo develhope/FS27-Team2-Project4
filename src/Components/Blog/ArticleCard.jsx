@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ArticleCard = ({ id, image, title, description, tags }) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center justify-center">
       <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg flex flex-col h-[490px] w-80">
         <img alt={title} src={image} className="h-56 w-full object-cover" />
 
@@ -16,8 +16,8 @@ const ArticleCard = ({ id, image, title, description, tags }) => {
           </div>
 
             <Link
-              to={`/article/${id}`}
-              className="mx-auto inline-block text-xs rounded-md border border-gray-700 bg-white text-gray-700 px-4 py-2 hover:bg-gray-700 hover:text-white transition"
+              to={`/article/${id}`}className="mx-auto inline-block text-xs rounded-md border border-dark-grey bg-white text-dark-grey px-4 py-2 hover:bg-pink hover:text-dark-grey  hover:border-pink transition"
+              
             >
               Scopri di più
             </Link>
@@ -27,7 +27,7 @@ const ArticleCard = ({ id, image, title, description, tags }) => {
               {tags.map((tag, index) => (
                 <span
                   key={index}
-                  className="text-xs text-dark-grey p-1 bg-light-grey rounded-xl"
+                  className="text-xs text-dark-grey p-2 mt-1 bg-light-grey rounded-xl"
                 >
                   {tag}
                 </span>
