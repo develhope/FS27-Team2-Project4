@@ -147,7 +147,7 @@ export default function CommunityPreview() {
       </div>
 
       {/* Sezione Eventi */}
-      <div className="mt-8 sm:mt-12">
+      <div className="mt-8 sm:mt-12 px-20">
         <h3 className="text-2xl sm:text-3xl font-semibold text-[#526742] text-center mb-4 sm:mb-6">
           Eventi
         </h3>

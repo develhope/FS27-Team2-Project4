@@ -31,9 +31,9 @@ export default function Banner() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 8000); // Change slides every 8 seconds
+    }, 8000); 
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
+    return () => clearInterval(interval);
   }, [slides.length]);
 
   const handleSlideChange = (index) => {

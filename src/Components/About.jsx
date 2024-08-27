@@ -3,19 +3,20 @@ import Alessandro from "../assets/images/Alessandro.jpg"
 import Antonio from "../assets/images/Antonio.jpg"
 import Aurora from "../assets/images/aurora.jpg"
 import Francesca from "../assets/images/Francesca.jpg"
+import Astrid from "../assets/images/Astrid.jpg"
 
 const teamMembers = [
   {
     name: "Astrid",
     role: "Fondatrice",
-    imageUrl: "path/to/astrid.jpg",
+    imageUrl: Astrid,
     description: 'Astrid è il cuore e l’anima del Rifugio degli Animali. Con una passione inesauribile per il benessere degli animali, ha trasformato il suo sogno in realtà fondando il rifugio nel 2010. Grazie alla sua leadership e dedizione, il rifugio è diventato un faro di speranza per centinaia di animali bisognosi, garantendo loro una seconda possibilità di trovare una casa amorevole.',
   },
   {
-    name: "Francesca",
-    role: "Responsabile Comunicazioni",
-    imageUrl: Francesca,
-    description: 'Francesca è la voce del Rifugio degli Animali, responsabile di diffondere il nostro messaggio di amore e cura per gli animali a un pubblico sempre più vasto. Con una grande esperienza nella comunicazione e una passione per le cause sociali, gestisce con efficacia le nostre campagne sui social media, coordina le relazioni con i media e assicura che ogni storia degli animali del rifugio raggiunga il cuore delle persone. Grazie al suo lavoro, il rifugio ha potuto sensibilizzare e coinvolgere la comunità, aumentando le adozioni e il supporto ai nostri progetti.',
+    name: "Manuel",
+    role: "Coordinatore Adozioni a Distanza",
+    imageUrl: manuel,
+    description: 'Manuel è il nostro Coordinatore delle Adozioni a Distanza, responsabile di gestire e ottimizzare il programma che consente ai sostenitori di contribuire al benessere degli animali attraverso supporto economico mirato. Con grande attenzione ai dettagli e abilità organizzative, Manuel gestisce le richieste di adozione a distanza, fornisce aggiornamenti regolari ai sostenitori e garantisce che ogni contributo venga utilizzato in modo efficace per migliorare le vite degli animali. Il suo lavoro non solo aiuta a mantenere il rifugio operativo, ma costruisce anche una comunità di sostenitori coinvolti e appassionati, creando un legame speciale tra gli animali e i loro adottanti a distanza.',
   },
   {
     name: "Alessandro",
@@ -24,10 +25,10 @@ const teamMembers = [
     description: 'Alessandro è il pilastro dietro il processo di adozione del Rifugio degli Animali. Con un incredibile dedizione e una profonda empatia, si assicura che ogni animale trovi la famiglia giusta. Alessandro lavora instancabilmente per conoscere ogni animale, comprendere le loro esigenze uniche e abbinarli a famiglie amorevoli e compatibili. Grazie al suo impegno, centinaia di animali hanno trovato case sicure e affettuose, trasformando il loro futuro in una storia di successo.',
   },
   {
-    name: "Manuel",
-    role: "Coordinatore Adozioni a Distanza",
-    imageUrl: manuel,
-    description: 'Manuel è il nostro Coordinatore delle Adozioni a Distanza, responsabile di gestire e ottimizzare il programma che consente ai sostenitori di contribuire al benessere degli animali attraverso supporto economico mirato. Con grande attenzione ai dettagli e abilità organizzative, Manuel gestisce le richieste di adozione a distanza, fornisce aggiornamenti regolari ai sostenitori e garantisce che ogni contributo venga utilizzato in modo efficace per migliorare le vite degli animali. Il suo lavoro non solo aiuta a mantenere il rifugio operativo, ma costruisce anche una comunità di sostenitori coinvolti e appassionati, creando un legame speciale tra gli animali e i loro adottanti a distanza.',
+    name: "Francesca",
+    role: "Responsabile Comunicazioni",
+    imageUrl: Francesca,
+    description: 'Francesca è la voce del Rifugio degli Animali, responsabile di diffondere il nostro messaggio di amore e cura per gli animali a un pubblico sempre più vasto. Con una grande esperienza nella comunicazione e una passione per le cause sociali, gestisce con efficacia le nostre campagne sui social media, coordina le relazioni con i media e assicura che ogni storia degli animali del rifugio raggiunga il cuore delle persone. Grazie al suo lavoro, il rifugio ha potuto sensibilizzare e coinvolgere la comunità, aumentando le adozioni e il supporto ai nostri progetti.',
   },
   {
     name: "Aurora",
@@ -45,14 +46,14 @@ const teamMembers = [
 
 export default function About() {
   return (
-    <div className="bg-white py-10">
-      <div className="container mx-auto text-center">
-        <div className="bg-light-green py-10 px-6 mb-10 rounded-lg shadow-lg mt-0">
+    <div className="bg-white flex flex-col justify-center items-center py-10">
+      <div className="container mx-20 text-center">
+        <div className="bg-light-green py-10 px-10 mb-10 rounded-lg shadow-lg mt-0">
           <h1 className="text-dark-purple text-5xl font-bold mb-4">
-            Benvenuti al Rifugio degli Animali
+            Benvenuti ad House of Paws!
           </h1>
           <p className="text-dark-grey text-lg py-12">
-            Il Rifugio degli Animali è nato dalla passione di un gruppo di amici
+            House of Paws è nato dalla passione di un gruppo di amici
             che condividevano un sogno comune: offrire una seconda possibilità
             agli animali abbandonati e maltrattati. Fondato nel 2010, il nostro
             rifugio è cresciuto da un piccolo gruppo di volontari a una comunità

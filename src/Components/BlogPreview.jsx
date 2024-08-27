@@ -6,7 +6,7 @@ export default function BlogPreview() {
   const previewArticles = articles.slice(0, 3);
 
   return (
-    <section className="py-10 sm:py-16 lg:py-24 bg-black z-40 relative">
+    <section className="py-10 sm:py-16 lg:py-24 bg-black relative">
       <div className="container mx-auto flex flex-col gap-4">
         <h2 className="text-3xl font-bold text-dark-green mb-4 sm:text-4xl lg:text-5xl">
           <span className=" block w-full font-light text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-500 lg:inline">
