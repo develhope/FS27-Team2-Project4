@@ -44,9 +44,10 @@ export function Login({ setLogin, users }) {
   }
 
   return (
-    <div className="flex flex-col gap-4 content-center max-w-72 ">
+    <div className="justify-center items-center flex p-10">
+    <div className="flex flex-col gap-2 max-w-72 justify-center items-center mt-20">
       <div className="flex flex-col gap-4 justify-center">
-        <h1 className="text-pink-800 text-lg">Login</h1>
+        <h1 className="flex items-center justify-center text-dark-blue text-4xl font-semibold mb-8">Login</h1>
 
         
         <form
@@ -56,7 +57,7 @@ export function Login({ setLogin, users }) {
           {" "}
           {/* gestisce il submit di tutti gli input nel form */}
           <input
-            className="rounded-lg flex drop-shadow-lg "
+            className="rounded-md flex drop-shadow-lg p-2"
             type="text"
             placeholder="username"
             name="username"
@@ -66,7 +67,7 @@ export function Login({ setLogin, users }) {
             } /*prende il valore da dataLogin che a sua volta li recupera dallo stato*/
           />
           <input
-            className="rounded-lg mt-4 flex drop-shadow-lg"
+            className="rounded-md mt-2 flex drop-shadow-lg p-2"
             type="password"
             placeholder="password"
             name="password"
@@ -75,20 +76,19 @@ export function Login({ setLogin, users }) {
               dataLogin(e.target.name, e.target.value)
             } /*prende il valore da dataLogin che a sua volta li recupera dallo stato*/
           />
-          <button className="bg-red-400 mt-3 text-red-50 font-bold p-2 rounded-lg  drop-shadow-lg  hover:bg-orange-300">
+          <button className="bg-light-blue hover:bg-dark-blue mt-3 mb-6 hover:shadow-xl text-white font-bold p-2 rounded-lg   drop-shadow-lg  hover:bg-orange-300">
             Login
           </button>
         </form>
       </div>
-      <div className="flex flex-col gap-4 justify-center">
-        <h5 className="font-medium ">Non sei ancora registrato?</h5>
+        <h5 className="text-xs ">Non sei ancora registrato?</h5>
         <button
           onClick={handleClick}
-          className="bg-red-400 p-2 text-red-50 font-bold rounded-lg  drop-shadow-lg  hover:bg-orange-300 "
+          className="bg-pink hover:shadow-xl p-2 text-red-50 font-bold rounded-lg px-12 drop-shadow-lg "
         >
           SignIn
         </button>
-      </div>
+    </div>
     </div>
   );
 }

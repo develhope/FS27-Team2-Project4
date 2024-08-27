@@ -25,6 +25,7 @@ import { Thankyoupage } from "./Components/Shop/ThankYouPage";
 import { Login } from "./Components/User/Login";
 import { Users } from "./Components/User/Users";
 import { SignIn } from "./Components/User/SignIn";
+import { AdminProfile } from "./Components/User/AdminProfile";
 
 function App() {
   const [theme, setTheme] = useState({
@@ -71,7 +72,7 @@ function App() {
   const [users, setUsers] = useState([
     {
       username: "Admin",
-      password: "Team4",
+      password: "Team3",
       admin: true,
     },
   ]);
@@ -106,6 +107,7 @@ function App() {
             <Route path="/community" element={<Community />} />
             <Route path="/submitOrderPage" element={<SubmitOrderPage />} />
             <Route path="/thankyoupage" element={<Thankyoupage />} />
+            <Route path="/loginAdmin" element={<AdminProfile />} />
             <Route
               path="/article/:id"
               element={<ArticlePage theme={theme} setTag={handleTheme} />}
