@@ -76,7 +76,7 @@ const DiventaVolontario = () => {
         }}
       >
         <div className="absolute inset-0 flex items-center justify-center">
-          <h3 className="text-4xl md:text-6xl lg:text-8xl font-bold text-white text-center px-4 shadow-md">
+          <h3 className="text-4xl md:text-6xl lg:text-8xl font-bold drop-shadow-lg text-white text-center px-4 shadow-md">
             Vuoi diventare Volontario?
           </h3>
         </div>
@@ -100,7 +100,7 @@ const DiventaVolontario = () => {
                 name="name"
                 required
                 placeholder="Nome"
-                className="w-full p-3 text-lg border-2 border-white bg-white text-gray-800 rounded-md"
+                className="w-full p-3 text-lg border-2 border-light-green bg-white text-gray-800 rounded-md"
               />
             </div>
 
@@ -114,7 +114,7 @@ const DiventaVolontario = () => {
                 name="surname"
                 required
                 placeholder="Cognome"
-                className="w-full p-3 text-lg border-2 border-white bg-white text-gray-800 rounded-md"
+                className="w-full p-3 text-lg border-2 border-light-green bg-white text-gray-800 rounded-md"
               />
             </div>
 
@@ -128,7 +128,7 @@ const DiventaVolontario = () => {
                 name="email"
                 required
                 placeholder="Email"
-                className="w-full p-3 text-lg border-2 border-white bg-white text-gray-800 rounded-md"
+                className="w-full p-3 text-lg border-2 border-light-green bg-white text-gray-800 rounded-md"
               />
             </div>
 
@@ -141,13 +141,13 @@ const DiventaVolontario = () => {
                 name="message"
                 required
                 placeholder="Messaggio"
-                className="w-full p-3 text-lg border-2 border-white bg-white text-gray-800 rounded-md h-32"
+                className="w-full p-3 text-lg border-2 border-light-green bg-white text-gray-800 rounded-md h-32"
               ></textarea>
             </div>
 
             <button
               type="submit"
-              className="py-1.5 px-3 text-sm rounded-lg text-black bg-[#f6bcb2] border border-[#ffe6b3] shadow-md"
+              className="py-1.5 px-3 text-sm rounded-lg text-black bg-pink border border-pink shadow-md"
             >
               Submit
             </button>
