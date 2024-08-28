@@ -1,6 +1,7 @@
 import React from 'react';
 import volontariato from "../assets/images/homepagevolontariato.jpg"
 import community from "../assets/images/homepagecommunity.jpg"
+import shop from "../assets/images/ORSEQL12.jpg"
 
 const PreviewCard = ({ image, title, link }) => (
   <div className="relative group flex justify-center items-center h-full w-full">
@@ -11,18 +12,18 @@ const PreviewCard = ({ image, title, link }) => (
     />
     <a
       href={link}
-      className=" text-dark-grey focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-5 z-10 absolute text-base font-medium leading-none text-gray-800 py-4 w-36 bg-pink transition-transform duration-300 ease-in-out transform group-hover:scale-95"
+      className=" text-dark-grey rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-5 z-10 absolute text-base font-medium leading-none text-gray-800 py-4 w-36 bg-pink transition-transform duration-300 ease-in-out transform group-hover:scale-95"
     >
       {title}
     </a>
-    <div className="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-5 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
+    <div className="absolute opacity-0 rounded-lg group-hover:opacity-100 transition duration-500 bottom-5 py-6 z-0 px-20 w-36 bg-white bg-opacity-50"></div>
   </div>
 );
 
 export default function SitePreview() {
   const previews = [
     {
-      image: 'https://media.discordapp.net/attachments/1225956010959835257/1277368196453761134/Screenshot_2024-08-25_223114.png?ex=66ce3ad6&is=66cce956&hm=58f13b1df431c347a5fea3481e2a42a981b62323bedfd42e3ac4e738a3f99f47&=&format=webp&quality=lossless&width=1216&height=1138',
+      image: shop,
       title: 'Shop',
       link: '/shop'
     },
