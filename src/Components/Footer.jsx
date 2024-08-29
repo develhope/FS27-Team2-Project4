@@ -56,7 +56,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <Link
-                    to="/"
+                    to="/#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -66,7 +66,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
 
                 <li>
                   <Link
-                    to="/community"
+                    to="/community#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -76,7 +76,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
 
                 <li>
                   <Link
-                    to="/Adozioni"
+                    to="/Adozioni#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -86,7 +86,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
 
                 <li>
                   <Link
-                    to="/shop"
+                    to="/shop#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -95,7 +95,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
                 </li>
                 <li>
                   <Link
-                    to="/Blog"
+                    to="/Blog#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -111,7 +111,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <Link
-                    to="/about"
+                    to="/about#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -121,7 +121,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
 
                 <li>
                   <Link
-                    to="/sustainability"
+                    to="/sostenibilità#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -131,7 +131,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
 
                 <li>
                   <Link
-                    to="/certification"
+                    to="/payment#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -147,17 +147,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <Link
-                    to="/contact"
-                    className={`${elementText} text-gray-700 transition hover:text-pink`}
-                  >
-                    {" "}
-                    Contatti{" "}
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    to="/faqs"
+                    to="/#faq"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -167,7 +157,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
 
                 <li>
                   <Link
-                    to="/liveChat"
+                    to="/"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -177,7 +167,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
 
                 <li>
                   <Link
-                    to="/DiventaVolontario"
+                    to="/DiventaVolontario#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -193,17 +183,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <Link
-                    to="/accessibility"
-                    className={`${elementText} text-gray-700 transition hover:text-pink`}
-                  >
-                    {" "}
-                    Accessibilità{" "}
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    to="/resi"
+                    to="/resi#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -213,7 +193,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
 
                 <li>
                   <Link
-                    to="/rimborsi"
+                    to="/rimborsi#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -229,7 +209,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
               <ul className="mt-6 space-y-4 text-sm">
                 <li>
                   <Link
-                    to="/donate"
+                    to="/donate#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -239,7 +219,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
 
                 <li>
                   <Link
-                    to="/events"
+                    to="/community#eventi"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
@@ -320,7 +300,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
         <div className="mt-8 border-t border-gray-100 pt-8">
           <div className="sm:flex sm:justify-between">
             <p className="text-xs text-gray-500">
-              &copy; 2022. Company Name. All rights reserved.
+              &copy; 2022. House of paws. All rights reserved.
             </p>
 
             <ul className="mt-8 flex flex-wrap justify-start gap-4 text-xs sm:mt-0 lg:justify-end">

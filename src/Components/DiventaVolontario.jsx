@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import React from "react";
 import Volontario1 from "../assets/images/Volontario1.jpg";
 import Volontario2 from "../assets/images/Volontario2.jpg";
@@ -8,6 +10,20 @@ const DiventaVolontario = () => {
     event.preventDefault();
     console.log("Form submitted");
   };
+
+  const { hash } = useLocation();
+
+useEffect(() => {
+  console.log("ciao")
+  if (hash) {
+    const element = document.getElementById(hash.substring(1));
+    if (element) {
+      console.log(element)
+      console.log(hash)
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+}, [hash]);
 
   return (
     <div className="w-full">

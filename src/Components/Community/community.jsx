@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -177,6 +179,20 @@ function Community() {
     ],
   };
 
+  const { hash } = useLocation();
+  
+    useEffect(() => {
+      console.log("ciao")
+      if (hash) {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          console.log(element)
+          console.log(hash)
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, [hash]);
+
   return (
     <section className="bg-gray-50 py-8 sm:py-12 lg:py-16">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -270,7 +286,7 @@ function Community() {
         </div>
 
         {/* Sezione Eventi */}
-        <div className="mt-8 sm:mt-12">
+        <div className="mt-8 sm:mt-12" id="eventi">
           <h3 className="text-2xl sm:text-3xl font-semibold text-[#526742] text-center mb-4 sm:mb-6">
             Eventi
           </h3>

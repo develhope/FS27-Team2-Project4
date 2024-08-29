@@ -1,5 +1,6 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 import Banner from './Banner';
 import ArticleCard from './ArticleCard';
 import Filters from './Filters';
@@ -24,6 +25,20 @@ const Blog = () => {
   const filteredArticles = filter
     ? articles.filter(article => article.tags.includes(filter)).slice(0, displayedArticles.length)
     : displayedArticles;
+
+    const { hash } = useLocation();
+
+    useEffect(() => {
+      console.log("ciao")
+      if (hash) {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          console.log(element)
+          console.log(hash)
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, [hash]);
 
   return (
     <div>

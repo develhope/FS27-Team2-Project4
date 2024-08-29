@@ -1,7 +1,8 @@
-import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { CartContext } from "../CartContext";
 import Logo from "../../public/SVG/LOGO-SITO.png";
+
 function Navbar({
   bgColor = "bg-green-600",
   textColor = "text-white",
@@ -9,6 +10,7 @@ function Navbar({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  
 
   const { cartCount } = useContext(CartContext);
 
@@ -16,8 +18,8 @@ function Navbar({
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
   return (
-    <nav className={`${bgColor} ${textColor} py-4 px-8`}>
-      <div className="flex items-center justify-between">
+    <nav className={`${bgColor} ${textColor} py-4 px-8`} >
+      <div className="flex items-center justify-between" id="navbar">
         <Link to="/" className="text-2xl font-semibold">
           <img src={Logo} alt="logo" className="h-12" />
         </Link>
