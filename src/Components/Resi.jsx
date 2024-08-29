@@ -1,4 +1,21 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 export default function () {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    console.log("ciao")
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        console.log(element)
+        console.log(hash)
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [hash]);
+  
   return (
     <section className="relative bg-[url(../src/assets/images/cute-animals-group-white-background.jpg)] bg-cover bg-center bg-no-repeat ">
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">

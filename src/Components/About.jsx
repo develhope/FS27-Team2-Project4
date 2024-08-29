@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import manuel from "../assets/images/manuel.jpg";
 import Alessandro from "../assets/images/Alessandro.jpg"
 import Antonio from "../assets/images/Antonio.jpg"
@@ -44,7 +46,23 @@ const teamMembers = [
   },
 ];
 
+
+
 export default function About() {
+  const { hash } = useLocation();
+
+useEffect(() => {
+  console.log("ciao")
+  if (hash) {
+    const element = document.getElementById(hash.substring(1));
+    if (element) {
+      console.log(element)
+      console.log(hash)
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+}, [hash]);
+
   return (
     <div className="bg-white flex flex-col justify-center items-center py-10">
       <div className="container mx-20 text-center">

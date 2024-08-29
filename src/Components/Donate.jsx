@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import {
   PayPalScriptProvider,
   usePayPalScriptReducer,
@@ -43,6 +44,20 @@ function Donate() {
       setShow5x1000Details(true);
     }
   };
+
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    console.log("ciao")
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        console.log(element)
+        console.log(hash)
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [hash]);
 
   return (
     <div className="donate-page font-sans text-gray-800 mt-8">

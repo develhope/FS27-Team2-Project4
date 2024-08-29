@@ -14,6 +14,8 @@ import adoption from "../assets/images/communityevent1.jpg"
 import raccoltafondi from "../assets/images/communityevent2.jpg"
 import seminario from "../assets/images/communityevent3.jpg"
 
+
+
 const reviews = [
     {
       name: "Paolo Marini",
@@ -85,6 +87,7 @@ const events = [
   ];
 
 export default function CommunityPreview() {
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -112,11 +115,15 @@ export default function CommunityPreview() {
       },
     ],
   };
+  
+    
+ 
+  
 
   return (
     <>
       {/* Sezione Recensioni */}
-      <div className="mt-8 sm:mt-12">
+      <div className="mt-8 sm:mt-12" >
         <h3 className="text-2xl sm:text-3xl font-semibold text-[#526742] text-center mb-4 sm:mb-6">
           Recensioni
         </h3>
@@ -159,7 +166,7 @@ export default function CommunityPreview() {
       </div>
 
       {/* Sezione Eventi */}
-      <div className="mt-8 sm:mt-12 px-20">
+      <div className="mt-8 sm:mt-12 px-20" >
         <h3 className="text-2xl sm:text-3xl font-semibold text-[#526742] text-center mb-4 sm:mb-6">
           Eventi
         </h3>
@@ -190,3 +197,4 @@ export default function CommunityPreview() {
     </>
   );
 }
+

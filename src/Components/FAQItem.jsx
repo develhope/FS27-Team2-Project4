@@ -8,7 +8,7 @@ const FAQItem = ({ question, answer }) => {
   };
 
   return (
-    <div className="group [&_summary::-webkit-details-marker]:hidden px-16">
+    <div className="group [&_summary::-webkit-details-marker]:hidden px-16" id='faq'>
       <summary
         className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-light-green p-4 text-gray-900"
         onClick={toggleOpen}
