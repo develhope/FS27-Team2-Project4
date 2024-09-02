@@ -1,24 +1,18 @@
-export default function () {
+export default function RimborsoForm() {
   return (
-    <section className="relative bg-[url(../src/assets/images/rimborsi.jpg)] bg-cover bg-center bg-no-repeat ">
+    <section className="relative bg-[url('../src/assets/images/rimborsi.jpg')] bg-cover bg-center bg-no-repeat">
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
           <div className="lg:col-span-2 lg:py-12">
-            <p className="max-w-xl text-lg  ml-1">
-              "Acquista in tutta tranquillità. Se il prodotto non soddisfa le
-              tue aspettative, ti offriamo un rimborso completo entro 15 
-              giorni dalla data di acquisto. <br />
-              
+            <p className="max-w-xl text-lg ml-1">
+              Acquista in tutta tranquillità. Se il prodotto non soddisfa le tue
+              aspettative, ti offriamo un rimborso completo entro 15 giorni
+              dalla data di acquisto. <br />
             </p>
-            
 
             <div className="mt-20">
-              <a
-                href="#"
-                className="text-2xl font-bold text-pink-600  text-light-green"
-              >
-                {" "}
-                02 12345678{" "}
+              <a href="#" className="text-2xl font-bold text-pink-600">
+                02 12345678
               </a>
 
               <address className="mt-2 not-italic">
@@ -30,14 +24,15 @@ export default function () {
           <div className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
             <form action="#" className="space-y-4">
               <div>
-                <label className="sr-only" htmlFor="nome">
+                <label className="sr-only" htmlFor="name">
                   Nome
                 </label>
                 <input
-                  className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                  className="w-full rounded-lg border p-3 text-sm text-gray-800"
                   placeholder="Nome"
                   type="text"
                   id="name"
+                  style={{ borderColor: "#92aa7f" }}
                 />
               </div>
 
@@ -47,10 +42,11 @@ export default function () {
                     Email
                   </label>
                   <input
-                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    className="w-full rounded-lg border p-3 text-sm text-gray-800"
                     placeholder="Indirizzo Email"
                     type="email"
                     id="email"
+                    style={{ borderColor: "#92aa7f" }}
                   />
                 </div>
 
@@ -59,10 +55,11 @@ export default function () {
                     Numero Di Telefono
                   </label>
                   <input
-                    className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                    className="w-full rounded-lg border p-3 text-sm text-gray-800"
                     placeholder="Numero Di Telefono"
                     type="tel"
                     id="phone"
+                    style={{ borderColor: "#92aa7f" }}
                   />
                 </div>
               </div>
@@ -125,14 +122,14 @@ export default function () {
 
               <div>
                 <label className="sr-only" htmlFor="message">
-                  Message
+                  Motivi rimborso
                 </label>
-
                 <textarea
-                  className="w-full rounded-lg border-gray-200 p-3 text-sm"
+                  className="w-full rounded-lg border p-3 text-sm text-gray-800"
                   placeholder="Motivi rimborso"
                   rows="8"
                   id="message"
+                  style={{ borderColor: "#92aa7f" }}
                 ></textarea>
               </div>
 

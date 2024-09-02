@@ -1,5 +1,5 @@
 import React from "react";
-import Volontario1 from "../assets/images/Volontario1.jpg";
+import Volontario1 from "../assets/images/Volontario1.jpeg";
 import Volontario2 from "../assets/images/Volontario2.jpg";
 import TopVolontariato from "../assets/images/top-volonariato.jpg";
 
