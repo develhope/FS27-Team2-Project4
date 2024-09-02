@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { ProductCard } from "./ProductCard";
-import cat1 from "../../assets/images/cat1.webp";
+import CALENDARIO from "../../assets/images/CALENDARIO.jpg";
+import FELPA from "../../assets/images/FELPA.jpg";
+import HAT from "../../assets/images/hat.jpg";
+import TAZZA from "../../assets/images/ORSEQL12.jpg";
+import TSHIRT from "../../assets/images/TSHIRT.jpg";
+import SHOPPER from "../../assets/images/shopper.jpg";
 import { ProductCardFull } from "./ProductCardFull";
 
-export function ProductArray() {
+export function ProductArray({ addToCart }) {
   const [color] = useState(["NERO", "BIANCO", "AZZURRO", "ROSA", "VERDE"]);
   const [size] = useState(["XS", "S", "M", "L", "XL", "XXL"]);
   const [products] = useState([
@@ -11,7 +16,7 @@ export function ProductArray() {
       nome: "Paw T-shirt",
       descrizione: "La nostra comoda t-shirt in cotone con logo serigrafato.",
       prezzo: "20,00 €",
-      immagine: cat1,
+      immagine: TSHIRT,
       taglia: size,
       colore: color,
     },
@@ -19,7 +24,7 @@ export function ProductArray() {
       nome: "Paw Shopper Bag",
       descrizione: "Porta con te i tuoi accessori con la nostra shopper!",
       prezzo: "12,00 €",
-      immagine: cat1,
+      immagine: SHOPPER,
       taglia: "",
       colore: color,
     },
@@ -27,7 +32,7 @@ export function ProductArray() {
       nome: "Paw fisherman hat",
       descrizione: "Proteggiti dal sole con il nostro morbido cappello.",
       prezzo: "15,00 €",
-      immagine: cat1,
+      immagine: HAT,
       taglia: "",
       colore: color,
     },
@@ -35,7 +40,7 @@ export function ProductArray() {
       nome: "Paw felpa",
       descrizione: "Felpa in cotone con logo.",
       prezzo: "35,00 €",
-      immagine: cat1,
+      immagine: FELPA,
       taglia: size,
       colore: color,
     },
@@ -43,7 +48,15 @@ export function ProductArray() {
       nome: "Paw calendario",
       descrizione: "Organizzati al meglio con il nostro calendario.",
       prezzo: "8,00 €",
-      immagine: cat1,
+      immagine: CALENDARIO,
+      taglia: "",
+      colore: "",
+    },
+    {
+      nome: "Tazza HOP",
+      descrizione: "La nostra tazza personalizzata per ogni evenienza.",
+      prezzo: "10,00 €",
+      immagine: TAZZA,
       taglia: "",
       colore: "",
     },
@@ -88,7 +101,10 @@ export function ProductArray() {
               }`}
               onClick={(e) => e.stopPropagation()}
             >
-              <ProductCardFull product={selectedProduct} />
+              <ProductCardFull
+                product={selectedProduct}
+                addToCart={addToCart}
+              />
             </div>
           </div>
         )}

@@ -1,4 +1,21 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 export default function RimborsoForm() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    console.log("ciao");
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        console.log(element);
+        console.log(hash);
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
+
   return (
     <section className="relative bg-[url('../src/assets/images/rimborsi.jpg')] bg-cover bg-center bg-no-repeat">
       <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
@@ -68,17 +85,15 @@ export default function RimborsoForm() {
                 <div>
                   <label
                     htmlFor="Option1"
-                    className=" bg-pink text-dark-grey block w-full cursor-pointer rounded-lg  p-3 text-gray-600   has-[:checked]:bg-dark-green "
+                    className="bg-pink text-dark-grey block w-full cursor-pointer rounded-lg p-3 text-gray-600 has-[:checked]:bg-dark-green"
                     tabIndex="0"
                   >
                     <input
                       className="sr-only"
                       id="Option1"
                       type="radio"
-                      tabIndex="-1"
                       name="option"
                     />
-
                     <span className="text-sm"> Conto Corrente </span>
                   </label>
                 </div>
@@ -86,17 +101,15 @@ export default function RimborsoForm() {
                 <div>
                   <label
                     htmlFor="Option2"
-                    className="  bg-pink text-dark-grey block w-full cursor-pointer rounded-lg  p-3 text-gray-600   has-[:checked]:bg-dark-green "
+                    className="bg-pink text-dark-grey block w-full cursor-pointer rounded-lg p-3 text-gray-600 has-[:checked]:bg-dark-green"
                     tabIndex="0"
                   >
                     <input
                       className="sr-only"
                       id="Option2"
                       type="radio"
-                      tabIndex="-1"
                       name="option"
                     />
-
                     <span className="text-sm"> Paypal </span>
                   </label>
                 </div>
@@ -104,17 +117,15 @@ export default function RimborsoForm() {
                 <div>
                   <label
                     htmlFor="Option3"
-                    className=" bg-pink text-dark-grey block w-full cursor-pointer rounded-lg  p-3 text-gray-600  has-[:checked]:bg-dark-green "
+                    className="bg-pink text-dark-grey block w-full cursor-pointer rounded-lg p-3 text-gray-600 has-[:checked]:bg-dark-green"
                     tabIndex="0"
                   >
                     <input
                       className="sr-only"
                       id="Option3"
                       type="radio"
-                      tabIndex="-1"
                       name="option"
                     />
-
                     <span className="text-sm"> Buono Amazon </span>
                   </label>
                 </div>

@@ -1,70 +1,64 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaComments } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-const teamMembers = [
-  "Astrid",
-  "Manuel",
-  "Aurora",
-  "Alessandro",
-  "Antonio",
-  "Francesca",
-];
-
-const ChatBot = ({ animals }) => {
+const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState("");
   const chatRef = useRef(null);
+  const navigate = useNavigate();
 
   const toggleChat = () => setIsOpen(!isOpen);
 
-  const handleSend = () => {
-    if (input.trim()) {
-      const userMessage = { sender: "user", text: input };
-      setMessages([...messages, userMessage]);
-      setInput("");
-      setTimeout(() => generateResponse(userMessage.text), 1000);
+  const addMessage = (sender, text) => {
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { sender, text },
+    ]);
+  };
+
+  const handleOptionClick = (option) => {
+    switch (option) {
+      case "adopt":
+        addMessage("bot", "Ti reindirizzo alla pagina delle adozioni...");
+        setTimeout(() => {
+          navigate("/adozioni");
+        }, 2000);
+        break;
+      case "volunteer":
+        addMessage("bot", "Siamo sempre alla ricerca di volontari! Puoi contattarci per maggiori informazioni.");
+        setTimeout(() => {
+          navigate("/diventa-volontario");
+        }, 2000);
+        break;
+      case "faq":
+        addMessage("bot", "Ti reindirizzo alla pagina delle FAQ...");
+        setTimeout(() => {
+          navigate("/FAQPage");
+        }, 2000);
+        break;
+      case "donate":
+        addMessage("bot", "Grazie per il tuo interesse nel donare! Ti reindirizzo alla pagina delle donazioni...");
+        setTimeout(() => {
+          navigate("/donate");
+        }, 2000);
+        break;
+      case "contact":
+        addMessage("bot", "Puoi contattarci direttamente attraverso il modulo nella pagina Contatti.");
+        setTimeout(() => {
+          navigate("/contact");
+        }, 2000);
+        break;
+      default:
+        addMessage("bot", "Scelta non valida, riprova.");
     }
   };
 
-  const generateResponse = (question) => {
-    let response = "";
-
-    if (question.toLowerCase().includes("adozione")) {
-      response = "Tutti i nostri animali sono disponibili per l'adozione. Vuoi informazioni su un animale specifico?";
-    } else if (question.toLowerCase().includes("volontariato")) {
-      response = "Siamo sempre alla ricerca di volontari! Puoi contattarci per maggiori informazioni.";
-    } else if (question.toLowerCase().includes("che animali posso adottare?")) {
-      response = "Ti reindirizzo alla pagina delle adozioni...";
-      setTimeout(() => {
-        window.location.href = "/adozioni";
-      }, 2000);
-    } else if (question.toLowerCase().includes("faq")) {
-      response = "Ti reindirizzo alla pagina delle adozioni...";
-      setTimeout(() => {
-        window.location.href = "/FAQPage";
-      }, 2000);
-    } else {
-      const animal = animals.find((a) =>
-        question.toLowerCase().includes(a.nome?.toLowerCase())
-      );
-
-      if (animal) {
-        const { nome, famiglia, razza, età, sterilizzato, descrizione } = animal;
-        response = `${nome} è un ${famiglia} ${razza}. Ha ${età} anni e ${
-          sterilizzato === "Sterilizzato" ? "è sterilizzato" : "non è sterilizzato"
-        }. ${descrizione}`;
-      } else {
-        response = "Grazie per il tuo messaggio! Uno dei nostri operatori ti risponderà a breve.";
-      }
+  useEffect(() => {
+    if (isOpen && messages.length === 0) {
+      addMessage("bot", "Come posso aiutarti?");
     }
-
-    const botMessage = {
-      sender: teamMembers[Math.floor(Math.random() * teamMembers.length)],
-      text: response,
-    };
-    setMessages((prevMessages) => [...prevMessages, botMessage]);
-  };
+  }, [isOpen]);
 
   useEffect(() => {
     if (chatRef.current) {
@@ -75,53 +69,70 @@ const ChatBot = ({ animals }) => {
   return (
     <div className="fixed bottom-4 right-4 z-50">
       {isOpen ? (
-        <div className="w-80 h-96 bg-white shadow-lg rounded-lg flex flex-col">
-          <div className="flex justify-between items-center p-4 bg-[#92aa7f] text-white rounded-t-lg">
+        <div className="w-96 h-[500px] bg-white shadow-lg rounded-lg flex flex-col">
+          <div className="flex justify-between items-center p-3 bg-[#92aa7f] text-white rounded-t-lg">
             <h2 className="text-lg font-semibold">Chat con noi!</h2>
-            <button onClick={toggleChat} className="text-2xl">
+            <button onClick={toggleChat} className="text-2xl focus:outline-none">
               ×
             </button>
           </div>
           <div
-            className="flex-1 p-4 overflow-y-auto"
+            className="flex-1 p-4 overflow-y-auto space-y-2"
             ref={chatRef}
             style={{ scrollBehavior: "smooth" }}
           >
             {messages.map((msg, index) => (
               <div
                 key={index}
-                className={`my-2 p-2 rounded-lg ${
-                  msg.sender === "user" ? "bg-blue-100 text-right" : "bg-gray-100 text-left"
+                className={`p-2 rounded-lg text-sm ${
+                  msg.sender === "user"
+                    ? "bg-blue-100 text-right"
+                    : "bg-gray-100 text-left"
                 }`}
               >
-                <p className="text-sm">
+                <p>
                   {msg.sender !== "user" && <strong>{msg.sender}: </strong>}
                   {msg.text}
                 </p>
               </div>
             ))}
           </div>
-          <div className="p-2 bg-gray-100 rounded-b-lg flex">
-            <input
-              type="text"
-              className="flex-1 p-2 border border-gray-300 rounded-lg"
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyPress={(e) => {
-                if (e.key === "Enter") handleSend();
-              }}
-            />
+          <div className="p-3 bg-gray-100 rounded-b-lg flex flex-col space-y-2">
             <button
-              className="bg-[#92aa7f] text-white py-2 px-4 rounded-md font-bold ml-2"
-              onClick={handleSend}
+              onClick={() => handleOptionClick("adopt")}
+              className="bg-[#6b8f71] hover:bg-[#5e7c61] text-white py-2 px-3 rounded-md font-medium transition-all"
             >
-              Invia
+              Adozioni
+            </button>
+            <button
+              onClick={() => handleOptionClick("volunteer")}
+              className="bg-[#6b8f71] hover:bg-[#5e7c61] text-white py-2 px-3 rounded-md font-medium transition-all"
+            >
+              Volontariato
+            </button>
+            <button
+              onClick={() => handleOptionClick("faq")}
+              className="bg-[#6b8f71] hover:bg-[#5e7c61] text-white py-2 px-3 rounded-md font-medium transition-all"
+            >
+              FAQ
+            </button>
+            <button
+              onClick={() => handleOptionClick("donate")}
+              className="bg-[#6b8f71] hover:bg-[#5e7c61] text-white py-2 px-3 rounded-md font-medium transition-all"
+            >
+              Donazioni
+            </button>
+            <button
+              onClick={() => handleOptionClick("contact")}
+              className="bg-[#6b8f71] hover:bg-[#5e7c61] text-white py-2 px-3 rounded-md font-medium transition-all"
+            >
+              Contatti
             </button>
           </div>
         </div>
       ) : (
         <button
-          className="bg-[#92aa7f] text-white p-2 rounded-full shadow-lg"
+          className="bg-[#92aa7f] text-white p-3 rounded-full shadow-lg focus:outline-none hover:bg-[#7c957a] transition-all"
           onClick={toggleChat}
         >
           <FaComments />

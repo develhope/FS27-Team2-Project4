@@ -142,11 +142,8 @@ const articles = [
     image:
       "https://www.zooplus.it/magazine/wp-content/uploads/2020/11/1-32.jpg",
     title: "5 ottime ragioni per adottare un cane anziano",
-    description: (
-     
-        "Siamo onesti: quasi tutti gli amanti dei cani che decidono di adottarne uno desiderano un tenere cucciolo da coccolare. È un peccato, però, perché esistono molti vantaggi nell’adottare un cane anziano..."
-      
-    ),
+    description:
+      "Siamo onesti: quasi tutti gli amanti dei cani che decidono di adottarne uno desiderano un tenere cucciolo da coccolare. È un peccato, però, perché esistono molti vantaggi nell’adottare un cane anziano...",
     content: (
       <div className="flex flex-col gap-3 my-7">
         <p>
@@ -483,7 +480,7 @@ const articles = [
             </p>
           </li>
           <li className="my-3 flex flex-col gap-3">
-          <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center">
               <svg
                 height="15px"
                 width="15px"
@@ -617,6 +614,26 @@ const articles = [
     description:
       "Fortunatamente al giorno d’oggi possiamo proteggere i nostri amici di zampa rafforzando le loro difese immunitarie contro alcune malattie. Sono molti infatti i vaccini del cane, alcuni raccomandati e altri solo consigliati. In questo articolo potrai conoscerli più da vicino e capire qanto è importante immunizzare il tuo pelosetto, a maggior ragione quando è ancora un cucciolo.",
     tags: ["cura cani", "problemi di salute"],
+  },
+  {
+    id: 7,
+    image:
+      "https://www.zooplus.it/magazine/wp-content/uploads/2024/08/scottish-fold-orecchie.jpeg",
+    title:
+      "il lato oscuro dell'allevamento dei gatti",
+    description:
+      "Molti gatti soffrono a causa dell’aspetto, apparentemente carino o esotico, che viene perseguito deliberatamente. In questo caso, gli attivisti per il benessere degli animali parlano di allevamento estremo o di “allevamento-tortura",
+    tags: ["cura gatti", "altro"],
+  },
+  {
+    id: 8,
+    image:
+      "https://www.zooplus.it/magazine/wp-content/uploads/2024/07/gatto-investito.jpeg",
+    title:
+      "Cosa fare se il gatto è stato investito?",
+    description:
+      "Purtroppo, soprattutto in città, i gatti domestici fuori casa e quelli randagi vengono investiti con un certa frequenza.",
+    tags: ["cura gatti", "altro"],
   },
 ];
 

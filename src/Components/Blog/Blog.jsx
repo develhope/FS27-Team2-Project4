@@ -1,5 +1,6 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 import Banner from './Banner';
 import ArticleCard from './ArticleCard';
 import Filters from './Filters';
@@ -25,6 +26,20 @@ const Blog = () => {
     ? articles.filter(article => article.tags.includes(filter)).slice(0, displayedArticles.length)
     : displayedArticles;
 
+    const { hash } = useLocation();
+
+    useEffect(() => {
+      console.log("ciao")
+      if (hash) {
+        const element = document.getElementById(hash.substring(1));
+        if (element) {
+          console.log(element)
+          console.log(hash)
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, [hash]);
+
   return (
     <div>
       <Banner />
@@ -47,7 +62,7 @@ const Blog = () => {
         </button>
       </div>
 
-      <section className="pt-14 max-w-screen-xl mx-auto">
+      <section className="py-14 max-w-screen-xl mx-auto">
             <div className="relative overflow-hidden mx-4 px-4 py-14 rounded-2xl bg-light-green md:px-8 md:mx-8">
                 <div className="relative z-10 max-w-xl mx-auto sm:text-center">
                     <div className="space-y-3">

@@ -1,181 +1,113 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { CartContext } from "../CartContext";
+import Logo from "../../public/SVG/LOGO-SITO.png";
 
 function Navbar({
   bgColor = "bg-green-600",
   textColor = "text-white",
-  elementText = "text-black",
   elementBg = "bg-green-600",
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  
+
+  const { cartCount } = useContext(CartContext);
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
   return (
-    <nav className={`${bgColor} ${textColor} p-4`}>
-      <div className="flex items-center justify-between">
-        {/* Logo */}
+    <nav className={`${bgColor} ${textColor} py-4 px-8`} >
+      <div className="flex items-center justify-between" id="navbar">
         <Link to="/" className="text-2xl font-semibold">
-          Logo
+          <img src={Logo} alt="logo" className="h-12" />
         </Link>
 
-        {/* Menu Links */}
         <div className="hidden lg:flex flex-grow justify-center space-x-4">
-          <NavLink to="/" text="Home" />
-          <NavLink to="/about" text="About" />
-          <NavLink to="/community" text="Community" />
-          <NavLink to="/adozioni" text="Adozioni" />
-          <NavLink to="/donate" text="Donazioni" />
-          <NavLink to="/shop" text="Shop" />
-          <NavLink to="/blog" text="Blog" />
-          <DropdownMenu />
+          <Link to="/" className="hover:underline">
+            Home
+          </Link>
+          <Link to="/about" className="hover:underline">
+            Chi siamo
+          </Link>
+          <Link to="/community" className="hover:underline">
+            Community
+          </Link>
+          <Link to="/adozioni" className="hover:underline">
+            Adozioni
+          </Link>
+          <Link to="/blog" className="`${elementText} hover:underline transition duration-300`">
+          Blog
+          </Link>
+          <Link to="/donate" className="hover:underline">
+            Donazioni
+          </Link>
+          <Link to="/shop" className="hover:underline">
+            Shop
+          </Link>
         </div>
 
-        {/* Auth Buttons */}
-        <div className="hidden lg:flex space-x-4">
+        <div className="hidden lg:flex items-center space-x-4">
+          <Link to="/cart">
+            <CartIcon count={cartCount} />
+          </Link>
           <AuthButtons />
         </div>
 
-        {/* Hamburger Menu */}
-        <button
-          onClick={toggleMenu}
-          className="lg:hidden text-white focus:outline-none"
-        >
-          {isOpen ? (
+        <div className="lg:hidden flex items-center">
+          <Link to="/cart" className="mr-4">
+            <CartIcon count={cartCount} />
+          </Link>
+          <button
+            onClick={toggleMenu}
+            className="text-white focus:outline-none"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+              width="20"
+              height="18"
+              fill="currentColor"
+              className="bi bi-three-dots"
+              viewBox="0 0 16 16"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
             </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
-          )}
-        </button>
+          </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`lg:hidden ${isOpen ? "block" : "hidden"} mt-4`}>
-        <NavLink to="/" text="Home" mobile />
-        <NavLink to="/about" text="About" mobile />
-        <NavLink to="/community" text="Community" mobile />
-        <NavLink to="/adozioni" text="Adozioni" mobile />
-        <NavLink to="/donate" text="Donazioni" mobile />
-        <NavLink to="/shop" text="Shop" mobile />
-        <NavLink to="/blog" text="Blog" mobile />
-        <DropdownMenu mobile />
+      <div
+        className={`lg:hidden ${
+          isOpen ? "flex flex-col gap-4" : "hidden"
+        } mt-4`}
+      >
+        {/* Mobile  */}
+        <Link to="/" className="hover:underline">
+          Home
+        </Link>
+        <Link to="/c" className="hover:underline">
+          Chi siamo
+        </Link>
+        <Link to="/community" className="hover:underline">
+          Community
+        </Link>
+        <Link to="/adozioni" className="hover:underline">
+          Adozioni
+        </Link>
+        <Link to="/donate" className="hover:underline">
+          Donazioni
+        </Link>
+        <Link to="/shop" className="hover:underline">
+          Shop
+        </Link>
+        <Link to="/about" className="hover:underline">
+          Contatti
+        </Link>
         <AuthButtons mobile />
       </div>
     </nav>
   );
-
-  function NavLink({ to, text, mobile }) {
-    return (
-      <Link
-        to={to}
-        className={`
-          ${mobile ? "block py-2 px-4" : ""}
-          px-4 py-2 rounded
-          transition duration-300
-        `}
-        style={{
-          backgroundColor: 'transparent',
-          color: 'black'
-        }}
-        onMouseEnter={(e) => e.target.style.backgroundColor = '#f6bcb2'}
-        onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-      >
-        {text}
-      </Link>
-    );
-  }
-
-  function DropdownMenu({ mobile }) {
-    return (
-      <div className={mobile ? "" : "relative"}>
-        <button
-          onClick={toggleDropdown}
-          className={`
-            px-4 py-2 rounded
-            transition duration-300
-            ${mobile ? "block w-full text-left py-2 px-4" : ""}
-          `}
-          style={{
-            backgroundColor: 'transparent',
-            color: 'black'
-          }}
-          onMouseEnter={(e) => e.target.style.backgroundColor = '#f6bcb2'}
-          onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-        >
-          Contatti
-        </button>
-        <ul
-          className={`${
-            mobile
-              ? "pl-4"
-              : "absolute top-full right-0 mt-2 bg-white shadow-lg rounded-md"
-          } ${dropdownOpen ? "block" : "hidden"}`}
-        >
-          <li>
-            <a
-              href="https://www.facebook.com/"
-              className="block px-4 py-2 transition duration-300"
-              style={{ color: 'black' }}
-              onMouseEnter={(e) => e.target.style.backgroundColor = '#ec4899'}
-              onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-            >
-              Facebook
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/"
-              className="block px-4 py-2 transition duration-300"
-              style={{ color: 'black' }}
-              onMouseEnter={(e) => e.target.style.backgroundColor = '#ec4899'}
-              onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-            >
-              Instagram
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://twitter.com/home"
-              className="block px-4 py-2 transition duration-300"
-              style={{ color: 'black' }}
-              onMouseEnter={(e) => e.target.style.backgroundColor = '#ec4899'}
-              onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-            >
-              Twitter
-            </a>
-          </li>
-        </ul>
-      </div>
-    );
-  }
 
   function AuthButtons({ mobile }) {
     return (
@@ -184,25 +116,50 @@ function Navbar({
           to="/login"
           className={`${
             mobile ? "block w-full" : ""
-          } bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300 ${
-            mobile ? "mt-2" : ""
+          } bg-gray-800 text-white  py-2 rounded hover:bg-gray-700 transition duration-300
           }`}
           onClick={() => mobile && setIsOpen(false)}
         >
           Accedi
         </Link>
         <Link
-          to="/register"
+          to="/signIn"
           className={`${
             mobile ? "block w-full" : ""
-          } ${elementBg} text-green-600 px-4 py-2 rounded hover:bg-opacity-90 transition duration-300 ${
-            mobile ? "mt-2" : ""
+          } ${elementBg}  text-dark-grey px-4 py-2 rounded hover:bg-opacity-90 transition duration-300 ${
+            mobile ? "mt-0" : ""
           }`}
           onClick={() => mobile && setIsOpen(false)}
         >
           Registrati
         </Link>
       </>
+    );
+  }
+
+  function CartIcon({ count }) {
+    return (
+      <div className="relative">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+          />
+        </svg>
+        {count > 0 && (
+          <span className="absolute -top-1 -right-1 bg-red-500 bg-light-blue text-white text-xs rounded-full px-1">
+            {count}
+          </span>
+        )}
+      </div>
     );
   }
 }

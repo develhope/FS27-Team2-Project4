@@ -14,9 +14,11 @@ a {
   height: 100vw;
   display: flex;
   justify-content: center;
+  border-radius: 15px;
+  
 }
 .profile-card {
-  border: 2px solid black;
   padding: 20px;
   height: 620px;
+  border-radius: 15px;
 }
