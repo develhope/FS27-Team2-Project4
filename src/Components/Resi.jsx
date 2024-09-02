@@ -65,7 +65,7 @@ export default function RimborsoForm() {
               </div>
 
               <div className="grid grid-cols-1 gap-4 text-center sm:grid-cols-3">
-              <div>
+                <div>
                   <label
                     htmlFor="Option1"
                     className=" bg-pink text-dark-grey block w-full cursor-pointer rounded-lg  p-3 text-gray-600   has-[:checked]:bg-dark-green "
