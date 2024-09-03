@@ -25,7 +25,7 @@ function Home() {
 
   return (
     <div>
-      <div className="main-content pb-10 text-center">
+      <div>
         <Banner />
         <BlogPreview />
         <SitePreview />
