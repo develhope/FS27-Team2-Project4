@@ -131,7 +131,7 @@ export default function Footer({ bgColor, textColor, elementText, elementBg }) {
 
                 <li>
                   <Link
-                    to="/payment#navbar"
+                    to="/metodiPagamento#navbar"
                     className={`${elementText} text-gray-700 transition hover:text-pink`}
                   >
                     {" "}
