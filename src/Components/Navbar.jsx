@@ -10,7 +10,6 @@ function Navbar({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  
 
   const { cartCount } = useContext(CartContext);
 
@@ -18,7 +17,7 @@ function Navbar({
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
 
   return (
-    <nav className={`${bgColor} ${textColor} py-4 px-8`} >
+    <nav className={`${bgColor} ${textColor} py-4 px-8`}>
       <div className="flex items-center justify-between" id="navbar">
         <Link to="/" className="text-2xl font-semibold">
           <img src={Logo} alt="logo" className="h-12" />
@@ -37,8 +36,11 @@ function Navbar({
           <Link to="/adozioni" className="hover:underline">
             Adozioni
           </Link>
-          <Link to="/blog" className="`${elementText} hover:underline transition duration-300`">
-          Blog
+          <Link
+            to="/blog"
+            className="`${elementText} hover:underline transition duration-300`"
+          >
+            Blog
           </Link>
           <Link to="/donate" className="hover:underline">
             Donazioni
@@ -86,7 +88,7 @@ function Navbar({
         <Link to="/" className="hover:underline">
           Home
         </Link>
-        <Link to="/c" className="hover:underline">
+        <Link to="/about" className="hover:underline">
           Chi siamo
         </Link>
         <Link to="/community" className="hover:underline">
@@ -97,15 +99,12 @@ function Navbar({
         </Link>
         <Link to="/blog" className="hover:underline">
           Blog
-          </Link>
+        </Link>
         <Link to="/donate" className="hover:underline">
           Donazioni
         </Link>
         <Link to="/shop" className="hover:underline">
           Shop
-        </Link>
-        <Link to="/about" className="hover:underline">
-          Contatti
         </Link>
         <AuthButtons mobile />
       </div>
