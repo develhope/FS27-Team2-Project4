@@ -83,6 +83,7 @@ const events = [
   ];
 
   export default function CommunityPreview() {
+    
     const settings = {
       dots: true,
       infinite: true,
