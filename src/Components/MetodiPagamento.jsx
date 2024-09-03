@@ -18,44 +18,7 @@ export default function MetodiPagamento() {
 
   return (
     <>
-      <div className=" rounded-lg border border-gray-100 py-3 shadow-sm bg-pink mt-6 mr-14 ml-14">
-        <dl className="-my-3 divide-y divide-gray-100 text-sm">
-          <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-            <dt className="font-medium text-gray-900">Paypal</dt>
-            <dd className="text-gray-700 sm:col-span-2">
-              {" "}
-              È come avere un portafoglio digitale sempre a portata di mano,
-              collegato al tuo conto bancario o alla tua carta di credito.
-            </dd>
-          </div>
-
-          <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-            <dt className="font-medium text-gray-900">Conto Corrente</dt>
-            <dd className="text-gray-700 sm:col-span-2">
-              il conto corrente è come un portafoglio digitale sicuro e
-              conveniente, gestito dalla tua banca
-            </dd>
-          </div>
-
-          <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-            <dt className="font-medium text-gray-900">5x1000</dt>
-            <dd className="text-gray-700 sm:col-span-2">
-              Il 5x1000 è una quota dell'IRPEF (Imposta sul Reddito delle
-              Persone Fisiche) che puoi decidere di destinare a sostegno di
-              organizzazioni non profit
-            </dd>
-          </div>
-
-          <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-            <dt className="font-medium text-gray-900"> Postepay(p2p) </dt>
-            <dd className="text-gray-700 sm:col-span-2">
-              . È un sistema che consente a due o più persone di scambiarsi
-              dati, file o denaro direttamente tra loro, senza passare
-              attraverso un server centrale.
-            </dd>
-          </div>
-        </dl>
-      </div>
+      
 
       <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 mt-16">
         <div className="mx-auto max-w-3xl text-center">
@@ -111,6 +74,45 @@ export default function MetodiPagamento() {
 
             <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl text-dark-green">
               €15k
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <div className=" rounded-lg border border-gray-100 py-3 shadow-sm bg-pink mt-6 mr-14 ml-14">
+        <dl className="-my-3 divide-y divide-gray-100 text-sm">
+          <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4 py-10">
+            <dt className="font-medium text-gray-900">Paypal</dt>
+            <dd className="text-gray-700 sm:col-span-2">
+              {" "}
+              È come avere un portafoglio digitale sempre a portata di mano,
+              collegato al tuo conto bancario o alla tua carta di credito.
+            </dd>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4 py-10">
+            <dt className="font-medium text-gray-900">Conto Corrente</dt>
+            <dd className="text-gray-700 sm:col-span-2">
+              il conto corrente è come un portafoglio digitale sicuro e
+              conveniente, gestito dalla tua banca
+            </dd>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4 py-10">
+            <dt className="font-medium text-gray-900">5x1000</dt>
+            <dd className="text-gray-700 sm:col-span-2">
+              Il 5x1000 è una quota dell'IRPEF (Imposta sul Reddito delle
+              Persone Fisiche) che puoi decidere di destinare a sostegno di
+              organizzazioni non profit
+            </dd>
+          </div>
+
+          <div className="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4 py-10">
+            <dt className="font-medium text-gray-900"> Postepay(p2p) </dt>
+            <dd className="text-gray-700 sm:col-span-2">
+              . È un sistema che consente a due o più persone di scambiarsi
+              dati, file o denaro direttamente tra loro, senza passare
+              attraverso un server centrale.
             </dd>
           </div>
         </dl>
