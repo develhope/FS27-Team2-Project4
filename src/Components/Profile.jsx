@@ -11,10 +11,10 @@ export default function Profile() {
 
   return (
     <>
-      <div className="profile-container bg-light-grey">
+      <div className="profile-container bg-light-grey ">
         <div className="flex flex-col items-center justify-center profile-card bg-white mt-6">
           <h1 className=" font-semibold text-2xl text-dark-grey mb-3 "> @{nickname} </h1>
-          <img className="w-auto rounded-md object-cover   hover:" src={icon} alt="" />
+          <img className=" rounded-md object-cover   hover:" src={icon} alt="" />
           <p className=" text-gray-700 mt-4 ">
             {firstname} {surname}'s Profile{" "}
           </p>
