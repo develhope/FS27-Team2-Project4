@@ -95,6 +95,9 @@ function Navbar({
         <Link to="/adozioni" className="hover:underline">
           Adozioni
         </Link>
+        <Link to="/blog" className="hover:underline">
+          Blog
+          </Link>
         <Link to="/donate" className="hover:underline">
           Donazioni
         </Link>
