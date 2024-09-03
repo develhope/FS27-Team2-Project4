@@ -3,7 +3,7 @@ export function AdoptionFilters({ filterCard, setFilterCard }) {
     setFilterCard(e.target.name);
   }
 
-  const selected = "bg-pink text-white";
+  const selected = "bg-light-green text-white font-semibold";
   return (
     <div>
       <div>
@@ -13,7 +13,7 @@ export function AdoptionFilters({ filterCard, setFilterCard }) {
             name="tutti"
             className={`${
               filterCard === "tutti" ? selected : ""
-            } shrink-0 rounded-lg p-4 pr-8 pl-8 text-sm font-semibold text-gray-800 hover:bg-pink hover:text-gray-700 `}
+            } shrink-0 rounded-lg py-2 px-4 text-sm  text-gray-800 hover:bg-light-grey hover:text-dark-grey `}
           >
             Tutti
           </button>
@@ -22,8 +22,8 @@ export function AdoptionFilters({ filterCard, setFilterCard }) {
             onClick={handleFilter}
             name="gatto"
             className={`${
-              filterCard === "gatto" ? "bg-light-purple text-white" : ""
-            } shrink-0 rounded-lg p-4 pr-8 pl-8 text-sm font-semibold text-gray-800 hover:bg-pink  hover:text-gray-700`}
+              filterCard === "gatto" ? "bg-light-purple text-white font-semibold" : ""
+            } shrink-0 rounded-lg py-2 px-4 text-sm  text-gray-800 hover:bg-light-grey hover:text-dark-grey`}
           >
             Gatti
           </button>
@@ -32,8 +32,8 @@ export function AdoptionFilters({ filterCard, setFilterCard }) {
             onClick={handleFilter}
             name="cane"
             className={`${
-              filterCard === "cane" ? "bg-light-blue text-white" : ""
-            } shrink-0 rounded-lg p-4 pr-8 pl-8 text-sm font-semibold text-gray-800 hover:bg-pink  hover:text-gray-700`}
+              filterCard === "cane" ? "bg-light-blue text-white font-semibold" : ""
+            } shrink-0 rounded-lg py-2 px-4 text-sm  text-gray-800 hover:bg-light-grey hover:text-dark-grey`}
           >
             Cani
           </button>
@@ -43,7 +43,7 @@ export function AdoptionFilters({ filterCard, setFilterCard }) {
             name="cuore"
             className={`${
               filterCard === "cuore" ? selected : ""
-            } shrink-0 rounded-lg font-semibold p-4 pr-8 pl-8 text-gray-800 hover:bg-pink  hover:text-gray-700`}
+            } shrink-0 rounded-lg py-2 px-4 text-gray-800 hover:bg-light-grey hover:text-dark-grey`}
             aria-current="page"
           >
             Adozioni del cuore

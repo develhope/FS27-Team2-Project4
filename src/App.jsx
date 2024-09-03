@@ -26,6 +26,9 @@ import { Login } from "./Components/User/Login";
 import { Users } from "./Components/User/Users";
 import { SignIn } from "./Components/User/SignIn";
 import { AdminProfile } from "./Components/User/AdminProfile";
+import Sostenibilità from "./Components/Sostenibilità";
+import MetodiPagamento from "./Components/MetodiPagamento";
+
 
 function App() {
   const [theme, setTheme] = useState({
@@ -107,7 +110,9 @@ function App() {
             <Route path="/community" element={<Community />} />
             <Route path="/submitOrderPage" element={<SubmitOrderPage />} />
             <Route path="/thankyoupage" element={<Thankyoupage />} />
-            <Route path="/loginAdmin"  element={<AdminProfile />} />
+            <Route path="/loginAdmin" element={<AdminProfile />} />
+            <Route path="/sostenibilità" element={<Sostenibilità/>}/>
+            <Route path="/metodiPagamento" element={<MetodiPagamento/>}/>
             <Route
               path="/article/:id"
               element={<ArticlePage theme={theme} setTag={handleTheme} />}

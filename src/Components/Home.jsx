@@ -23,6 +23,18 @@ function Home() {
     }
   }, [hash]);
 
+  useEffect(() => {
+    console.log("ciao")
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        console.log(element)
+        console.log(hash)
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [hash]);
+
   return (
     <div>
       <div className="main-content pb-10 text-center">

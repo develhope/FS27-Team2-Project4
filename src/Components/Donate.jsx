@@ -48,13 +48,13 @@ function Donate() {
   const { hash } = useLocation();
 
   useEffect(() => {
-    console.log("ciao")
+    console.log("ciao");
     if (hash) {
       const element = document.getElementById(hash.substring(1));
       if (element) {
-        console.log(element)
-        console.log(hash)
-        element.scrollIntoView({ behavior: 'smooth' });
+        console.log(element);
+        console.log(hash);
+        element.scrollIntoView({ behavior: "smooth" });
       }
     }
   }, [hash]);
@@ -133,6 +133,7 @@ function Donate() {
               <option value="paypal">PayPal</option>
               <option value="iban">Bonifico Bancario</option>
               <option value="5x1000">5x1000</option>
+              <option value="p2p">Postepay(p2p)</option>
             </select>
 
             {showIbanDetails && (
