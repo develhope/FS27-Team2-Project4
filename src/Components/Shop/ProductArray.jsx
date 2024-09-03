@@ -79,7 +79,7 @@ export function ProductArray({ addToCart }) {
 
   return (
     <>
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {products.map((product, index) => (
             <ProductCard
