@@ -16,7 +16,7 @@ export function SubmitOrderPage() {
 
   const handlePayment = (e) => {
     e.preventDefault();
-    alert("Grazie per il tuo ordine!");
+    alert("Ordine inoltrato con successo!");
     clearCart();
     navigate("/thankYouPage");
    

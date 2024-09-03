@@ -55,14 +55,14 @@ export function PetArray({ filterCard }) {
       razza: "Meticcio",
       sesso: "Maschio",
       img: cane2,
-      età: "4",
+      età: "1",
       problematiche: "Nessuna",
       sterilizzato: "Sterilizzato",
       descrizione:
         "Rocky ha 4 anni e un cuore d'oro. Nonostante le sue allergie, è sempre pieno di energia e ama giocare con i bambini.",
     },
     {
-      nome: "Pooppy",
+      nome: "Poppy",
       famiglia: "gatto",
       razza: "Meticcio",
       sesso: "Femmina",
@@ -140,7 +140,7 @@ export function PetArray({ filterCard }) {
       razza: "Meticcio",
       sesso: "Femmina",
       img: cane3,
-      età: "4",
+      età: "6 mesi",
       problematiche: "Nessuna",
       sterilizzato: "Sterilizzata",
       descrizione:
@@ -212,7 +212,7 @@ export function PetArray({ filterCard }) {
       razza: "Meticcio",
       sesso: "Femmina",
       img: cane7,
-      età: "4",
+      età: "8 mesi",
       problematiche: "Nessuna",
       sterilizzato: "Sterilizzata",
       descrizione:
@@ -285,8 +285,7 @@ export function PetArray({ filterCard }) {
     <div>
       <div className="flex justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-          {/*         lo slice ritorna solo una porzione dell'array quindi posso usarlo per renderizzare solo un tot di elementi
-           */}{" "}
+          {/*lo slice ritorna solo una porzione dell'array quindi posso usarlo per renderizzare solo un tot di elementi */}
           {animals
             .slice(0, visibleCards)
             .filter((card) => {
@@ -332,6 +331,7 @@ export function PetArray({ filterCard }) {
           </button>
         </div>
       )}
+      
     </div>
   );
 }

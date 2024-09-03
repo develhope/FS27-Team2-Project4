@@ -61,7 +61,7 @@ function App() {
         elementBg: "bg-pink",
       });
     }
-  }, [tag]);
+  }, [tag, theme]);
 
   function handleTheme(string) {
     setTag(string);
@@ -107,7 +107,7 @@ function App() {
             <Route path="/community" element={<Community />} />
             <Route path="/submitOrderPage" element={<SubmitOrderPage />} />
             <Route path="/thankyoupage" element={<Thankyoupage />} />
-            <Route path="/loginAdmin" element={<AdminProfile />} />
+            <Route path="/loginAdmin"  element={<AdminProfile />} />
             <Route
               path="/article/:id"
               element={<ArticlePage theme={theme} setTag={handleTheme} />}

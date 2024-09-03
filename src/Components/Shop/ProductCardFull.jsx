@@ -1,8 +1,21 @@
-export function ProductCardFull({ product, addToCart }) {
-  const handleAddToCart = () => {
-    addToCart(product);
-  };
+import { useState } from "react";
 
+export function ProductCardFull({ product, addToCart }) {
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const handleAddToCart = () => {
+   
+    setIsAnimating(true);
+
+
+    addToCart(product);
+
+  
+    setTimeout(() => {
+      setIsAnimating(false);
+      alert("Articolo aggiunto al carrello!");
+    }, 300); 
+  };
   return (
     <div className="flex justify-center items-center p-4 sm:flex-col">
       <div className="border-y-neutral-900 border-solid rounded-3xl shadow-2xl p-8  w-full max-w-xl flex flex-col justify-center bg-white">
@@ -62,7 +75,9 @@ export function ProductCardFull({ product, addToCart }) {
           <div className="flex place-items-center justify-between">
             <p className="text-2xl my-2">{product.prezzo}</p>
             <button
-             className=" p-2 bg-red-500 bg-pink text-white font-semibold my-8 rounded cursor-pointer hover:bg-red-600 "
+              className={`p-2 bg-pink text-white font-semibold my-8 rounded cursor-pointer hover:bg-red-600 transform ${
+                isAnimating ? "scale-110 transition-transform duration-300" : ""
+              }`}
               onClick={handleAddToCart}
             >
               Aggiungi al carrello
