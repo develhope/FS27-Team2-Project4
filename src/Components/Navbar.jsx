@@ -120,7 +120,7 @@ function Navbar({
             mobile ? "block w-full" : ""
           } bg-gray-800 text-white  py-2 rounded hover:bg-gray-700 transition duration-300
           }`}
-          onClick={() => mobile && setIsOpen(false)}
+        
         >
           Accedi
         </Link>
@@ -131,7 +131,7 @@ function Navbar({
           } ${elementBg}  text-dark-grey px-4 py-2 rounded hover:bg-opacity-90 transition duration-300 ${
             mobile ? "mt-0" : ""
           }`}
-          onClick={() => mobile && setIsOpen(false)}
+         
         >
           Registrati
         </Link>
