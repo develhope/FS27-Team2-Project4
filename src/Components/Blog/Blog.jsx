@@ -56,7 +56,7 @@ const Blog = () => {
       <div className="text-center mt-4">
         <button
           onClick={handleLoadMore}
-          className="bg-light-green text-white px-4 py-2 rounded-lg hover:bg-dark-green"
+          className="bg-light-green text-white py-4 px-8 rounded-lg hover:bg-dark-green font-semibold"
         >
           Load More
         </button>

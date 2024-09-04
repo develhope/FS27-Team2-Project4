@@ -33,7 +33,7 @@ export function HeroBannerAdozioni({ filterCard }) {
       <div style={{ opacity: displayCaption }}>
         <div className="absolute inset-0 bg-white/75 sm:bg-white/0  "></div>
         <div className="relative mx-auto px-4 py-32 sm:px-6 lg:flex lg:flex-col lg:items-center lg:px-8">
-          <div className="lg:flex outline p-3 rounded-3xl outline-white">
+          <div className="lg:flex p-3 rounded-3xl">
             <h1 className="text-lg font-extrabold sm:text-5xl text-dark-green">
               NON COMPRARE, ADOTTA!
               <br />
