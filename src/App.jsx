@@ -64,7 +64,7 @@ function App() {
         elementBg: "bg-pink",
       });
     }
-  }, [tag, theme]);
+  }, [tag]);
 
   function handleTheme(string) {
     setTag(string);

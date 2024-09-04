@@ -4,9 +4,10 @@ import { CartContext } from "../CartContext";
 import Logo from "../../public/SVG/LOGO-SITO.png";
 
 function Navbar({
-  bgColor,
-  textColor,
-  elementBg,
+  bgColor = "bg-green-600",
+  textColor = "text-white",
+  elementBg = "bg-green-600",
+
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -120,7 +121,6 @@ function Navbar({
             mobile ? "block w-full" : ""
           } bg-gray-800 text-white  py-2 rounded hover:bg-gray-700 transition duration-300
           }`}
-          onClick={() => mobile && setIsOpen(false)}
         >
           Accedi
         </Link>
@@ -131,7 +131,6 @@ function Navbar({
           } ${elementBg}  text-dark-grey px-4 py-2 rounded hover:bg-opacity-90 transition duration-300 ${
             mobile ? "mt-0" : ""
           }`}
-          onClick={() => mobile && setIsOpen(false)}
         >
           Registrati
         </Link>
