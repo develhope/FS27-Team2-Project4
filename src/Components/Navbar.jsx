@@ -4,9 +4,9 @@ import { CartContext } from "../CartContext";
 import Logo from "../../public/SVG/LOGO-SITO.png";
 
 function Navbar({
-  bgColor = "bg-green-600",
-  textColor = "text-white",
-  elementBg = "bg-green-600",
+  bgColor,
+  textColor,
+  elementBg,
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);

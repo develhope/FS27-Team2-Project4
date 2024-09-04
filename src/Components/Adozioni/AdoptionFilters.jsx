@@ -7,7 +7,7 @@ export function AdoptionFilters({ filterCard, setFilterCard }) {
   return (
     <div>
       <div>
-        <nav className="flex gap-6 justify-center p-10" aria-label="Tabs">
+        <nav className="flex flex-wrap gap-6 justify-center p-10" aria-label="Tabs">
           <button
             onClick={handleFilter}
             name="tutti"

@@ -75,7 +75,7 @@ function App() {
   const [users, setUsers] = useState([
     {
       username: "Admin",
-      password: "Team3",
+      password: "Team2",
       admin: true,
     },
   ]);
