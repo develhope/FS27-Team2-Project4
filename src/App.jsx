@@ -64,7 +64,7 @@ function App() {
         elementBg: "bg-pink",
       });
     }
-  }, [tag, theme]);
+  }, [tag]);
 
   function handleTheme(string) {
     setTag(string);
@@ -75,7 +75,7 @@ function App() {
   const [users, setUsers] = useState([
     {
       username: "Admin",
-      password: "Team2",
+      password: "Team3",
       admin: true,
     },
   ]);
